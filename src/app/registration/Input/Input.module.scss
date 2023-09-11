@@ -1,0 +1,20 @@
+.input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: rgb(222, 222, 222);
+  &::placeholder {
+    font-size: 14px;
+  }
+}
+.error {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #fff;
+  border: 1px solid red;
+  &::placeholder {
+    color: red;
+    font-size: 14px;
+  }
+}

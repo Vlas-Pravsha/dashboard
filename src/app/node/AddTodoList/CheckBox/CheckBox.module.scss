@@ -1,0 +1,29 @@
+.checkboxWrapper input[type="checkbox"] {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  width: 18px;
+  height: 18px;
+  border-radius: 10px;
+  border: 2px solid #050510;
+  &:checked {
+    background-image: url(../../../../assets/Img/check-solid.svg);
+    background-repeat: no-repeat;
+    background-color: black;
+    background-position: 2px;
+    background-size: 10px;
+  }
+}
+.text {
+  color: #050510;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+.checkboxWrapper {
+  height: 18px;
+  &:hover {
+    cursor: pointer;
+  }
+}

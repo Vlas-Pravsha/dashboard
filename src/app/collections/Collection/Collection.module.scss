@@ -1,0 +1,35 @@
+.collection {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  min-height: 320px;
+  padding: 25px;
+  gap: 10px;
+}
+.img {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  transition: width 0.2s ease 70ms, height 0.2s ease 70ms;
+
+  &:hover {
+    // width: 60px;
+    // height: 60px;
+    cursor: pointer;
+  }
+}
+.title {
+  font-size: 16px;
+  font-weight: 700;
+}
+.mainImg {
+  width: 250px;
+  height: 150px;
+  border-radius: 15px;
+}
+.imgWrap {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

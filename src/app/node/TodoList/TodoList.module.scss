@@ -1,0 +1,132 @@
+.wrapper {
+}
+
+.todolist {
+  width: 225px;
+  min-height: 200px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.title {
+  align-self: center;
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+}
+.inputWrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.input {
+  background-color: rgb(217, 217, 217);
+  padding: 5px;
+  margin-left: 10px;
+  border-radius: 10px;
+  width: calc(100% - 50px);
+}
+.status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 10px;
+}
+.q {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.add {
+  width: 24px;
+  height: 24px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.taskWrapper {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.delete {
+  width: 16px;
+  height: 16px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.edit {
+  width: 16px;
+  height: 16px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.statusBtn {
+  background-color: rgb(239, 238, 238);
+  padding: 5px;
+  border-radius: 10px;
+}
+.active {
+  padding: 5px;
+  background-color: #74b49b;
+  border-radius: 10px;
+  color: white;
+}
+.completed {
+  text-decoration: line-through;
+}
+
+.qq {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.imgQ {
+  display: flex;
+  gap: 10px;
+}
+.save {
+  width: 16px;
+  height: 16px;
+}
+.taskInput {
+  width: 180px;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 0 10px;
+}
+.error {
+  background-color: white;
+  padding: 4px;
+  margin-left: 10px;
+  border-radius: 10px;
+  width: calc(100% - 50px);
+  border: red 1px solid;
+  color: red;
+
+  &::placeholder {
+    color: red;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.errorMessage {
+  margin-left: 10px;
+  font-size: 10px;
+  line-height: 10px;
+  color: red;
+}

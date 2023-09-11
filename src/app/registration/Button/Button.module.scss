@@ -1,0 +1,37 @@
+.button {
+  border-radius: 15px;
+  padding: 5px 30px;
+  font-weight: 800;
+  font-size: 13px;
+  line-height: 26px;
+  background-color: #fff;
+  color: #2c3e50;
+  box-shadow: 0px 1px 2px 0px rgb(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  &:hover {
+    background-color: #2c3e50;
+    color: #fff;
+  }
+}
+// .submit {
+//   padding: 5px 30px;
+//   color: #ec5990;
+//   border-radius: 15px;
+//   box-shadow: 0px 1px 2px 0px #ec5990;
+//   &:hover {
+//     background-color: #ec5990;
+//     color: white;
+//   }
+// }
+.submit {
+  padding: 10px 30px;
+  color: #fff;
+  border-radius: 6px;
+  background-color: #ec5990;
+
+  &:hover {
+    background-color: #fff;
+    color: #ec5990;
+  }
+}
