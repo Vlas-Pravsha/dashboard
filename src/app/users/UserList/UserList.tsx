@@ -4,8 +4,6 @@ import { StaticImageData } from "next/image";
 import React from "react";
 import Button from "../Button/Button";
 import s from "./UserList.module.scss";
-import Left from "../../../assets/Img/UsersImg/chevron-left-solid.svg";
-import Right from "../../../assets/Img/UsersImg/chevron-right-solid.svg";
 import Input from "../Input/Input";
 import CheckBox from "../CheckBox/CheckBox";
 import ModalDelete from "../ModalDelete/ModalDelete";
@@ -13,7 +11,7 @@ import ModalDelete from "../ModalDelete/ModalDelete";
 type UserItem = {
   id: number;
   name: string;
-  avatar: StaticImageData;
+  avatar: string;
   email: string;
   biography: string;
   country: string;
@@ -64,6 +62,8 @@ const UserList = ({ usersData }: UserListProps) => {
                       src={user.avatar}
                       alt={user.name}
                       className={s.avatar}
+                      width="40"
+                      height="40"
                     />
                     <div className={s.textWrapper}>
                       <div className={s.name}>{user.name}</div>
@@ -108,8 +108,20 @@ const UserList = ({ usersData }: UserListProps) => {
       </table>
       <div className={s.paginationWrapper}>
         <div className={s.paginationTextWrapper}>
-          <Image src={Left} alt="Left" className={s.back} />
-          <Image src={Right} alt="Right" className={s.to} />
+          <Image
+            src={"/Img/UsersImg/chevron-left-solid.svg"}
+            alt="Left"
+            className={s.back}
+            width="30"
+            height="30"
+          />
+          <Image
+            src={"/Img/UsersImg/chevron-right-solid.svg"}
+            alt="Right"
+            className={s.to}
+            width="30"
+            height="30"
+          />
           <div className={s.text}>
             Showing <span className={s.span}>1-20 </span>of
             <span className={s.span}> 2290</span>

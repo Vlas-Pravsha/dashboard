@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./Products.module.scss";
 import ProductsList from "./ProductsList/ProductsList";
+import { v1 } from "uuid";
 
 const Products = () => {
   const productsData = [
@@ -8,7 +9,7 @@ const Products = () => {
       name: "Education Dashboard",
       category: "Html templates",
       technology: "Angular",
-      id: 194556,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$149",
@@ -18,7 +19,7 @@ const Products = () => {
       name: "React UI Kit",
       category: "Html templates",
       technology: "React JS",
-      id: 623232,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$129",
@@ -28,7 +29,7 @@ const Products = () => {
       name: "Education Dashboard",
       category: "Html templates",
       technology: "Angular",
-      id: 194356,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$149",
@@ -38,7 +39,7 @@ const Products = () => {
       name: "React UI Kit",
       category: "Html templates",
       technology: "React JS",
-      id: 323323,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$129",
@@ -48,7 +49,7 @@ const Products = () => {
       name: "Education Dashboard",
       category: "Html templates",
       technology: "Angular",
-      id: 994856,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$149",
@@ -58,7 +59,7 @@ const Products = () => {
       name: "Education Dashboard",
       category: "Html templates",
       technology: "Angular",
-      id: 194256,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$149",
@@ -68,7 +69,7 @@ const Products = () => {
       name: "React UI Kit",
       category: "Html templates",
       technology: "React JS",
-      id: 623378,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$129",
@@ -78,7 +79,7 @@ const Products = () => {
       name: "Education Dashboard",
       category: "Html templates",
       technology: "Angular",
-      id: 192856,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$149",
@@ -88,7 +89,7 @@ const Products = () => {
       name: "React UI Kit",
       category: "Html templates",
       technology: "React JS",
-      id: 523323,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$129",
@@ -98,7 +99,7 @@ const Products = () => {
       name: "Education Dashboard",
       category: "Html templates",
       technology: "Angular",
-      id: 191857,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$149",
@@ -108,7 +109,7 @@ const Products = () => {
       name: "Education Dashboard",
       category: "Html templates",
       technology: "Angular",
-      id: 914856,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$149",
@@ -118,7 +119,7 @@ const Products = () => {
       name: "React UI Kit",
       category: "Html templates",
       technology: "React JS",
-      id: 633293,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$129",
@@ -128,7 +129,7 @@ const Products = () => {
       name: "Education Dashboard",
       category: "Html templates",
       technology: "Angular",
-      id: 194556,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$149",
@@ -138,7 +139,7 @@ const Products = () => {
       name: "React UI Kit",
       category: "Html templates",
       technology: "React JS",
-      id: 623232,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$129",
@@ -148,7 +149,7 @@ const Products = () => {
       name: "Education Dashboard",
       category: "Html templates",
       technology: "Angular",
-      id: 194356,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$149",
@@ -158,7 +159,7 @@ const Products = () => {
       name: "React UI Kit",
       category: "Html templates",
       technology: "React JS",
-      id: 323323,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$129",
@@ -168,7 +169,7 @@ const Products = () => {
       name: "Education Dashboard",
       category: "Html templates",
       technology: "Angular",
-      id: 994856,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$149",
@@ -178,7 +179,7 @@ const Products = () => {
       name: "Education Dashboard",
       category: "Html templates",
       technology: "Angular",
-      id: 194256,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$149",
@@ -188,7 +189,7 @@ const Products = () => {
       name: "React UI Kit",
       category: "Html templates",
       technology: "React JS",
-      id: 623378,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$129",
@@ -198,7 +199,7 @@ const Products = () => {
       name: "Education Dashboard",
       category: "Html templates",
       technology: "Angular",
-      id: 192856,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$149",
@@ -208,7 +209,7 @@ const Products = () => {
       name: "React UI Kit",
       category: "Html templates",
       technology: "React JS",
-      id: 523323,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$129",
@@ -218,7 +219,7 @@ const Products = () => {
       name: "Education Dashboard",
       category: "Html templates",
       technology: "Angular",
-      id: 191857,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$149",
@@ -228,7 +229,7 @@ const Products = () => {
       name: "Education Dashboard",
       category: "Html templates",
       technology: "Angular",
-      id: 914856,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$149",
@@ -238,7 +239,7 @@ const Products = () => {
       name: "React UI Kit",
       category: "Html templates",
       technology: "React JS",
-      id: 633293,
+      id: v1(),
       description:
         "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
       price: "$129",

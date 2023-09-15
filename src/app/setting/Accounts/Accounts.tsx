@@ -1,10 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import s from "./Accounts.module.scss";
-import Avatar1 from "../../../assets/Img/Settingimg/neil-sims.png";
-import Avatar2 from "../../../assets/Img/Settingimg/jese-leos.png";
-import Avatar3 from "../../../assets/Img/Settingimg/lana-byrd.png";
-import Avatar4 from "../../../assets/Img/Settingimg/profile.png";
 import Button from "../Button/Button";
 
 const usersData = [
@@ -13,7 +9,7 @@ const usersData = [
     name: "Bonnie Green",
     country: "New York, USA",
     visited: "Last seen: 1 min ago",
-    avatar: Avatar1,
+    avatar: "/Img/Settingimg/neil-sims.png",
     status: false,
   },
   {
@@ -21,7 +17,7 @@ const usersData = [
     name: "Jese Leos",
     country: "California, USA",
     visited: "Last seen: 2 min ago",
-    avatar: Avatar2,
+    avatar: "/Img/Settingimg/jese-leos.png",
     status: false,
   },
   {
@@ -29,7 +25,7 @@ const usersData = [
     name: "Thomas Lean",
     country: "Texas, USA",
     visited: "Last seen: 30 min ago",
-    avatar: Avatar3,
+    avatar: "/Img/Settingimg/lana-byrd.png",
     status: false,
   },
   {
@@ -37,7 +33,7 @@ const usersData = [
     name: "Lana Byrd",
     country: "Texas, USA",
     visited: "Last seen: 1 hour ago",
-    avatar: Avatar4,
+    avatar: "/Img/Settingimg/profile.png",
     status: true,
   },
 ];
@@ -51,7 +47,13 @@ const Accounts = () => {
           return (
             <div key={user.id} className={s.cart}>
               <div className={s.avatarWrapper}>
-                <Image src={user.avatar} alt={user.name} className={s.avatar} />
+                <Image
+                  src={user.avatar}
+                  alt={user.name}
+                  className={s.avatar}
+                  height="50"
+                  width="50"
+                />
                 <div className={s.textWrapper}>
                   <div className={s.name}>{user.name}</div>
                   <span className={s.country}>{user.country}</span>

@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import s from "./TodoList.module.scss";
-import Add from "../../../assets/Img/NodeImg/circle-plus-solid.svg";
-import Edit from "../../../assets/Img/NodeImg/pen-solid.svg";
-import Delete from "../../../assets/Img/NodeImg/trash-solid.svg";
-import Save from "../../../assets/Img/NodeImg/share-solid.svg";
+import Add from "/Img/NodeImg/circle-plus-solid.svg";
+import Edit from "/Img/NodeImg/pen-solid.svg";
+import Delete from "/Img/NodeImg/trash-solid.svg";
+import Save from "/Img/NodeImg/share-solid.svg";
 import Image from "next/image";
 import CheckBox from "../AddTodoList/CheckBox/CheckBox";
 import { v1 } from "uuid";
@@ -111,8 +111,10 @@ const TodoList = ({ title }: TodoListProps) => {
               onKeyPress={(e) => onKeyPressAddTask(e)}
             />
             <Image
-              src={Add}
+              src={"/Img/NodeImg/circle-plus-solid.svg"}
               alt="Add"
+              width="30"
+              height="30"
               className={s.add}
               onClick={() => addTodoTask()}
             />
@@ -145,25 +147,31 @@ const TodoList = ({ title }: TodoListProps) => {
               {edit === task.id ? (
                 <div>
                   <Image
-                    src={Save}
+                    src={"/Img/NodeImg/share-solid.svg"}
                     alt="Save"
                     className={s.save}
                     onClick={() => saveTodo(task.id)}
+                    width="30"
+                    height="30"
                   />
                 </div>
               ) : (
                 <div className={s.imgQ}>
                   <Image
-                    src={Edit}
+                    src={"/Img/NodeImg/pen-solid.svg"}
                     alt="Edit"
                     className={s.edit}
                     onClick={() => editTodo(task.id, task.title)}
+                    width="30"
+                    height="30"
                   />
                   <Image
-                    src={Delete}
+                    src={"/Img/NodeImg/trash-solid.svg"}
                     alt="Delete"
                     className={s.delete}
                     onClick={() => deleteTask(task.id)}
+                    width="30"
+                    height="30"
                   />
                 </div>
               )}

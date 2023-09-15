@@ -1,7 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Add from "../../../assets/Img/NodeImg/circle-plus-solid.svg";
-
 import s from "./AddTodoList.module.scss";
 
 interface AddTodoListProps {
@@ -39,10 +37,12 @@ const AddTodoList: React.FC<AddTodoListProps> = ({
         <span className={error ? s.errorMessage : ""}>{error}</span>
       </div>
       <Image
-        src={Add}
+        src="/Img/NodeImg/circle-plus-solid.svg"
         alt="Add"
-        className={s.addTodoListImg}
         onClick={() => addTodoList(searchValue)}
+        width="30"
+        height="30"
+        className={s.addTodoListImg}
       />
     </div>
   );

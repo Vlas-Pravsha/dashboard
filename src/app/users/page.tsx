@@ -1,17 +1,17 @@
 import React from "react";
 import s from "./Registration.module.scss";
-import Avatar1 from "../../assets/Img/UsersImg/neil-sims.png";
-import Avatar2 from "../../assets/Img/UsersImg/jese-leos.png";
-import Avatar3 from "../../assets/Img/UsersImg/lana-byrd.png";
-import Avatar4 from "../../assets/Img/UsersImg/profile.png";
-import Avatar5 from "../../assets/Img/UsersImg/andrey.png";
-import Avatar6 from "../../assets/Img/UsersImg/thomas-lean.png";
-import Avatar7 from "../../assets/Img/UsersImg/helene-engels.png";
-import Avatar8 from "../../assets/Img/UsersImg/joseph-mcfall.png";
-import Avatar9 from "../../assets/Img/UsersImg/leslie-livingston.png";
-import Avatar10 from "../../assets/Img/UsersImg/michael-gough.png";
-import Avatar11 from "../../assets/Img/UsersImg/roberta-casas.png";
-import Avatar12 from "../../assets/Img/UsersImg/robert-brown.png";
+const Avatar1 = "/Img/UsersImg/neil-sims.png";
+const Avatar2 = "/Img/UsersImg/jese-leos.png";
+const Avatar3 = "/Img/UsersImg/lana-byrd.png";
+const Avatar4 = "/Img/UsersImg/profile.png";
+const Avatar5 = "/Img/UsersImg/andrey.png";
+const Avatar6 = "/Img/UsersImg/thomas-lean.png";
+const Avatar7 = "/Img/UsersImg/helene-engels.png";
+const Avatar8 = "/Img/UsersImg/joseph-mcfall.png";
+const Avatar9 = "/Img/UsersImg/leslie-livingston.png";
+const Avatar10 = "/Img/UsersImg/michael-gough.png";
+const Avatar11 = "/Img/UsersImg/roberta-casas.png";
+const Avatar12 = "/Img/UsersImg/robert-brown.png";
 import UserList from "./UserList/UserList";
 
 const usersData = [
@@ -238,7 +238,6 @@ const usersData = [
 ];
 
 const Registration = () => {
-
   return (
     <div className={s.wrapper}>
       <UserList usersData={usersData}></UserList>

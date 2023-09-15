@@ -1,11 +1,7 @@
 import Image from "next/image";
 import s from "./Header.module.scss";
 import React from "react";
-import Icon from "../../assets/Img/HeaderImg/Icon.svg";
-import Moon from "../../assets/Img/HeaderImg/moon-solid.svg";
-import Sun from "../../assets/Img/HeaderImg/sun-solid.svg";
-import Glass from "../../assets/Img/HeaderImg/glass.svg";
-import Profile from "../../assets/Img/HeaderImg/Pr.jpg";
+
 import Link from "next/link";
 
 const Header = () => {
@@ -14,20 +10,50 @@ const Header = () => {
       <div className={s.gap}>
         <Link href="/">
           <div className={s.headerTitleWrap}>
-            <Image src={Icon} alt="Icon" className={s.icon} />
+            <Image
+              src={"/Img/HeaderImg/Icon.svg"}
+              alt="Icon"
+              className={s.icon}
+              width="30"
+              height="30"
+            />
             <h2 className={s.title}>DashBoard</h2>
           </div>
         </Link>
         <div className={s.searchGlass}>
-          <Image src={Glass} alt="Glass" className={s.glass} />
+          <Image
+            src={"/Img/HeaderImg/glass.svg"}
+            alt="Glass"
+            className={s.glass}
+            width="30"
+            height="30"
+          />
           <input type="text" className={s.input} placeholder="Search" />
         </div>
       </div>
       <div className={s.search}></div>
       <div className={s.svgWrap}>
-        <Image src={Moon} alt="Moon" className={s.svg} />
-        <Image src={Sun} alt="Sun" className={s.svg} />
-        <Image src={Profile} alt="Profile" className={s.profile} />
+        <Image
+          src={"/Img/HeaderImg/moon-solid.svg"}
+          alt="Moon"
+          className={s.svg}
+          width="30"
+          height="30"
+        />
+        <Image
+          src={"/Img/HeaderImg/sun-solid.svg"}
+          alt="Sun"
+          className={s.svg}
+          width="30"
+          height="30"
+        />
+        <Image
+          src={"/Img/HeaderImg/Pr.jpg"}
+          alt="Profile"
+          className={s.profile}
+          width="30"
+          height="30"
+        />
       </div>
     </div>
   );

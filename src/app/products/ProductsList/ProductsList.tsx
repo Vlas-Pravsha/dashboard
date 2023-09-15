@@ -3,14 +3,12 @@ import Image from "next/image";
 import React from "react";
 import Button from "@/app/users/Button/Button";
 import s from "./ProductsList.module.scss";
-import Left from "../../../assets/Img/UsersImg/chevron-left-solid.svg";
-import Right from "../../../assets/Img/UsersImg/chevron-right-solid.svg";
 import Input from "@/app/users/Input/Input";
 import CheckBox from "@/app/users/CheckBox/CheckBox";
 import ModalDelete from "@/app/users/ModalDelete/ModalDelete";
 
 type ProductItem = {
-  id: number;
+  id: string;
   name: string;
   category: string;
   technology: string;
@@ -61,8 +59,9 @@ const ProductsList = ({ productsData }: ProductListProps) => {
               discount,
             } = product;
             const slicedDescription = description.slice(0, 71);
+            const slicedId = id.slice(0, 8);
             return (
-              <tr key={product.id} className={s.tr}>
+              <tr key={id} className={s.tr}>
                 <td className={s.td}>
                   <CheckBox></CheckBox>
                 </td>
@@ -81,7 +80,7 @@ const ProductsList = ({ productsData }: ProductListProps) => {
                   >{`${slicedDescription}...`}</span>
                 </td>
                 <td className={s.td}>
-                  <span className={s.position}>{id}</span>
+                  <span className={s.position}>{slicedId}</span>
                 </td>
                 <td className={s.td}>
                   <span className={s.country}>{price}</span>
@@ -102,8 +101,20 @@ const ProductsList = ({ productsData }: ProductListProps) => {
       </table>
       <div className={s.paginationWrapper}>
         <div className={s.paginationTextWrapper}>
-          <Image src={Left} alt="Left" className={s.back} />
-          <Image src={Right} alt="Right" className={s.to} />
+          <Image
+            src={"/Img/UsersImg/chevron-left-solid.svg"}
+            alt="Left"
+            className={s.back}
+            width="30"
+            height="30"
+          />
+          <Image
+            src={"/Img/UsersImg/chevron-right-solid.svg"}
+            alt="Right"
+            className={s.to}
+            width="30"
+            height="30"
+          />
           <div className={s.text}>
             Showing <span className={s.span}>1-20 </span>of
             <span className={s.span}> 2290</span>

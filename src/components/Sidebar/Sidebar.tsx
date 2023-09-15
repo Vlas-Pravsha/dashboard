@@ -1,27 +1,44 @@
 "use client";
 import React from "react";
-import Dashboard from "../../assets/Img/SideBarImg/dashboard.svg";
-import Node from "../../assets/Img/SideBarImg/transactions.svg";
-import Stats from "../../assets/Img/SideBarImg/performance.svg";
-import Converter from "../../assets/Img/SideBarImg/news.svg";
-import Setting from "../../assets/Img/SideBarImg/settings.svg";
-import Users from "../../assets/Img/SideBarImg/support.svg";
-import Burs from "../../assets/Img/SideBarImg/bars-solid.svg";
-import Exit from "../../assets/Img/SideBarImg/xmark-solid.svg";
-import Gear from "../../assets/Img/SideBarImg/sideGear.svg";
+import Dashboard from "/Img/SideBarImg/dashboard.svg";
+import Node from "/Img/SideBarImg/transactions.svg";
+import Stats from "/Img/SideBarImg/performance.svg";
+import Converter from "/Img/SideBarImg/news.svg";
+import Setting from "/Img/SideBarImg/settings.svg";
+import Users from "/Img/SideBarImg/support.svg";
+import Burs from "/Img/SideBarImg/bars-solid.svg";
+import Exit from "/Img/SideBarImg/xmark-solid.svg";
+import Gear from "/Img/SideBarImg/sideGear.svg";
 import { v1 } from "uuid";
 import Link from "../../../node_modules/next/link";
 import s from "./Sidebar.module.scss";
 import Image from "../../../node_modules/next/image";
 
+const sp = "/Img/SideBarImg/";
+
 const sidebar = [
-  { img: Dashboard, id: v1(), title: "Dashboard", link: "" },
-  { img: Node, id: v1(), title: "Node ", link: "node " },
-  { img: Stats, id: v1(), title: "Collections", link: "collections" },
-  { img: Converter, id: v1(), title: "Converter", link: "converter" },
-  { img: Users, id: v1(), title: "Users", link: "users" },
-  { img: Node, id: v1(), title: "Products", link: "products" },
-  { img: Setting, id: v1(), title: "Setting", link: "setting" },
+  {
+    img: sp + "dashboard.svg",
+    id: v1(),
+    title: "Dashboard",
+    link: "",
+  },
+  {
+    img: sp + "transactions.svg",
+    id: v1(),
+    title: "Node ",
+    link: "node ",
+  },
+  {
+    img: sp + "performance.svg",
+    id: v1(),
+    title: "Collections",
+    link: "collections",
+  },
+  { img: sp + "news.svg", id: v1(), title: "Converter", link: "converter" },
+  { img: sp + "news.svg", id: v1(), title: "Users", link: "users" },
+  { img: sp + "news.svg", id: v1(), title: "Products", link: "products" },
+  { img: sp + "news.svg", id: v1(), title: "Setting", link: "setting" },
 ];
 
 const Sidebar = () => {
@@ -49,7 +66,13 @@ const Sidebar = () => {
                 onClick={() => setCategory(i)}
               >
                 <div className={s.item}>
-                  <Image src={item.img} alt={item.title} className={s.icon} />
+                  <Image
+                    src={item.img}
+                    alt={item.title}
+                    className={s.icon}
+                    width="30"
+                    height="30"
+                  />
                   <p className={s.text}>{item.title}</p>
                 </div>
               </div>

@@ -1,7 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import Delete from "../../../assets/Img/UsersImg/delete.svg";
-import Exit from "../../../assets/Img/UsersImg/exit.svg";
 import Btn from "./Btn/Btn";
 import s from "./ModalDelete.module.scss";
 
@@ -15,10 +13,23 @@ const ModalDelete = ({ onClose }: ModalDeleteProps) => {
       <div className={s.overlay} onClick={onClose}></div>
       <div className={s.wrapper}>
         <div className={s.exitWrapper}>
-          <Image src={Exit} alt="Exit" className={s.exit} onClick={onClose} />
+          <Image
+            src={"/Img/UsersImg/exit.svg"}
+            alt="Exit"
+            className={s.exit}
+            onClick={onClose}
+            width="30"
+            height="30"
+          />
         </div>
         <div className={s.center}>
-          <Image src={Delete} alt="Delete" className={s.delete} />
+          <Image
+            src={"/Img/UsersImg/delete.svg"}
+            alt="Delete"
+            className={s.delete}
+            width="30"
+            height="30"
+          />
           <span className={s.text}>
             Are you sure you want to delete this user?
           </span>
