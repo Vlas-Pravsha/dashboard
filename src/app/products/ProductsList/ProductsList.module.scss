@@ -1,0 +1,138 @@
+.wrapper {
+  width: 100%;
+}
+.mainTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 25px 25px 15px 25px;
+}
+
+.table {
+  width: 100%;
+  border-bottom: 1px solid rgba(229, 231, 235, 0.1);
+}
+
+.th {
+  text-align: start;
+  padding: 15px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: rgb(55 65 81);
+  color: rgb(156 163 175);
+}
+
+.tr {
+  background-color: rgb(31, 41, 55);
+  border-top: 1px solid rgba(229, 231, 235, 0.1);
+}
+
+.td {
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.button {
+  margin: 20px 20px 0 20px;
+  padding: 5px 30px;
+  color: rgba(63, 131, 248, 1);
+  border-radius: 15px;
+  box-shadow: 0px 1px 3px 1px rgba(63, 131, 248, 1);
+  font-weight: 500;
+  text-transform: uppercase;
+  &:hover {
+    background-color: rgba(63, 131, 248, 1);
+    color: white;
+  }
+}
+.span {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+}
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+.buttonWrapper {
+  display: flex;
+  gap: 15px;
+}
+.imgTextWrapper {
+  display: flex;
+  gap: 10px;
+}
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.name {
+  font-size: 16px;
+  font-weight: 500;
+}
+.email {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(156 163 175);
+}
+.biography {
+  font-size: 16px;
+  color: rgb(156 163 175);
+}
+.position {
+  font-size: 16px;
+}
+.country {
+  font-size: 16px;
+}
+.status {
+  font-size: 16px;
+  position: relative;
+}
+
+.dote {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: rgb(49 196 141);
+  margin-left: -17px;
+  margin-top: 7px;
+}
+.redDote {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: rgb(224 36 36);
+  margin-left: -17px;
+  margin-top: 7px;
+}
+.paginationWrapper {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  margin: 15px 15px 15px 30px;
+}
+.back {
+  width: 16px;
+  height: 16px;
+}
+.to {
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+}
+.text {
+  color: rgb(156 163 175);
+  font-size: 14px;
+}
+.span {
+  color: #fff;
+  font-size: 16px;
+}
+.paginationTextWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

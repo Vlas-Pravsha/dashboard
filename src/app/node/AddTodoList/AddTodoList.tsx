@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Add from "../../../assets/Img/circle-plus-solid.svg";
+import Add from "../../../assets/Img/NodeImg/circle-plus-solid.svg";
 
 import s from "./AddTodoList.module.scss";
 

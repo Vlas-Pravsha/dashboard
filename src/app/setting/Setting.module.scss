@@ -1,0 +1,25 @@
+.wrapper {
+  padding: 20px;
+  width: 100%;
+}
+.contentWrapper {
+  display: flex;
+  width: 100%;
+  gap: 15px;
+}
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.q {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footerText {
+  font-size: 14px;
+  color: rgb(156 163 175);
+  text-align: center;
+  margin: 30px 0;
+}

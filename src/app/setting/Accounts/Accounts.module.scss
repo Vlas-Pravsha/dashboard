@@ -1,0 +1,47 @@
+.wrapper {
+  display: flex;
+  background-color: rgb(31, 41, 55);
+  border: 1px solid rgba(229, 231, 235, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  flex-direction: column;
+}
+.content {
+  margin-bottom: 25px;
+}
+.title {
+  font-size: 20px;
+  font-weight: 600;
+}
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+.cart {
+  border-bottom: 1px solid rgba(229, 231, 235, 0.1);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.avatarWrapper {
+  display: flex;
+  gap: 15px;
+}
+.name {
+  font-size: 16px;
+  font-weight: 600;
+}
+.country {
+  font-size: 14px;
+  color: rgba(63, 131, 248, 1);
+}
+.visited {
+  font-size: 12px;
+  color: rgb(156 163 175);
+}

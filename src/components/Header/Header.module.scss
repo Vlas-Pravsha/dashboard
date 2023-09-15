@@ -1,0 +1,77 @@
+.headerWrapper {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(229, 231, 235, 0.1);
+  padding: 14px 22px;
+}
+.headerTitleWrap {
+  display: flex;
+  gap: 10px;
+}
+.icon {
+  height: 32px;
+  width: 32px;
+}
+
+.title {
+  color: rgb(210, 210, 210);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.search {
+  display: flex;
+  max-width: 300px;
+  align-items: center;
+  justify-content: center;
+}
+.svg {
+  width: 20px;
+  height: 20px;
+}
+.svgWrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.profile {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+}
+.gap {
+  width: 660px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input {
+  width: 350px;
+  background-color: rgb(55 65 81);
+  &::placeholder {
+    font-size: 14px;
+  }
+  &:focus {
+    outline: none;
+    // border: 1px solid rgba(63, 131, 248, 1);
+  }
+}
+.glass {
+  width: 15px;
+  height: 15px;
+  margin-right: 12px;
+}
+.searchGlass {
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(55 65 81);
+  border: 1px solid rgba(229, 231, 235, 0.1);
+  align-items: center;
+  border-radius: 10px;
+  &:hover {
+    border: 1px solid rgba(63, 131, 248, 1);
+  }
+}

@@ -6,17 +6,16 @@
   width: 18px;
   height: 18px;
   border-radius: 10px;
-  border: 2px solid #050510;
+  border: 2px solid rgb(107 114 128);
   &:checked {
-    background-image: url(../../../../assets/Img/check-solid.svg);
+    background-image: url(../../../../assets/Img/NodeImg/check-solid.svg);
     background-repeat: no-repeat;
-    background-color: black;
+    background-color: rgb(107 114 128);
     background-position: 2px;
     background-size: 10px;
   }
 }
 .text {
-  color: #050510;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;

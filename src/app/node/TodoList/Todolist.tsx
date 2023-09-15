@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import s from "./TodoList.module.scss";
-import Add from "../../../assets/Img/circle-plus-solid.svg";
-import Edit from "../../../assets/Img/pen-solid.svg";
-import Delete from "../../../assets/Img/trash-solid.svg";
-import Save from "../../../assets/Img/share-solid.svg";
+import Add from "../../../assets/Img/NodeImg/circle-plus-solid.svg";
+import Edit from "../../../assets/Img/NodeImg/pen-solid.svg";
+import Delete from "../../../assets/Img/NodeImg/trash-solid.svg";
+import Save from "../../../assets/Img/NodeImg/share-solid.svg";
 import Image from "next/image";
 import CheckBox from "../AddTodoList/CheckBox/CheckBox";
 import { v1 } from "uuid";

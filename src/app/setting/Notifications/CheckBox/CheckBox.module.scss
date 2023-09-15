@@ -1,0 +1,31 @@
+.checkbox {
+  position: relative;
+  width: 42px;
+  height: 22px;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: rgb(55 65 81);
+  outline: none;
+  border-radius: 20px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.checkbox:checked {
+  background-color: rgb(37 99 235);
+}
+.checkbox::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 20px;
+  top: 2px;
+  left: 2px;
+  background-color: #fff;
+  transition: 0.1s;
+  border: 1px solid #fff;
+}
+.checkbox:checked:before {
+  left: 22px;
+}

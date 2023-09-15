@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/support/QustionList/QustionList.tsx", "src/app/support/Qustion/Qustion.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/setting/QustionList/QustionList.tsx", "src/app/setting/Qustion/Qustion.tsx"],
   "exclude": ["node_modules"]
 }

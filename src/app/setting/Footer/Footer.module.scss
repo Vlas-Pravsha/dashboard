@@ -1,0 +1,35 @@
+.wrapper {
+  width: calc(100% - 40px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(31, 41, 55);
+  border: 1px solid rgba(229, 231, 235, 0.1);
+  border-radius: 8px;
+  padding: 30px;
+  margin: 0 0 0 20px;
+}
+.textWrapper {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.value {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgb(156 163 175);
+  &:hover {
+    cursor: pointer;
+  }
+}
+.img {
+  width: 20px;
+  height: 20px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.imgWrapper {
+  display: flex;
+  gap: 25px;
+}

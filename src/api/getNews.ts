@@ -8,4 +8,3 @@ export async function getNews() {
     console.error(e);
   }
 }
-

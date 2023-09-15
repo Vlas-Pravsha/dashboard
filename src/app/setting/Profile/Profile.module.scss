@@ -1,0 +1,36 @@
+.wrapper {
+  width: 740px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: rgb(31, 41, 55);
+  border: 1px solid rgba(229, 231, 235, 0.1);
+  border-radius: 10px;
+  padding: 25px;
+}
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.buttonWrapper {
+  display: flex;
+  gap: 15px;
+}
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.avatar {
+  width: 112px;
+  height: 112px;
+  border-radius: 10px;
+}
+.title {
+  font-size: 20px;
+  font-weight: 700;
+}
+.text {
+  font-size: 14px;
+  color: rgb(156 163 175);
+}
