@@ -1,0 +1,36 @@
+.wrapper {
+  margin-bottom: 50px;
+}
+.table {
+  width: 100%;
+}
+.th {
+  text-align: start;
+  padding: 17px 17px 17px 0;
+  font-size: 18px;
+}
+.tr {
+  &:nth-child(odd) {
+    background-color: rgb(31 41 55);
+  }
+}
+.td {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 17px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.usersText {
+  font-size: 16px;
+  font-weight: 500;
+}
+.title {
+  color: rgb(156 163 175);
+  font-size: 16px;
+  font-weight: 400;
+}
+.borderRadiousRight {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}

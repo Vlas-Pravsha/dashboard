@@ -1,0 +1,62 @@
+.wrapper {
+  width: 100%;
+  background-color: rgb(31 41 55);
+  padding: 22px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(229, 231, 235, 0.1);
+  position: fixed;
+  top: 0;
+}
+.content {
+  width: 1550px;
+  display: flex;
+  justify-content: space-between;
+}
+.headerTitleWrap {
+  display: flex;
+  gap: 10px;
+}
+.icon {
+  height: 32px;
+  width: 32px;
+}
+
+.title {
+  color: rgb(210, 210, 210);
+  font-size: 22px;
+  font-weight: 700;
+}
+.svg {
+  width: 20px;
+  height: 20px;
+}
+.svgWrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.profile {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+}
+.navWrapper {
+  display: flex;
+  gap: 25px;
+}
+.headerWrap {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.pageItem {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(156 163 175);
+  &:hover {
+    cursor: pointer;
+    color: rgb(37 99 235);
+  }
+}

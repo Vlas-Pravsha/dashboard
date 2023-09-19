@@ -1,0 +1,11 @@
+.default {
+  width: 100%;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  background-color: rgb(37, 99, 235);
+  &:hover {
+    background-color: rgba(37, 99, 235, 0.7);
+  }
+}
