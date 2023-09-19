@@ -23,7 +23,7 @@ const DashBoard = () => {
   return (
     <div className={s.wrapper}>
       <Cart></Cart>
-      <ShowNews data={data} />
+      {/* <ShowNews data={data} /> */}
     </div>
   );
 };

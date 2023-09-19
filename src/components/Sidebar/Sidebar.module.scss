@@ -5,6 +5,7 @@
   padding: 30px 15px 30px 15px;
   min-width: 260px;
   border-right: 1px solid rgba(229, 231, 235, 0.1);
+  background-color: rgb(31 41 55);
 }
 .item {
   display: flex;
@@ -63,4 +64,12 @@
   align-items: center;
   justify-content: center;
   // border-bottom: 1px solid rgba(229, 231, 235, 0.1);
+}
+.pageItem {
+  padding: 5px 20px;
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(249, 250, 251, 0.1);
+    border-radius: 10px;
+  }
 }

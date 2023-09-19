@@ -18,27 +18,48 @@ const sp = "/Img/SideBarImg/";
 
 const sidebar = [
   {
+    title: "Dashboard",
     img: sp + "dashboard.svg",
     id: v1(),
-    title: "Dashboard",
-    link: "",
+    href: "",
   },
+
   {
+    title: "Pages",
+    img: sp + "news.svg",
+    id: v1(),
+    pages: [
+      { id: v1(), title: "Pricing", href: "pages/pricing" },
+      { id: v1(), title: "Maintenance", href: "pages/maintenance" },
+      { id: v1(), title: "404 not found", href: "pages/404" },
+      { id: v1(), title: "500 server error", href: "pages/500" },
+    ],
+  },
+
+  {
+    title: "Node ",
     img: sp + "transactions.svg",
     id: v1(),
-    title: "Node ",
-    link: "node ",
+    href: "node ",
   },
   {
+    title: "Collections",
     img: sp + "performance.svg",
     id: v1(),
-    title: "Collections",
-    link: "collections",
+    href: "collections",
   },
-  { img: sp + "news.svg", id: v1(), title: "Converter", link: "converter" },
-  { img: sp + "news.svg", id: v1(), title: "Users", link: "users" },
-  { img: sp + "news.svg", id: v1(), title: "Products", link: "products" },
-  { img: sp + "news.svg", id: v1(), title: "Setting", link: "setting" },
+
+  {
+    title: "CRUD",
+    img: sp + "news.svg",
+    id: v1(),
+    pages: [
+      { id: v1(), title: "Products", href: "crud/products" },
+      { id: v1(), title: "Users", href: "crud/users" },
+    ],
+  },
+
+  { img: sp + "settings.svg", id: v1(), title: "Setting", href: "setting" },
 ];
 
 const Sidebar = () => {
@@ -46,44 +67,62 @@ const Sidebar = () => {
   const [category, setCategory] = React.useState(0);
 
   const toggle = () => setIsOpen(!isOpen);
-
   return (
-    <div className={`${isOpen ? s.wrapperActive : s.wrapper}`}>
+    <div className={s.wrapper}>
       <div className={s.gap}>
-        {/* <div className={s.line}>
-          <Image
-            src={Burs}
-            alt={Burs}
-            className={s.bursIcon}
-            onClick={toggle}
-          />
-        </div> */}
-        {sidebar.map((item, i) => (
-          <div key={item.id} className={s.content}>
-            <Link href={`/${item.link}`}>
-              <div
-                className={`${category === i ? s.active : ""}`}
-                onClick={() => setCategory(i)}
-              >
-                <div className={s.item}>
-                  <Image
-                    src={item.img}
-                    alt={item.title}
-                    className={s.icon}
-                    width="30"
-                    height="30"
-                  />
-                  <p className={s.text}>{item.title}</p>
+        {sidebar.map((item, i) => {
+          if (item.pages && item.pages.length) {
+            return (
+              <div key={item.id} className={s.content}>
+                <div
+                  className={`${category === i ? s.active : ""}`}
+                  onClick={() => setCategory(i)}
+                >
+                  <div className={s.item}>
+                    <Image
+                      src={item.img}
+                      alt={item.title}
+                      className={s.icon}
+                      width="30"
+                      height="30"
+                    />
+                    <p className={s.text}>{item.title}</p>
+                  </div>
                 </div>
+                {item.pages.map((page) => (
+                  <Link href={`/${page.href}`} key={page.id}>
+                    <div className={s.pageItem}>{page.title}</div>
+                  </Link>
+                ))}
               </div>
-            </Link>
-          </div>
-        ))}
+            );
+          } else {
+            return (
+              <div key={item.id} className={s.content}>
+                <Link href={`/${item.href}`}>
+                  <div
+                    className={`${category === i ? s.active : ""}`}
+                    onClick={() => setCategory(i)}
+                  >
+                    <div className={s.item}>
+                      <Image
+                        src={item.img}
+                        alt={item.title}
+                        className={s.icon}
+                        width="30"
+                        height="30"
+                      />
+                      <p className={s.text}>{item.title}</p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            );
+          }
+        })}
       </div>
     </div>
   );
 };
 
 export default Sidebar;
-{
-}

@@ -24,7 +24,7 @@ body {
   grid-template-areas:
     "h h"
     "n c";
-  grid-template-columns: minmax(60px, auto) 1fr;
+  grid-template-columns: auto 1fr;
 }
 
 .app {
