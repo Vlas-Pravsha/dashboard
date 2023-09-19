@@ -3,6 +3,7 @@ import React from "react";
 import Cart from "./Cart/Cart";
 import Footer from "./Footer/Footer";
 import s from "./Pricing.module.scss";
+import Qustions from "./Qustions/Questions";
 import Table from "./Table/Table";
 const Pricing = () => {
   return (
@@ -21,6 +22,7 @@ const Pricing = () => {
           All types of businesses need access to development resources, so we
           give you the option to decide how much you need to use.
         </p>
+        <Qustions />
       </div>
       <Footer />
     </div>
