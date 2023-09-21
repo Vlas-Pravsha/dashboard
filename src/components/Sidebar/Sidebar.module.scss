@@ -1,11 +1,16 @@
-.wrapper {
+.background {
+  width: 260px;
   height: 100%;
+}
+.wrapper {
+  height: 1280px;
   display: flex;
   flex-direction: column;
   padding: 30px 15px 30px 15px;
   min-width: 260px;
   border-right: 1px solid rgba(229, 231, 235, 0.1);
   background-color: rgb(31 41 55);
+  position: fixed;
 }
 .item {
   display: flex;
@@ -66,10 +71,21 @@
   // border-bottom: 1px solid rgba(229, 231, 235, 0.1);
 }
 .pageItem {
-  padding: 5px 20px;
+  padding: 10px;
   &:hover {
     cursor: pointer;
     background-color: rgba(249, 250, 251, 0.1);
     border-radius: 10px;
   }
+}
+.footer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin-bottom: 20px;
+}
+.svgWrap {
+  display: flex;
+  gap: 35px;
 }

@@ -200,11 +200,9 @@ const Questions = () => {
     <div className={s.wrapper}>
       <div className={s.content}>
         {questionsData.map((question) => (
-          <div className={s.question} key={question.id}>
-            <div className={s.questionWrapper}>
+            <div className={s.questionWrapper}  key={question.id}>
               <h2 className={s.title}>{question.title}</h2>
               <div className={s.answer}>{question.answer}</div>
-            </div>
           </div>
         ))}
       </div>

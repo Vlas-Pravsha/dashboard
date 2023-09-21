@@ -1,18 +1,10 @@
 "use client";
 import React from "react";
-import Dashboard from "/Img/SideBarImg/dashboard.svg";
-import Node from "/Img/SideBarImg/transactions.svg";
-import Stats from "/Img/SideBarImg/performance.svg";
-import Converter from "/Img/SideBarImg/news.svg";
-import Setting from "/Img/SideBarImg/settings.svg";
-import Users from "/Img/SideBarImg/support.svg";
-import Burs from "/Img/SideBarImg/bars-solid.svg";
-import Exit from "/Img/SideBarImg/xmark-solid.svg";
-import Gear from "/Img/SideBarImg/sideGear.svg";
 import { v1 } from "uuid";
 import Link from "../../../node_modules/next/link";
 import s from "./Sidebar.module.scss";
 import Image from "../../../node_modules/next/image";
+import Flags from "./Flags/Flags";
 
 const sp = "/Img/SideBarImg/";
 
@@ -26,7 +18,7 @@ const sidebar = [
 
   {
     title: "Pages",
-    img: sp + "news.svg",
+    img: "/Img/PagesImg/pages.svg",
     id: v1(),
     pages: [
       { id: v1(), title: "Pricing", href: "pages/pricing" },
@@ -63,48 +55,23 @@ const sidebar = [
 ];
 
 const Sidebar = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(true);
   const [category, setCategory] = React.useState(0);
 
   const toggle = () => setIsOpen(!isOpen);
   return (
-    <div className={s.wrapper}>
-      <div className={s.gap}>
-        {sidebar.map((item, i) => {
-          if (item.pages && item.pages.length) {
-            return (
-              <div key={item.id} className={s.content}>
-                <div
-                  className={`${category === i ? s.active : ""}`}
-                  onClick={() => setCategory(i)}
-                >
-                  <div className={s.item}>
-                    <Image
-                      src={item.img}
-                      alt={item.title}
-                      className={s.icon}
-                      width="30"
-                      height="30"
-                    />
-                    <p className={s.text}>{item.title}</p>
-                  </div>
-                </div>
-                {item.pages.map((page) => (
-                  <Link href={`/${page.href}`} key={page.id}>
-                    <div className={s.pageItem}>{page.title}</div>
-                  </Link>
-                ))}
-              </div>
-            );
-          } else {
-            return (
-              <div key={item.id} className={s.content}>
-                <Link href={`/${item.href}`}>
+    <div className={s.background}>
+      <div className={s.wrapper}>
+        <div className={s.gap}>
+          {sidebar.map((item, i) => {
+            if (item.pages && item.pages.length) {
+              return (
+                <div key={item.id} className={s.content}>
                   <div
                     className={`${category === i ? s.active : ""}`}
                     onClick={() => setCategory(i)}
                   >
-                    <div className={s.item}>
+                    <div className={s.item} onClick={toggle}>
                       <Image
                         src={item.img}
                         alt={item.title}
@@ -115,11 +82,63 @@ const Sidebar = () => {
                       <p className={s.text}>{item.title}</p>
                     </div>
                   </div>
-                </Link>
-              </div>
-            );
-          }
-        })}
+                  {isOpen &&
+                    item.pages.map((page) => (
+                      <Link
+                        href={`/${page.href}`}
+                        key={page.id}
+                        className={s.pageWrapper}
+                      >
+                        <div className={s.pageItem}>{page.title}</div>
+                      </Link>
+                    ))}
+                </div>
+              );
+            } else {
+              return (
+                <div key={item.id} className={s.content}>
+                  <Link href={`/${item.href}`}>
+                    <div
+                      className={`${category === i ? s.active : ""}`}
+                      onClick={() => setCategory(i)}
+                    >
+                      <div className={s.item}>
+                        <Image
+                          src={item.img}
+                          alt={item.title}
+                          className={s.icon}
+                          width="30"
+                          height="30"
+                        />
+                        <p className={s.text}>{item.title}</p>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              );
+            }
+          })}
+        </div>
+
+        <div className={s.footer}>
+          <div className={s.svgWrap}>
+            <Image
+              height="26"
+              width="26"
+              src="/Img/SideBarImg/params.svg"
+              alt="Logo"
+            />
+            <Link href="/setting">
+              <Image
+                height="26"
+                width="26"
+                src="/Img/SideBarImg/setting-bottom.svg"
+                alt="Logo"
+              />
+            </Link>
+            <Flags />
+          </div>
+        </div>
       </div>
     </div>
   );

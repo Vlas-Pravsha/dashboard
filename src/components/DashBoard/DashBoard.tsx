@@ -4,6 +4,7 @@ import React from "react";
 import s from "./DashBoard.module.scss";
 import Cart from "./Cart/Cart";
 import ShowNews from "./ShowNews/ShowNews";
+import Footer from "@/app/setting/Footer/Footer";
 
 const DashBoard = () => {
   const [data, setData] = React.useState([]);
@@ -24,6 +25,7 @@ const DashBoard = () => {
     <div className={s.wrapper}>
       <Cart></Cart>
       {/* <ShowNews data={data} /> */}
+      <Footer />
     </div>
   );
 };
