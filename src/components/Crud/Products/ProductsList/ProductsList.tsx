@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import Button from "@/app/crud/users/Button/Button";
+import Button from "../../Users/Button/Button";
+import CheckBox from "../../Users/CheckBox/CheckBox";
+import Input from "../../Users/Input/Input";
+import ModalDelete from "../../Users/ModalDelete/ModalDelete";
 import s from "./ProductsList.module.scss";
-import Input from "@/app/crud/users/Input/Input";
-import CheckBox from "@/app/crud/users/CheckBox/CheckBox";
-import ModalDelete from "@/app/crud/users/ModalDelete/ModalDelete";
 
 type ProductItem = {
   id: string;

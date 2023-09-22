@@ -1,8 +1,8 @@
 "use client";
+import AddTodoList from "@/components/Node/AddTodoList/AddTodoList";
+import TodoList from "@/components/Node/TodoList/Todolist";
 import React, { useState } from "react";
 import s from "./Node.module.scss";
-import AddTodoList from "./AddTodoList/AddTodoList";
-import TodoList from "./TodoList/Todolist";
 
 const Node = () => {
   const [todoLists, setTodoLists] = useState<JSX.Element[]>([]);

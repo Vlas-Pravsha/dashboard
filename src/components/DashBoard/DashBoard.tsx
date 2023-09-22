@@ -4,7 +4,7 @@ import React from "react";
 import s from "./DashBoard.module.scss";
 import Cart from "./Cart/Cart";
 import ShowNews from "./ShowNews/ShowNews";
-import Footer from "@/app/setting/Footer/Footer";
+import Footer from "../Footer/Footer";
 
 const DashBoard = () => {
   const [data, setData] = React.useState([]);

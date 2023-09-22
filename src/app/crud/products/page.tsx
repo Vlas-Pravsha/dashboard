@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./Products.module.scss";
-import ProductsList from "./ProductsList/ProductsList";
+import ProductsList from "@/components/Crud/Products/ProductsList/ProductsList";
 import { v1 } from "uuid";
 
 const Products = () => {

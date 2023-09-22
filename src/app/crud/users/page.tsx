@@ -12,7 +12,7 @@ const Avatar9 = "/Img/UsersImg/leslie-livingston.png";
 const Avatar10 = "/Img/UsersImg/michael-gough.png";
 const Avatar11 = "/Img/UsersImg/roberta-casas.png";
 const Avatar12 = "/Img/UsersImg/robert-brown.png";
-import UserList from "./UserList/UserList";
+import UserList from "@/components/Crud/Users/UserList/UserList";
 
 const usersData = [
   {

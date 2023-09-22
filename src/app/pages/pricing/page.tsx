@@ -1,10 +1,11 @@
 import SecondHeader from "@/components/Header/SecondHeader/SecondHeader";
+import Cart from "@/components/Pricing/Cart/Cart";
+import Footer from "@/components/Pricing/Footer/Footer";
+import Questions from "@/components/Pricing/Qustions/Questions";
+import Table from "@/components/Pricing/Table/Table";
 import React from "react";
-import Cart from "./Cart/Cart";
-import Footer from "./Footer/Footer";
 import s from "./Pricing.module.scss";
-import Qustions from "./Qustions/Questions";
-import Table from "./Table/Table";
+
 const Pricing = () => {
   return (
     <div className={s.wrapper}>
@@ -22,7 +23,7 @@ const Pricing = () => {
           All types of businesses need access to development resources, so we
           give you the option to decide how much you need to use.
         </p>
-        <Qustions />
+        <Questions />
       </div>
       <Footer />
     </div>

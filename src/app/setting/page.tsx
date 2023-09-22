@@ -1,15 +1,15 @@
 "use client";
+import Accounts from "@/components/Setting/Accounts/Accounts";
+import General from "@/components/Setting/General/General";
+import Profile from "@/components/Setting/Profile/Profile";
+import Social from "@/components/Setting/Social/Social";
+import Time from "@/components/Setting/Time/Time";
 import React, { useState } from "react";
 import s from "./Setting.module.scss";
-import General from "./General/General";
-import Profile from "./Profile/Profile";
-import Time from "./Time/Time";
-import Social from "./Social/Social";
-import Password from "./Password/Password";
-import Accounts from "./Accounts/Accounts";
-import Sessions from "./Sessions/Sessions";
-import Footer from "./Footer/Footer";
-import Notifications from "./Notifications/Notifications";
+import Password from "../../components/Setting/Password/Password";
+import Sessions from "@/components/Setting/Sessions/Sessions";
+import Notifications from "@/components/Setting/Notifications/Notifications";
+import Footer from "@/components/Footer/Footer";
 
 const Setting = () => {
   return (
@@ -27,7 +27,7 @@ const Setting = () => {
             </div>
             <Accounts></Accounts>
           </div>
-          <div>
+          <div className={s.p}>
             <General></General>
             <Password></Password>
             <Sessions></Sessions>
