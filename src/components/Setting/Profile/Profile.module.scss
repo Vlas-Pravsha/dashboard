@@ -3,8 +3,8 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  background-color: rgb(31, 41, 55);
-  border: 1px solid rgba(229, 231, 235, 0.1);
+  background-color: var(--component-bg);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   padding: 25px;
 }
@@ -32,5 +32,5 @@
 }
 .text {
   font-size: 14px;
-  color: rgb(156 163 175);
+  color: var(--ligth-text-color);
 }

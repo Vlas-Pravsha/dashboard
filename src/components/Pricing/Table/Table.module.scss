@@ -11,7 +11,7 @@
 }
 .tr {
   &:nth-child(odd) {
-    background-color: rgb(31 41 55);
+    background-color: var(--component-bg);
   }
 }
 .td {
@@ -26,7 +26,7 @@
   font-weight: 500;
 }
 .title {
-  color: rgb(156 163 175);
+  color: var(--ligth-text-color);
   font-size: 16px;
   font-weight: 400;
 }

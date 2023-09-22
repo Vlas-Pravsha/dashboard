@@ -4,7 +4,7 @@
   margin-bottom: 50px;
 }
 .content {
-  border-top: 1px solid rgba(229, 231, 235, 0.1);
+  border-top: 1px solid var(--border-color);
   padding-top: 50px;
   display: flex;
   flex-wrap: wrap;
@@ -29,7 +29,7 @@
 }
 .answer {
   padding-bottom: 20px;
-  color: rgb(156 163 175);
+  color: var(--ligth-text-color);
   font-size: 16px;
   line-height: 26px;
 }

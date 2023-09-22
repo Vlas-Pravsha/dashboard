@@ -1,5 +1,5 @@
 import "@unocss/reset/tailwind.css";
-import "./globals.scss";
+import "./globals.css";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import Header from "@/components/Header/Header";
 

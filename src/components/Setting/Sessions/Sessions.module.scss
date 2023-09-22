@@ -2,8 +2,8 @@
   width: 100%;
   display: flex;
   gap: 25px;
-  background-color: rgb(31, 41, 55);
-  border: 1px solid rgba(229, 231, 235, 0.1);
+  background-color: var(--component-bg);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   padding: 20px;
   flex-direction: column;
@@ -18,7 +18,7 @@
   height: 26px;
 }
 .cart {
-  border-bottom: 1px solid rgba(229, 231, 235, 0.1);
+  border-bottom: 1px solid var(--border-color);
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -30,7 +30,7 @@
 }
 .text {
   font-size: 14px;
-  color: rgb(156 163 175);
+  color: var(--ligth-text-color);
 }
 .svgTextWrapper {
   display: flex;

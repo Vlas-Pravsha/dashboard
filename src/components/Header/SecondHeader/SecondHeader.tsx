@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { v1 } from "uuid";
+import Profile from "../Profile/Profile";
 import s from "./SecondHeader.module.scss";
 
 const SecondHeaderData = [
@@ -63,13 +64,7 @@ const SecondHeader = () => {
             width="30"
             height="30"
           />
-          <Image
-            src={"/Img/HeaderImg/Pr.jpg"}
-            alt="Profile"
-            className={s.profile}
-            width="30"
-            height="30"
-          />
+          <Profile />
         </div>
       </div>
     </div>

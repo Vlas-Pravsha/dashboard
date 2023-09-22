@@ -1,7 +1,7 @@
 .wrapper {
   display: flex;
-  background-color: rgb(31, 41, 55);
-  border: 1px solid rgba(229, 231, 235, 0.1);
+  background-color: var(--component-bg);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   padding: 20px;
   flex-direction: column;
@@ -19,7 +19,7 @@
   border-radius: 100%;
 }
 .cart {
-  border-bottom: 1px solid rgba(229, 231, 235, 0.1);
+  border-bottom: 1px solid var(--border-color);
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -39,9 +39,9 @@
 }
 .country {
   font-size: 14px;
-  color: rgba(63, 131, 248, 1);
+  color: var(--blue);
 }
 .visited {
   font-size: 12px;
-  color: rgb(156 163 175);
+  color: var(--ligth-text-color);
 }

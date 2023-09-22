@@ -2,7 +2,7 @@
   width: 100%;
   padding: 10px;
   border-radius: 6px;
-  background-color: rgb(55 65 81);
+  background-color: var(--dark-grey-bg);
   &::placeholder {
     font-size: 14px;
   }

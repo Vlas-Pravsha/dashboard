@@ -1,6 +1,6 @@
 .wrapper {
   width: 425px;
-  background-color: rgb(31 41 55);
+  background-color: var(--component-bg);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -25,7 +25,7 @@
   margin-bottom: 20px;
 }
 .text {
-  color: rgb(156 163 175);
+  color: var(--ligth-text-color);
   font-size: 18px;
   font-weight: 500;
 }

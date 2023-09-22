@@ -21,10 +21,10 @@
   font-size: 14px;
   font-weight: 500;
   padding: 8px 12px;
-  border: 1px solid rgba(229, 231, 235, 0.3);
-  background-color: rgba(31, 41, 55);
+  border: 1px solid var(--border-color);
+  background-color: var(--component-bg);
   border-radius: 8px;
-  color: rgb(156 163 175);
+  color: var(--ligth-text-color);
   &:hover {
     background-color: rgb(38, 47, 62);
     color: #fff;

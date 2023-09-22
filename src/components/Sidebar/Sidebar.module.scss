@@ -8,8 +8,8 @@
   flex-direction: column;
   padding: 30px 15px 30px 15px;
   min-width: 260px;
-  border-right: 1px solid rgba(229, 231, 235, 0.1);
-  background-color: rgb(31 41 55);
+  border-right: 1px solid var(--border-color);
+  background-color: var(--component-bg);
   position: fixed;
 }
 .item {
@@ -18,7 +18,7 @@
   gap: 15px;
   &:hover {
     cursor: pointer;
-    background-color: rgba(249, 250, 251, 0.1);
+    background-color: var(--hover-bg);
     border-radius: 10px;
   }
 }
@@ -32,10 +32,10 @@
   flex-direction: column;
   gap: 25px;
   padding-bottom: 20px;
-  border-bottom: 1px solid rgba(229, 231, 235, 0.1);
+  border-bottom: 1px solid var(--border-color);
 }
 .active {
-  background-color: rgba(249, 250, 251, 0.1);
+  background-color: var(--hover-bg);
   border-radius: 10px;
 }
 .icon {
@@ -53,7 +53,7 @@
   flex-direction: column;
   gap: 25px;
   align-items: center;
-  border-right: 1px solid rgba(229, 231, 235, 0.1);
+  border-right: 1px solid var(--border-color);
   height: 100%;
   padding-top: 30px;
   .text {
@@ -68,7 +68,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  // border-bottom: 1px solid rgba(229, 231, 235, 0.1);
+  // border-bottom: 1px solid var(--border-color);
 }
 .pageItem {
   padding: 10px;

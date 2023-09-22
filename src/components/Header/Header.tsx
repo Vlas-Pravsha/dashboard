@@ -3,6 +3,7 @@ import s from "./Header.module.scss";
 import React from "react";
 
 import Link from "next/link";
+import Profile from "./Profile/Profile";
 
 const Header = () => {
   return (
@@ -48,13 +49,8 @@ const Header = () => {
             width="30"
             height="30"
           />
-          <Image
-            src={"/Img/HeaderImg/Pr.jpg"}
-            alt="Profile"
-            className={s.profile}
-            width="30"
-            height="30"
-          />
+      
+          <Profile />
         </div>
       </div>
     </div>

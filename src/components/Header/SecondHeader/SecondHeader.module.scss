@@ -1,11 +1,11 @@
 .wrapper {
   width: 100%;
-  background-color: rgb(31 41 55);
+  background-color: var(--component-bg);
   padding: 22px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid rgba(229, 231, 235, 0.1);
+  border-bottom: 1px solid var(--border-color);
   position: fixed;
   top: 0;
 }
@@ -54,9 +54,9 @@
 .pageItem {
   font-size: 14px;
   font-weight: 500;
-  color: rgb(156 163 175);
+  color: var(--ligth-text-color);
   &:hover {
     cursor: pointer;
-    color: rgb(37 99 235);
+    color: var(--dark-blue);
   }
 }

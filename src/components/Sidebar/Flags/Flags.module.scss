@@ -10,7 +10,7 @@
   height: 20px;
 }
 .content {
-  background-color: rgb(55 65 81);
+  background-color: var(--dark-grey-bg);
   border-radius: 10px;
   position: absolute;
   margin-bottom: 260px;
@@ -21,18 +21,18 @@
   gap: 10px;
   padding: 10px;
   &:hover {
-    background-color: rgba(249, 250, 251, 0.1);
+    background-color: var(--hover-bg);
     cursor: pointer;
   }
 }
 .text {
   font-size: 14px;
-  color: rgb(156 163 175);
+  color: var(--ligth-text-color);
 }
 .choosedImg {
   &:hover {
     cursor: pointer;
-    background-color: rgb(156 163 175);
+    background-color: var(--ligth-text-color);
     border-radius: 10px;
   }
 }

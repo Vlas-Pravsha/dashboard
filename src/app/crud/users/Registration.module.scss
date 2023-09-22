@@ -1,6 +1,6 @@
 .wrapper {
   display: flex;
-  background-color: rgb(31, 41, 55);
+  background-color: var(--component-bg);
 }
 .title {
   font-size: 22px;

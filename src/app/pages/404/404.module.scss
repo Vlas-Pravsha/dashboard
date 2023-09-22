@@ -6,7 +6,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgb(17 24 39);
+  background-color: var(--dark-blue-bg);
 }
 .wrapper {
   height: 100%;
@@ -22,14 +22,14 @@
 .text {
   font-size: 18px;
   font-weight: 500;
-  color: rgb(156 163 175);
+  color: var(--ligth-text-color);
 
   text-align: center;
   margin-bottom: 20px;
 }
 .link {
   text-decoration: none;
-  color: rgba(63, 131, 248, 1);
+  color: var(--blue);
   &:hover {
     text-decoration: underline;
   }

@@ -1,6 +1,6 @@
 .wrapper {
   width: 100%;
-  background-color: rgb(31 41 55);
+  background-color: var(--component-bg);
   padding: 100px 0;
   display: flex;
   align-items: center;
@@ -9,7 +9,7 @@
 }
 .content {
   width: 1550px;
-  border-bottom: 1px solid rgba(229, 231, 235, 0.1);
+  border-bottom: 1px solid var(--border-color);
 }
 .headerTitleWrap {
   display: flex;
@@ -26,7 +26,7 @@
 }
 .text {
   font-size: 16px;
-  color: rgb(156 163 175);
+  color: var(--ligth-text-color);
 }
 .dashWrapper {
   display: flex;
@@ -35,7 +35,7 @@
   max-width: 450px;
 }
 .footerText {
-  color: rgb(156 163 175);
+  color: var(--ligth-text-color);
   font-size: 16px;
   font-weight: 400;
   margin-top: 50px;

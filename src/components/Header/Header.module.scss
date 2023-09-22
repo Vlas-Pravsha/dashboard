@@ -6,9 +6,9 @@
   display: flex;
   gap: 10px;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(229, 231, 235, 0.1);
+  border-bottom: 1px solid var(--border-color);
   padding: 14px 22px;
-  background-color: rgb(31 41 55);
+  background-color: var(--component-bg);
   position: fixed;
 }
 .headerTitleWrap {
@@ -40,11 +40,7 @@
   align-items: center;
   gap: 20px;
 }
-.profile {
-  width: 32px;
-  height: 32px;
-  border-radius: 100%;
-}
+
 .gap {
   width: 660px;
   display: flex;
@@ -53,13 +49,13 @@
 }
 .input {
   width: 350px;
-  background-color: rgb(55 65 81);
+  background-color: var(--dark-grey-bg);
   &::placeholder {
     font-size: 14px;
   }
   &:focus {
     outline: none;
-    // border: 1px solid rgba(63, 131, 248, 1);
+    // border: 1px solid var(--blue);
   }
 }
 .glass {
@@ -71,11 +67,11 @@
   padding: 8px 10px;
   display: flex;
   align-items: center;
-  background-color: rgb(55 65 81);
-  border: 1px solid rgba(229, 231, 235, 0.1);
+  background-color: var(--dark-grey-bg);
+  border: 1px solid var(--border-color);
   align-items: center;
   border-radius: 10px;
   &:hover {
-    border: 1px solid rgba(63, 131, 248, 1);
+    border: 1px solid var(--blue);
   }
 }

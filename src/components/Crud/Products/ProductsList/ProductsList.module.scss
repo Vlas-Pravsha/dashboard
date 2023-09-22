@@ -9,7 +9,7 @@
 
 .table {
   width: 100%;
-  border-bottom: 1px solid rgba(229, 231, 235, 0.1);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .th {
@@ -17,13 +17,13 @@
   padding: 15px;
   font-size: 12px;
   font-weight: 500;
-  background-color: rgb(55 65 81);
-  color: rgb(156 163 175);
+  background-color: var(--dark-grey-bg);
+  color: var(--ligth-text-color);
 }
 
 .tr {
-  background-color: rgb(31, 41, 55);
-  border-top: 1px solid rgba(229, 231, 235, 0.1);
+  background-color: var(--component-bg);
+  border-top: 1px solid var(--border-color);
 }
 
 .td {
@@ -34,13 +34,13 @@
 .button {
   margin: 20px 20px 0 20px;
   padding: 5px 30px;
-  color: rgba(63, 131, 248, 1);
+  color: var(--blue);
   border-radius: 15px;
-  box-shadow: 0px 1px 3px 1px rgba(63, 131, 248, 1);
+  box-shadow: 0px 1px 3px 1px var(--blue);
   font-weight: 500;
   text-transform: uppercase;
   &:hover {
-    background-color: rgba(63, 131, 248, 1);
+    background-color: var(--blue);
     color: white;
   }
 }
@@ -73,11 +73,11 @@
 .email {
   font-size: 14px;
   font-weight: 400;
-  color: rgb(156 163 175);
+  color: var(--ligth-text-color);
 }
 .biography {
   font-size: 16px;
-  color: rgb(156 163 175);
+  color: var(--ligth-text-color);
 }
 .position {
   font-size: 16px;
@@ -124,7 +124,7 @@
   margin-left: 5px;
 }
 .text {
-  color: rgb(156 163 175);
+  color: var(--ligth-text-color);
   font-size: 14px;
 }
 .span {

@@ -9,9 +9,9 @@
 }
 .cart {
   width: 500px;
-  border: 1px solid rgba(229, 231, 235, 0.1);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
-  background-color: rgb(31 41 55);
+  background-color: var(--component-bg);
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@
   font-weight: 600;
 }
 .description {
-  color: rgb(156 163 175);
+  color: var(--ligth-text-color);
   font-size: 18px;
 }
 .price {
@@ -32,7 +32,7 @@
 .month {
   font-size: 16px;
   font-weight: 500;
-  color: rgb(156 163 175);
+  color: var(--ligth-text-color);
 }
 .options {
   display: flex;

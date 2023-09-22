@@ -3,8 +3,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(31, 41, 55);
-  border: 1px solid rgba(229, 231, 235, 0.1);
+  background-color: var(--component-bg);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 30px;
   margin: 0 0 0 20px;
@@ -17,7 +17,7 @@
 .value {
   font-size: 14px;
   font-weight: 300;
-  color: rgb(156 163 175);
+  color: var(--ligth-text-color);
   &:hover {
     cursor: pointer;
   }
