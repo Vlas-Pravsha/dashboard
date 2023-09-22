@@ -45,12 +45,12 @@
   padding-bottom: 30px;
 }
 .table {
-  border: 1px solid var(--border-color);;
+  border: 1px solid var(--border-color);
   width: 100%;
 }
 
 .th {
-  border: 1px solid var(--border-color);;
+  border: 1px solid var(--border-color);
   text-align: start;
   padding: 5px 0 5px 15px;
   font-size: 18px;
@@ -58,12 +58,12 @@
 }
 
 .tr {
-  border: 1px solid var(--border-color);;
+  border: 1px solid var(--border-color);
   background-color: var(--component-bg);
 }
 
 .td {
-  border: 1px solid var(--border-color);;
+  border: 1px solid var(--border-color);
 
   padding: 5px 0 5px 15px;
   font-size: 14px;
@@ -72,13 +72,13 @@
 .button {
   margin: 20px 20px 0 20px;
   padding: 5px 30px;
-  color: var(--blue);
+  color: var(--link-color-blue);
   border-radius: 15px;
-  box-shadow: 0px 1px 3px 1px var(--blue);
+  box-shadow: 0px 1px 3px 1px var(--link-color-blue);
   font-weight: 500;
   text-transform: uppercase;
   &:hover {
-    background-color: var(--blue);
+    background-color: var(--link-color-blue);
     color: white;
   }
 }

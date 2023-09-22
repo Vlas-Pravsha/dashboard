@@ -7,7 +7,7 @@
   --component-bg: rgb(31, 41, 55);
   --hover-bg: rgba(249, 250, 251, 0.1);
   --ligth-text-color: rgb(156 163 175);
-  --blue: rgba(63, 131, 248, 1);
+  --link-color-blue: rgba(63, 131, 248, 1);
   --dark-blue: rgb(37 99 235);
   --border-color: rgba(229, 231, 235, 0.1);
 }

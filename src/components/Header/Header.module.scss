@@ -55,7 +55,7 @@
   }
   &:focus {
     outline: none;
-    // border: 1px solid var(--blue);
+    // border: 1px solid var( --link-color-blue);
   }
 }
 .glass {
@@ -72,6 +72,6 @@
   align-items: center;
   border-radius: 10px;
   &:hover {
-    border: 1px solid var(--blue);
+    border: 1px solid var(--link-color-blue);
   }
 }

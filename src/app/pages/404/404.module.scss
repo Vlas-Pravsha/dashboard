@@ -29,7 +29,7 @@
 }
 .link {
   text-decoration: none;
-  color: var(--blue);
+  color: var( --link-color-blue);
   &:hover {
     text-decoration: underline;
   }
