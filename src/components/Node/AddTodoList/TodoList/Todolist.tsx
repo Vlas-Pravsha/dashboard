@@ -6,7 +6,7 @@ import Edit from "/Img/NodeImg/pen-solid.svg";
 import Delete from "/Img/NodeImg/trash-solid.svg";
 import Save from "/Img/NodeImg/share-solid.svg";
 import Image from "next/image";
-import CheckBox from "../AddTodoList/CheckBox/CheckBox";
+import CheckBox from "../CheckBox/CheckBox";
 import { v1 } from "uuid";
 
 type Task = {
