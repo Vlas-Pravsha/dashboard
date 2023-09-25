@@ -19,6 +19,7 @@
   font-weight: 500;
   background-color: var(--dark-grey-bg);
   color: var(--ligth-text-color);
+  border-top: 1px solid var(--border-color);
 }
 
 .tr {
@@ -128,7 +129,6 @@
   font-size: 14px;
 }
 .span {
-  color: #fff;
   font-size: 16px;
 }
 .paginationTextWrapper {

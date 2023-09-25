@@ -23,7 +23,7 @@
   border: 2px solid black;
   border-radius: 8px;
   padding: 2px 10px;
-  background-color: rgb(107 114 128);
+  background-color: var(--node-input-bg);
 }
 .error {
   border: 2px solid black;

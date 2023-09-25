@@ -1,11 +1,19 @@
+"use client";
 import Image from "next/image";
 import s from "./Header.module.scss";
-import React from "react";
-
+import React, { useState } from "react";
 import Link from "next/link";
 import Profile from "./Profile/Profile";
+import { changeTheme } from "@/utils";
 
 const Header = () => {
+  const [changeThemeImg, setChangeThemeImg] = useState(false);
+  const toggle = () => setChangeThemeImg(!changeThemeImg);
+  const changeThemeAndIcon = () => {
+    toggle();
+    changeTheme();
+  };
+
   return (
     <div className={s.background}>
       <div className={s.headerWrapper}>
@@ -35,21 +43,26 @@ const Header = () => {
         </div>
         <div className={s.search}></div>
         <div className={s.svgWrap}>
-          <Image
-            src={"/Img/HeaderImg/moon-solid.svg"}
-            alt="Moon"
-            className={s.svg}
-            width="30"
-            height="30"
-          />
-          <Image
-            src={"/Img/HeaderImg/sun-solid.svg"}
-            alt="Sun"
-            className={s.svg}
-            width="30"
-            height="30"
-          />
-      
+          <button onClick={changeThemeAndIcon}>
+            {changeThemeImg ? (
+              <Image
+                src={"/Img/HeaderImg/moon-solid.svg"}
+                alt="Moon"
+                className={s.svg}
+                width="30"
+                height="30"
+              />
+            ) : (
+              <Image
+                src={"/Img/HeaderImg/sun-solid.svg"}
+                alt="Sun"
+                className={s.svg}
+                width="30"
+                height="30"
+              />
+            )}
+          </button>
+
           <Profile />
         </div>
       </div>

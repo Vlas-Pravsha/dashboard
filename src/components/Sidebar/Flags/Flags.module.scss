@@ -10,11 +10,13 @@
   height: 20px;
 }
 .content {
-  background-color: var(--dark-grey-bg);
+  background-color: var(--profile-header-bg);
   border-radius: 10px;
   position: absolute;
   margin-bottom: 260px;
   width: 120px;
+  border-right: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
 }
 .itemWrapper {
   display: flex;

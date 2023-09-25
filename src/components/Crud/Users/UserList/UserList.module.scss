@@ -10,6 +10,7 @@
 .table {
   width: 100%;
   border-bottom: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
 }
 
 .th {
@@ -17,7 +18,7 @@
   padding: 15px;
   font-size: 12px;
   font-weight: 500;
-  background-color: rgb(55 65 81);
+  background-color: var(--dark-grey-bg);
   color: var(--ligth-text-color);
 }
 
@@ -128,7 +129,6 @@
   font-size: 14px;
 }
 .span {
-  color: #fff;
   font-size: 16px;
 }
 .paginationTextWrapper {

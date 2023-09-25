@@ -3,10 +3,11 @@
 }
 .content {
   position: absolute;
-  margin-left: -133px;
-  background-color: var(--dark-grey-bg);
+  margin-left: -140px;
+  background-color: var(--profile-header-bg);
   border-radius: 10px;
   margin-top: 10px;
+  border: 1px solid var(--border-color);
 }
 .profile {
   width: 32px;
@@ -26,18 +27,18 @@
   padding: 15px;
 }
 .title {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
 }
 .email {
   font-size: 14px;
-  color: rgb(209 213 219);
+  color: var(--profile-text-color);
   margin-bottom: 10px;
   font-weight: 600;
 }
 .optionText {
   font-size: 14px;
-  color: rgb(209 213 219);
+  color: var(--profile-text-color);
   padding: 5px 8px;
   &:hover {
     background-color: var(--hover-bg);
