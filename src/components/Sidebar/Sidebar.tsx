@@ -25,7 +25,6 @@ const Sidebar = () => {
       id: v1(),
       href: "",
     },
-
     {
       id: v1(),
       pages: [
@@ -78,25 +77,10 @@ const Sidebar = () => {
                   <div
                     className={`${category === i ? s.active : ""}`}
                     onClick={() => setCategory(i)}
-                  >
-                    <div className={s.item}>
-                      {item.img && (
-                        <Image
-                          src={item.img}
-                          alt={item.mainTitle}
-                          className={s.icon}
-                          width="30"
-                          height="30"
-                        />
-                      )}
-                      {item.mainTitle && (
-                        <p className={s.text}>{item.mainTitle}</p>
-                      )}
-                    </div>
-                  </div>
+                  ></div>
                   {item.pages.map((page) => (
-                    <div key={page.id} className={s.pageWrapper}>
-                      <div className={s.pageItem}>{page.title}</div>
+                    <div className={s.pageItem} key={page.id}>
+                      {page.title}
                     </div>
                   ))}
                 </div>

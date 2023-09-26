@@ -30,8 +30,9 @@ const CrudSelect = ({ crudToggle, crudOpen }: CrudSelectProps) => {
               <Image
                 src="/Img/SideBarImg/news.svg"
                 alt="Crud"
-                height="30"
-                width="30"
+                height="26"
+                width="26"
+                className={s.img}
               />
               <h2 className={s.title}>{item.title}</h2>
             </div>

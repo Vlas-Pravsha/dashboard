@@ -45,21 +45,25 @@ const Header = () => {
         <div className={s.svgWrap}>
           <button onClick={changeThemeAndIcon}>
             {changeThemeImg ? (
-              <Image
-                src={"/Img/HeaderImg/moon-solid.svg"}
-                alt="Moon"
-                className={s.svg}
-                width="30"
-                height="30"
-              />
+              <div className={s.imgWrap}>
+                <Image
+                  src={"/Img/HeaderImg/moon-solid.svg"}
+                  alt="Moon"
+                  className={s.svg}
+                  width="30"
+                  height="30"
+                />
+              </div>
             ) : (
-              <Image
-                src={"/Img/HeaderImg/sun-solid.svg"}
-                alt="Sun"
-                className={s.svg}
-                width="30"
-                height="30"
-              />
+              <div className={s.imgWrap}>
+                <Image
+                  src={"/Img/HeaderImg/sun-solid.svg"}
+                  alt="Sun"
+                  className={s.svg}
+                  width="30"
+                  height="30"
+                />
+              </div>
             )}
           </button>
 

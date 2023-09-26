@@ -22,7 +22,7 @@
   justify-content: center;
   width: 30px;
   height: 30px;
-  background-color: #fff;
+  background-color: var(--button-color-text);
   border-radius: 8px;
   font-size: 16px;
   &:hover {
@@ -39,7 +39,7 @@
   width: 30px;
   height: 30px;
   background-color: #000;
-  color: #fff;
+  color: var(--button-color-text);
   border-radius: 8px;
   font-size: 16px;
   &:hover {

@@ -32,8 +32,8 @@
   justify-content: center;
 }
 .svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 .svgWrap {
   display: flex;
@@ -73,5 +73,16 @@
   border-radius: 10px;
   &:hover {
     border: 1px solid var(--link-color-blue);
+  }
+}
+.imgWrap {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background-color: var(--dark-grey-bg);
+    border-radius: 10px;
   }
 }

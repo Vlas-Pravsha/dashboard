@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 import { v1 } from "uuid";
 import s from "./Profile.module.scss";
@@ -10,10 +11,10 @@ const profileArr = [
     title: "Neil Sims",
     email: "neil.sims@flowbite.com",
     options: [
-      { id: v1(), text: "DashBoard" },
-      { id: v1(), text: "Settings" },
-      { id: v1(), text: "Earnings" },
-      { id: v1(), text: "Sign out" },
+      { id: v1(), text: "DashBoard", href: "/" },
+      { id: v1(), text: "Settings", href: "/setting" },
+      { id: v1(), text: "Earnings", href: "" },
+      { id: v1(), text: "Sign out", href: "" },
     ],
   },
 ];
@@ -42,13 +43,11 @@ const Profile = () => {
               <span className={s.line}></span>
               <div className={s.optionsWrapper}>
                 {item.options.map((option) => (
-                  <div
-                    key={option.id}
-                    className={s.optionText}
-                    onClick={toggle}
-                  >
-                    {option.text}
-                  </div>
+                  <Link href={option.href} key={option.id}>
+                    <div className={s.optionText} onClick={toggle}>
+                      {option.text}
+                    </div>
+                  </Link>
                 ))}
               </div>
             </div>

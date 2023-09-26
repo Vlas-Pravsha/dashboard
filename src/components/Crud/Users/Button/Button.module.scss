@@ -9,7 +9,7 @@
   border-radius: 8px;
   font-weight: 500;
   background-color: rgb(37, 99, 235);
-  color: #fff;
+  color: var(--button-color-text);
   &:hover {
     background-color: rgba(37, 99, 235, 0.7);
   }
@@ -20,7 +20,7 @@
   padding: 8px 12px;
   background-color: var(--component-bg);
   border-radius: 8px;
-  color: #fff;
+  color: var(--button-color-text);
   background-color: rgb(224 36 36);
   &:hover {
     background-color: rgba(224, 36, 36, 0.7);
@@ -30,7 +30,7 @@
 //   font-size: 14px;
 //   font-weight: 500;
 //   padding: 8px 12px;
-//   color: #fff;
+//   color: var(--button-color-text);
 //   border-radius: 8px;
 //   background-color: rgb(37, 99, 235);
 //   &:hover {
@@ -51,7 +51,7 @@
   border-radius: 8px;
   font-weight: 500;
   background-color: rgb(37, 99, 235);
-  color: #fff;
+  color: var(--button-color-text);
   &:hover {
     background-color: rgba(37, 99, 235, 0.7);
   }
@@ -62,7 +62,7 @@
   border-radius: 8px;
   font-weight: 500;
   background-color: rgb(37, 99, 235);
-  color: #fff;
+  color: var(--button-color-text);
   &:hover {
     background-color: rgba(37, 99, 235, 0.7);
   }

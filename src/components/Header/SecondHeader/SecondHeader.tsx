@@ -1,3 +1,5 @@
+"use client";
+import { changeTheme } from "@/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -25,6 +27,12 @@ const SecondHeaderData = [
 ];
 
 const SecondHeader = () => {
+  const [changeThemeImg, setChangeThemeImg] = React.useState(false);
+  const toggle = () => setChangeThemeImg(!changeThemeImg);
+  const changeThemeAndIcon = () => {
+    toggle();
+    changeTheme();
+  };
   return (
     <div className={s.wrapper}>
       <div className={s.content}>
@@ -50,20 +58,25 @@ const SecondHeader = () => {
           </div>
         </div>
         <div className={s.svgWrap}>
-          <Image
-            src={"/Img/HeaderImg/moon-solid.svg"}
-            alt="Moon"
-            className={s.svg}
-            width="30"
-            height="30"
-          />
-          <Image
-            src={"/Img/HeaderImg/sun-solid.svg"}
-            alt="Sun"
-            className={s.svg}
-            width="30"
-            height="30"
-          />
+          <button onClick={changeThemeAndIcon}>
+            {changeThemeImg ? (
+              <Image
+                src={"/Img/HeaderImg/moon-solid.svg"}
+                alt="Moon"
+                className={s.svg}
+                width="30"
+                height="30"
+              />
+            ) : (
+              <Image
+                src={"/Img/HeaderImg/sun-solid.svg"}
+                alt="Sun"
+                className={s.svg}
+                width="30"
+                height="30"
+              />
+            )}
+          </button>
           <Profile />
         </div>
       </div>

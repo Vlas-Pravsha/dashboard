@@ -22,9 +22,9 @@
   border-radius: 20px;
   top: 2px;
   left: 2px;
-  background-color: #fff;
+  background-color: var(--button-color-text);
   transition: 0.1s;
-  border: 1px solid #fff;
+  border: 1px solid var(--button-color-text);
 }
 .checkbox:checked:before {
   left: 22px;

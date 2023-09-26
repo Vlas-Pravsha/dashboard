@@ -31,8 +31,9 @@ const PagesSelect = ({ isOpen, pagesToggle }: PagesSelectProps) => {
             <Image
               src="/Img/PagesImg/pages.svg"
               alt="Pages"
-              height="30"
-              width="30"
+              height="26"
+              width="26"
+              className={s.img}
             />
             <h2 className={s.title}>{item.title}</h2>
           </div>

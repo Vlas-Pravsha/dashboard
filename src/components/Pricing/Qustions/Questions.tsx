@@ -141,7 +141,7 @@ const questionsData = [
     answer: (
       <>
         If you are unhappy with your purchase, just
-        <span className={s.link}>contact us</span> within 30 days and we will
+        <span className={s.link}> contact us</span> within 30 days and we will
         issue a full refund.
       </>
     ),
