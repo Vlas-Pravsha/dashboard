@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { v1 } from "uuid";
 import s from "./CrudSelect.module.scss";
+import { AiOutlineIdcard } from "react-icons/ai";
 
 const crudArr = [
   {
@@ -27,20 +28,14 @@ const CrudSelect = ({ crudToggle, crudOpen }: CrudSelectProps) => {
         {crudArr.map((item) => (
           <div key={item.id} onClick={crudToggle}>
             <div className={s.titleWrapper}>
-              <Image
-                src="/Img/SideBarImg/news.svg"
-                alt="Crud"
-                height="26"
-                width="26"
-                className={s.img}
-              />
+              <AiOutlineIdcard className={s.img} />
               <h2 className={s.title}>{item.title}</h2>
             </div>
             <div className={s.pagesWrapper}>
               {crudOpen &&
                 item.pages.map((page) => (
                   <Link href={page.href} key={page.id} className={s.pageItem}>
-                    {page.title}
+                    <span className={s.title}>{page.title}</span>
                   </Link>
                 ))}
             </div>

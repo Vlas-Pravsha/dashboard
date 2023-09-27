@@ -16,6 +16,7 @@
   --node-input-bg: rgb(107 114 128);
   --button-color-text: rgb(255 255 255);
   --dashboard-hover-color-bg: rgb(75 85 99);
+  --icons-color: rgb(156 163 175);
 }
 
 body {
@@ -25,7 +26,7 @@ body {
   color: #fff;
 }
 body.dark {
-  --nav-text-color: rgb(17 24 39);
+  --nav-text-color: rgba(17, 24, 39, 0.7);
   --ligth-grey-text: rgb(117 114 128);
   --dark-grey-bg: rgb(243 244 246);
   --dark-blue-bg: rgb(249 250 251);
@@ -40,6 +41,7 @@ body.dark {
   --node-input-bg: rgba(229, 231, 235, 1);
   --button-color-text: rgb(255 255 255);
   --dashboard-hover-color-bg: rgb(238, 239, 240);
+  --icons-color: rgb(107 114 128);
   color: #000;
 }
 

@@ -34,6 +34,7 @@
 .svg {
   width: 18px;
   height: 18px;
+  color: var(--icons-color);
 }
 .svgWrap {
   display: flex;
@@ -59,9 +60,10 @@
   }
 }
 .glass {
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
   margin-right: 12px;
+  color: var(--icons-color);
 }
 .searchGlass {
   padding: 8px 10px;

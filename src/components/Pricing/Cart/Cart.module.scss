@@ -25,6 +25,12 @@
   color: var(--ligth-text-color);
   font-size: 18px;
 }
+.icon {
+  width: 20px;
+  height: 20px;
+  color: rgb(49 196 141);
+}
+
 .price {
   font-size: 48px;
   font-weight: 700;
@@ -42,6 +48,7 @@
 }
 .option {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 .optionText {

@@ -3,6 +3,8 @@ import { changeTheme } from "@/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { BsMoonFill } from "react-icons/bs";
+import { FaSun } from "react-icons/fa";
 import { v1 } from "uuid";
 import Profile from "../Profile/Profile";
 import s from "./SecondHeader.module.scss";
@@ -60,21 +62,13 @@ const SecondHeader = () => {
         <div className={s.svgWrap}>
           <button onClick={changeThemeAndIcon}>
             {changeThemeImg ? (
-              <Image
-                src={"/Img/HeaderImg/moon-solid.svg"}
-                alt="Moon"
-                className={s.svg}
-                width="30"
-                height="30"
-              />
+              <div className={s.imgWrap}>
+                <BsMoonFill className={s.svg} />
+              </div>
             ) : (
-              <Image
-                src={"/Img/HeaderImg/sun-solid.svg"}
-                alt="Sun"
-                className={s.svg}
-                width="30"
-                height="30"
-              />
+              <div className={s.imgWrap}>
+                <FaSun className={s.svg} />
+              </div>
             )}
           </button>
           <Profile />

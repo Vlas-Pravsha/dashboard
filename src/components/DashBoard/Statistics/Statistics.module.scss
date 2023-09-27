@@ -67,3 +67,14 @@
   font-weight: 500;
   color: var(--link-color-blue);
 }
+.lastTextWrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  line-height: 22px;
+}
+.chevronDown {
+  width: 20px;
+  height: 20px;
+  color: var(--ligth-text-color);
+}

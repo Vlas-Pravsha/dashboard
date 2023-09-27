@@ -1,6 +1,13 @@
 import Image from "next/image";
 import React from "react";
 import s from "./Footer.module.scss";
+import {
+  BsFacebook,
+  BsGithub,
+  BsInstagram,
+  BsTwitter,
+  BsLinkedin,
+} from "react-icons/bs";
 
 const footerData = [
   { id: 1, value: "Terms and conditions" },
@@ -12,23 +19,23 @@ const footerData = [
 const footerDataImg = [
   {
     id: 1,
-    Img: "/Img/FooterImg/github.svg",
+    Img: <BsGithub className={s.img} />,
   },
   {
     id: 2,
-    Img: "/Img/FooterImg/twitter.svg",
+    Img: <BsTwitter className={s.img} />,
   },
   {
     id: 3,
-    Img: "/Img/FooterImg/linkedIn-in.svg",
+    Img: <BsLinkedin className={s.img} />,
   },
   {
     id: 4,
-    Img: "/Img/FooterImg/facebook-f.svg",
+    Img: <BsFacebook className={s.img} />,
   },
   {
     id: 5,
-    Img: "/Img/FooterImg/instagram.svg",
+    Img: <BsInstagram className={s.img} />,
   },
 ];
 
@@ -45,13 +52,7 @@ const Footer = () => {
       <div className={s.imgWrapper}>
         {footerDataImg.map((item) => (
           <div key={item.id}>
-            <Image
-              src={item.Img}
-              alt="Img"
-              className={s.img}
-              width="30"
-              height="30"
-            />
+            <span>{item.Img}</span>
           </div>
         ))}
       </div>

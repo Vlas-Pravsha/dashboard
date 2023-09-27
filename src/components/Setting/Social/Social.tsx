@@ -1,34 +1,39 @@
 import React from "react";
 import Button from "../Button/Button";
 import s from "./Social.module.scss";
-import Image from "next/image";
+import {
+  AiOutlineTwitter,
+  AiOutlineGithub,
+  AiFillLinkedin,
+} from "react-icons/ai";
+import { LiaFacebookF } from "react-icons/lia";
 
 const socialData = [
   {
     id: 1,
     value: "GitHub account",
-    img: "/Img/FooterImg/github.svg",
+    img: <AiOutlineGithub className={s.img} />,
     link: "www.github.com/themesberg",
     status: true,
   },
   {
     id: 2,
     value: "Twitter account",
-    img: "/Img/FooterImg/twitter.svg",
+    img: <AiOutlineTwitter className={s.img} />,
     link: "www.twitter.com/themesberg",
     status: true,
   },
   {
     id: 3,
     value: "LinkedIn account",
-    img: "/Img/FooterImg/linkedIn-in.svg",
+    img: <AiFillLinkedin className={s.img} />,
     link: "www.linkedin.com/themesberg",
     status: false,
   },
   {
     id: 4,
     value: "Facebook account",
-    img: "/Img/FooterImg/facebook-f.svg",
+    img: <LiaFacebookF className={s.img} />,
     link: "www.facebook.com/themesberg",
     status: false,
   },
@@ -42,13 +47,7 @@ const Social = () => {
         {socialData.map((item) => (
           <div key={item.id} className={s.cart}>
             <div className={s.content}>
-              <Image
-                src={item.img}
-                alt={item.value}
-                className={s.img}
-                width="30"
-                height="30"
-              />
+              <span>{item.img}</span>
               <div className={s.textWrapper}>
                 <div className={s.title}>{item.value}</div>
                 {item.status ? (

@@ -5,7 +5,9 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Profile from "./Profile/Profile";
 import { changeTheme } from "@/utils";
-
+import { BsMoonFill } from "react-icons/bs";
+import { FaSun } from "react-icons/fa";
+import { AiOutlineSearch } from "react-icons/ai";
 const Header = () => {
   const [changeThemeImg, setChangeThemeImg] = useState(false);
   const toggle = () => setChangeThemeImg(!changeThemeImg);
@@ -31,13 +33,7 @@ const Header = () => {
             </div>
           </Link>
           <div className={s.searchGlass}>
-            <Image
-              src={"/Img/HeaderImg/glass.svg"}
-              alt="Glass"
-              className={s.glass}
-              width="30"
-              height="30"
-            />
+            <AiOutlineSearch className={s.glass} />
             <input type="text" className={s.input} placeholder="Search" />
           </div>
         </div>
@@ -46,23 +42,11 @@ const Header = () => {
           <button onClick={changeThemeAndIcon}>
             {changeThemeImg ? (
               <div className={s.imgWrap}>
-                <Image
-                  src={"/Img/HeaderImg/moon-solid.svg"}
-                  alt="Moon"
-                  className={s.svg}
-                  width="30"
-                  height="30"
-                />
+                <BsMoonFill className={s.svg} />
               </div>
             ) : (
               <div className={s.imgWrap}>
-                <Image
-                  src={"/Img/HeaderImg/sun-solid.svg"}
-                  alt="Sun"
-                  className={s.svg}
-                  width="30"
-                  height="30"
-                />
+                <FaSun className={s.svg} />
               </div>
             )}
           </button>

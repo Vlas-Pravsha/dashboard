@@ -1,6 +1,6 @@
 "use client";
-import Image from "next/image";
 import React from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Button from "../../Users/Button/Button";
 import CheckBox from "../../Users/CheckBox/CheckBox";
 import Input from "../../Users/Input/Input";
@@ -101,20 +101,8 @@ const ProductsList = ({ productsData }: ProductListProps) => {
       </table>
       <div className={s.paginationWrapper}>
         <div className={s.paginationTextWrapper}>
-          <Image
-            src={"/Img/UsersImg/chevron-left-solid.svg"}
-            alt="Left"
-            className={s.back}
-            width="30"
-            height="30"
-          />
-          <Image
-            src={"/Img/UsersImg/chevron-right-solid.svg"}
-            alt="Right"
-            className={s.to}
-            width="30"
-            height="30"
-          />
+          <FaChevronLeft className={s.back} />
+          <FaChevronRight className={s.to} />
           <div className={s.text}>
             Showing <span className={s.span}>1-20 </span>of
             <span className={s.span}> 2290</span>

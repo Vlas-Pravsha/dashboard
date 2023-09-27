@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { MdOutlineDone } from "react-icons/md";
 import { v1 } from "uuid";
 import Button from "./Button/Button";
 import s from "./Cart.module.scss";
@@ -58,12 +59,7 @@ const Cart = () => {
           <div className={s.options}>
             {item.options.map((option) => (
               <div className={s.option} key={option.id}>
-                <Image
-                  src="/Img/PagesImg/chevron-green.svg"
-                  alt="Checked"
-                  height="20"
-                  width="20"
-                />
+                <MdOutlineDone className={s.icon} />
                 <span className={s.optionText}>{option.text}</span>
               </div>
             ))}

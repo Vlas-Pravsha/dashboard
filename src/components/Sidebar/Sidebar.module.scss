@@ -38,10 +38,6 @@
   background-color: var(--hover-bg);
   border-radius: 10px;
 }
-.icon {
-  width: 26px;
-  height: 26px;
-}
 .bursIcon {
   width: 26px;
   height: 26px;
@@ -86,4 +82,30 @@
 .svgWrap {
   display: flex;
   gap: 35px;
+}
+.titleWrapper {
+  margin-top: 20px;
+  padding: 8px 10px;
+  display: flex;
+  gap: 10px;
+  &:hover {
+    background-color: var(--hover-bg);
+    cursor: pointer;
+    border-radius: 10px;
+  }
+}
+.icon {
+  width: 26px;
+  height: 26px;
+  color: var(--icons-color);
+}
+.iconGit {
+  height: 24px;
+  width: 24px;
+  color: var(--icons-color);
+}
+.footerImg {
+  height: 24px;
+  width: 24px;
+  color: var(--icons-color);
 }

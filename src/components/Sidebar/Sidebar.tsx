@@ -7,8 +7,11 @@ import Image from "../../../node_modules/next/image";
 import Flags from "./Flags/Flags";
 import CrudSelect from "./CrudSelect/CrudSelect";
 import PagesSelect from "./PagesSelect/PagesSelect";
-
-const sp = "/Img/SideBarImg/";
+import { MdDashboardCustomize } from "react-icons/md";
+import { BiNotepad } from "react-icons/bi";
+import { IoMdSettings } from "react-icons/io";
+import { BsGithub } from "react-icons/bs";
+import { AiOutlineBars } from "react-icons/ai";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -21,7 +24,7 @@ const Sidebar = () => {
   const sidebar = [
     {
       mainTitle: "Dashboard",
-      img: sp + "dashboard.svg",
+      img: <MdDashboardCustomize className={s.icon} />,
       id: v1(),
       href: "",
     },
@@ -34,20 +37,12 @@ const Sidebar = () => {
         },
       ],
     },
-
     {
       mainTitle: "Node ",
-      img: sp + "transactions.svg",
+      img: <BiNotepad className={s.icon} />,
       id: v1(),
       href: "node ",
     },
-    {
-      mainTitle: "Collections",
-      img: sp + "performance.svg",
-      id: v1(),
-      href: "collections",
-    },
-
     {
       id: v1(),
       pages: [
@@ -59,7 +54,7 @@ const Sidebar = () => {
     },
 
     {
-      img: sp + "settings.svg",
+      img: <IoMdSettings className={s.icon} />,
       id: v1(),
       mainTitle: "Setting",
       href: "setting",
@@ -94,15 +89,8 @@ const Sidebar = () => {
                       onClick={() => setCategory(i)}
                     >
                       <div className={s.item}>
-                        {item.img && (
-                          <Image
-                            src={item.img}
-                            alt={item.mainTitle}
-                            className={s.icon}
-                            width="30"
-                            height="30"
-                          />
-                        )}
+                        <span>{item.img}</span>
+
                         {item.mainTitle && (
                           <p className={s.text}>{item.mainTitle}</p>
                         )}
@@ -114,21 +102,15 @@ const Sidebar = () => {
             }
           })}
         </div>
+        <div className={s.titleWrapper}>
+          <BsGithub className={s.iconGit} />
+          <span className={s.text}>GitHub Repository</span>
+        </div>
         <div className={s.footer}>
           <div className={s.svgWrap}>
-            <Image
-              height="26"
-              width="26"
-              src="/Img/SideBarImg/params.svg"
-              alt="Logo"
-            />
+            <AiOutlineBars className={s.footerImg} />
             <Link href="/setting">
-              <Image
-                height="26"
-                width="26"
-                src="/Img/SideBarImg/setting-bottom.svg"
-                alt="Logo"
-              />
+              <IoMdSettings className={s.footerImg} />
             </Link>
             <Flags />
           </div>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { v1 } from "uuid";
 import s from "./PagesSelect.module.scss";
+import { LuFileSpreadsheet } from "react-icons/lu";
 
 const pagesArr = [
   {
@@ -28,20 +29,14 @@ const PagesSelect = ({ isOpen, pagesToggle }: PagesSelectProps) => {
       {pagesArr.map((item) => (
         <div key={item.id} onClick={pagesToggle}>
           <div className={s.titleWrapper}>
-            <Image
-              src="/Img/PagesImg/pages.svg"
-              alt="Pages"
-              height="26"
-              width="26"
-              className={s.img}
-            />
+            <LuFileSpreadsheet className={s.img} />
             <h2 className={s.title}>{item.title}</h2>
           </div>
           <div className={s.pagesWrapper}>
             {isOpen &&
               item.pages.map((page) => (
                 <Link href={page.href} key={page.id} className={s.pageItem}>
-                  {page.title}
+                  <span className={s.title}>{page.title}</span>
                 </Link>
               ))}
           </div>

@@ -2,6 +2,8 @@ import Image from "next/image";
 import React from "react";
 import { v1 } from "uuid";
 import s from "./Table.module.scss";
+import { MdOutlineDone } from "react-icons/md";
+import { IoClose } from "react-icons/io5";
 const tableData = [
   {
     id: v1(),
@@ -103,63 +105,27 @@ const Table = () => {
                 </td>
                 <td>
                   {item.Freelancer === "active" ? (
-                    <Image
-                      src="/Img/PagesImg/chevron-green.svg"
-                      alt="Img"
-                      width={20}
-                      height={20}
-                      className={s.img}
-                    />
+                    <MdOutlineDone className={s.icon} />
                   ) : item.Freelancer === "disabled" ? (
-                    <Image
-                      src="/Img/PagesImg/chevron-red.svg"
-                      alt="Img"
-                      width={20}
-                      height={20}
-                      className={s.img}
-                    />
+                    <IoClose className={s.close} />
                   ) : (
                     <div className={s.usersText}>{item.Freelancer}</div>
                   )}
                 </td>
                 <td>
                   {item.Company === "active" ? (
-                    <Image
-                      src="/Img/PagesImg/chevron-green.svg"
-                      alt="Img"
-                      width={20}
-                      height={20}
-                      className={s.img}
-                    />
+                    <MdOutlineDone className={s.icon} />
                   ) : item.Company === "disabled" ? (
-                    <Image
-                      src="/Img/PagesImg/chevron-red.svg"
-                      alt="Img"
-                      width={20}
-                      height={20}
-                      className={s.img}
-                    />
+                    <IoClose className={s.close} />
                   ) : (
                     <div className={s.usersText}>{item.Company}</div>
                   )}
                 </td>
                 <td className={s.borderRadiousRight}>
                   {item.Enterprise === "active" ? (
-                    <Image
-                      src="/Img/PagesImg/chevron-green.svg"
-                      alt="Img"
-                      width={20}
-                      height={20}
-                      className={s.img}
-                    />
+                    <MdOutlineDone className={s.icon} />
                   ) : item.Enterprise === "disabled" ? (
-                    <Image
-                      src="/Img/PagesImg/chevron-red.svg"
-                      alt="Img"
-                      width={20}
-                      height={20}
-                      className={s.img}
-                    />
+                    <IoClose className={s.close} />
                   ) : (
                     <div className={s.usersText}>{item.Enterprise}</div>
                   )}

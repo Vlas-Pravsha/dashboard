@@ -23,8 +23,8 @@
   }
 }
 .img {
-  width: 20px;
-  height: 20px;
+  font-size: 18px;
+  color: var(--icons-color);
   &:hover {
     cursor: pointer;
   }

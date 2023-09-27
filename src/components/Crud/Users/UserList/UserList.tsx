@@ -7,6 +7,7 @@ import s from "./UserList.module.scss";
 import Input from "../Input/Input";
 import CheckBox from "../CheckBox/CheckBox";
 import ModalDelete from "../ModalDelete/ModalDelete";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 type UserItem = {
   id: number;
@@ -108,20 +109,8 @@ const UserList = ({ usersData }: UserListProps) => {
       </table>
       <div className={s.paginationWrapper}>
         <div className={s.paginationTextWrapper}>
-          <Image
-            src={"/Img/UsersImg/chevron-left-solid.svg"}
-            alt="Left"
-            className={s.back}
-            width="30"
-            height="30"
-          />
-          <Image
-            src={"/Img/UsersImg/chevron-right-solid.svg"}
-            alt="Right"
-            className={s.to}
-            width="30"
-            height="30"
-          />
+          <FaChevronLeft className={s.back} />
+          <FaChevronRight className={s.to} />
           <div className={s.text}>
             Showing <span className={s.span}>1-20 </span>of
             <span className={s.span}> 2290</span>
