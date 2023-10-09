@@ -17,40 +17,36 @@ const Password = () => {
   };
 
   return (
-    <div className={s.wrapper}>
+    <form className={s.wrapper} onSubmit={handleSubmit(onSubmit)}>
       <h2 className={s.title}>Password information</h2>
       <div className={s.lineWrapper}>
         <Label
           title="Current password"
           text="Tip"
           errorText="Invalid password"
-          hasError={errors.Name}
+          hasError={errors.Current}
         >
           <Input
             hasError={errors.Current}
             placeholder="********"
+            type="password"
             {...register("Current", {
               required: true,
-              maxLength: 20,
-              minLength: 2,
-              pattern: /[a-zA-Z]+/g,
             })}
           />
         </Label>
         <Label
           errorText="Invalid password"
-          hasError={errors.Sername}
+          hasError={errors.New}
           text="Tip"
           title="New password"
         >
           <Input
+            type="password"
             hasError={errors.New}
             placeholder="********"
             {...register("New", {
               required: true,
-              maxLength: 20,
-              minLength: 2,
-              pattern: /[a-zA-Z]+/g,
             })}
           />
         </Label>
@@ -58,25 +54,23 @@ const Password = () => {
       <div className={s.hiddenWrapper}>
         <Label
           errorText="Invalid password"
-          hasError={errors.Sername}
+          hasError={errors.Confirm}
           text="Tip"
           title="Confirm password"
         >
           <Input
+            type="password"
             hasError={errors.Confirm}
             placeholder="********"
             {...register("Confirm", {
               required: true,
-              maxLength: 20,
-              minLength: 2,
-              pattern: /[a-zA-Z]+/g,
             })}
           />
         </Label>
         <div className={s.hiddenElement}></div>
       </div>
       <Button>Save all</Button>
-    </div>
+    </form>
   );
 };
 

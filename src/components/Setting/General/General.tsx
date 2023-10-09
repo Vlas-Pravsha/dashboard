@@ -50,7 +50,7 @@ const General = () => {
   };
 
   return (
-    <div onSubmit={handleSubmit(onSubmit)} className={s.wrapper}>
+    <form className={s.wrapper} onSubmit={handleSubmit(onSubmit)}>
       <h2 className={s.title}>General information</h2>
       <div className={s.lineWrapper}>
         <Label
@@ -172,9 +172,6 @@ const General = () => {
             placeholder="e.g. +1 123 456 7890"
             {...register("Number", {
               required: true,
-              maxLength: 20,
-              minLength: 2,
-              pattern: /[a-zA-Z]+/g,
             })}
           />
         </Label>
@@ -186,12 +183,10 @@ const General = () => {
         >
           <Input
             hasError={errors.Birthday}
-            placeholder="01/01/2000"
+            placeholder="01/21/2000"
             {...register("Birthday", {
               required: true,
-              maxLength: 20,
-              minLength: 2,
-              pattern: /[a-zA-Z]+/g,
+              pattern: /^(0[1-9]|1[0-2])\/(0[1-9]|[1-2][0-9]|3[0-1])\/\d{4}$/,
             })}
           />
         </Label>
@@ -261,15 +256,12 @@ const General = () => {
             placeholder="Green"
             {...register("Сode", {
               required: true,
-              maxLength: 20,
-              minLength: 2,
-              pattern: /[a-zA-Z]+/g,
             })}
           />
         </Label>
       </div>
       <Button>Save all</Button>
-    </div>
+    </form>
   );
 };
 

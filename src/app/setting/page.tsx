@@ -13,18 +13,14 @@ import Footer from "@/components/Footer/Footer";
 
 const Setting = () => {
   return (
-    <>
+    <div className={s.mainWrapper}>
       <div className={s.wrapper}>
         <h2 className={s.title}>User settings</h2>
         <div className={s.contentWrapper}>
           <div className={s.q}>
             <Profile></Profile>
-            <div>
               <Time></Time>
-            </div>
-            <div>
               <Social></Social>
-            </div>
             <Accounts></Accounts>
           </div>
           <div className={s.p}>
@@ -37,7 +33,7 @@ const Setting = () => {
       <Notifications></Notifications>
       <Footer></Footer>
       <div className={s.footerText}>© 2023 Dashboard.com. My Best Project.</div>
-    </>
+    </div>
   );
 };
 

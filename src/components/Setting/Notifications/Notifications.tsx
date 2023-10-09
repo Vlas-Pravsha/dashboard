@@ -60,7 +60,7 @@ const Notifications = () => {
   return (
     <div className={s.wrapper}>
       <div className={s.cart}>
-        <div>
+        <div className={s.test}>
           <h2 className={s.title}>Alerts & Notifications</h2>
           <span className={s.span}>
             You can set up Themesberg to get notifications
@@ -82,7 +82,7 @@ const Notifications = () => {
         <Button>Save all</Button>
       </div>
       <div className={s.cart}>
-        <div>
+        <div className={s.test}>
           <h2 className={s.title}>Email Notifications</h2>
           <span className={s.span}>
             You can set up Themesberg to get email notifications

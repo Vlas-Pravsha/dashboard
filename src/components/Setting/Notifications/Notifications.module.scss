@@ -1,9 +1,8 @@
 .wrapper {
-  width: calc(100% - 40px);
+  width: 100%;
   display: flex;
   gap: 15px;
-  margin-left: 20px;
-  margin-bottom: 25px;
+  margin: 15px 0;
 }
 .cart {
   width: 100%;
@@ -29,4 +28,9 @@
   align-items: center;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--border-color);
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }

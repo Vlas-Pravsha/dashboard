@@ -1,6 +1,7 @@
-.wrapper {
+.mainWrapper {
   padding: 20px;
-  width: 100%;
+}
+.wrapper {
 }
 .contentWrapper {
   display: flex;
@@ -24,5 +25,8 @@
   margin: 30px 0;
 }
 .p {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
   width: 100%;
 }

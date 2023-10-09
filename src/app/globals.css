@@ -52,7 +52,7 @@ body.dark {
   grid-template-areas:
     "h h"
     "n c";
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 260px 1fr;
 }
 
 .app {
@@ -64,7 +64,15 @@ body.dark {
 .nav {
   grid-area: n;
 }
-
 .header {
   grid-area: h;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-areas:
+      "h h"
+      "n c";
+    grid-template-columns: 21px 1fr;
+  }
 }

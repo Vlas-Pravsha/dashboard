@@ -88,3 +88,34 @@
     border-radius: 10px;
   }
 }
+.svgBackground {
+  display: none;
+}
+.svgClose {
+  width: 22px;
+  height: 22px;
+}
+.svgOpen {
+  width: 22px;
+  height: 22px;
+}
+@media (max-width: 1024px) {
+  .svgBackground {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dark-grey-bg);
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+  }
+  .searchGlass {
+    display: none;
+  }
+  .gap {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+  }
+}

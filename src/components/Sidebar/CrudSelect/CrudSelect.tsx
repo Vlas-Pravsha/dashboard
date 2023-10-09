@@ -29,7 +29,7 @@ const CrudSelect = ({ crudToggle, crudOpen }: CrudSelectProps) => {
           <div key={item.id} onClick={crudToggle}>
             <div className={s.titleWrapper}>
               <AiOutlineIdcard className={s.img} />
-              <h2 className={s.title}>{item.title}</h2>
+              <h2 className={s.mainTitle}>{item.title}</h2>
             </div>
             <div className={s.pagesWrapper}>
               {crudOpen &&

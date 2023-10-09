@@ -8,8 +8,17 @@ import { changeTheme } from "@/utils";
 import { BsMoonFill } from "react-icons/bs";
 import { FaSun } from "react-icons/fa";
 import { AiOutlineSearch } from "react-icons/ai";
-const Header = () => {
+import { HiMenuAlt1 } from "react-icons/hi";
+import { MdOutlineClose } from "react-icons/md";
+import Sidebar from "../Sidebar/Sidebar";
+
+interface HeaderProps {
+  navOpen?: boolean;
+  navToggle?: () => void;
+}
+const Header = ({ navOpen, navToggle }: HeaderProps) => {
   const [changeThemeImg, setChangeThemeImg] = useState(false);
+
   const toggle = () => setChangeThemeImg(!changeThemeImg);
   const changeThemeAndIcon = () => {
     toggle();
@@ -20,6 +29,19 @@ const Header = () => {
     <div className={s.background}>
       <div className={s.headerWrapper}>
         <div className={s.gap}>
+          {navOpen ? (
+            <>
+              <div onClick={navToggle} className={s.svgBackground}>
+                <MdOutlineClose className={s.svgClose} />
+              </div>
+            </>
+          ) : (
+            <>
+              <div onClick={navToggle} className={s.svgBackground}>
+                <HiMenuAlt1 className={s.svgOpen} />
+              </div>
+            </>
+          )}
           <Link href="/">
             <div className={s.headerTitleWrap}>
               <Image

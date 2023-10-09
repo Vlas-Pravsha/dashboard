@@ -4,6 +4,7 @@ import s from "./DashBoard.module.scss";
 import Footer from "../Footer/Footer";
 import Statistics from "./Statistics/Statistics";
 import { v1 } from "uuid";
+import LineChart from "./LineChart/LineChart";
 
 const DashBoard = ({ mapedData, customersArr }: any) => {
   const [activeItem, setActiveItem] = React.useState("Coins");
@@ -26,11 +27,14 @@ const DashBoard = ({ mapedData, customersArr }: any) => {
   ];
   return (
     <div className={s.wrapper}>
-      <Statistics
-        itemList={itemList}
-        activeItem={activeItem}
-        setActiveItem={setActiveItem}
-      />
+      <div className={s.q}>
+        <LineChart />
+        <Statistics
+          itemList={itemList}
+          activeItem={activeItem}
+          setActiveItem={setActiveItem}
+        />
+      </div>
       <Footer />
     </div>
   );

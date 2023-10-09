@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import { v1 } from "uuid";
-import Link from "../../../node_modules/next/link";
+import Link from "next/link";
 import s from "./Sidebar.module.scss";
-import Image from "../../../node_modules/next/image";
+import Image from "next/image";
 import Flags from "./Flags/Flags";
 import CrudSelect from "./CrudSelect/CrudSelect";
 import PagesSelect from "./PagesSelect/PagesSelect";
@@ -13,7 +13,10 @@ import { IoMdSettings } from "react-icons/io";
 import { BsGithub } from "react-icons/bs";
 import { AiOutlineBars } from "react-icons/ai";
 
-const Sidebar = () => {
+interface SidebarProps {
+  navOpen?: boolean;
+}
+const Sidebar = ({ navOpen }: SidebarProps) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [crudOpen, setCrudOpen] = React.useState(false);
   const [category, setCategory] = React.useState(0);
@@ -62,61 +65,63 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className={s.background}>
-      <div className={s.wrapper}>
-        <div className={s.gap}>
-          {sidebar.map((item, i) => {
-            if (item.pages && item.pages.length) {
-              return (
-                <div key={item.id} className={s.content}>
-                  <div
-                    className={`${category === i ? s.active : ""}`}
-                    onClick={() => setCategory(i)}
-                  ></div>
-                  {item.pages.map((page) => (
-                    <div className={s.pageItem} key={page.id}>
-                      {page.title}
-                    </div>
-                  ))}
-                </div>
-              );
-            } else {
-              return (
-                <div key={item.id} className={s.content}>
-                  <Link href={`/${item.href}`}>
+    <>
+      <div className={`${navOpen ? s.backgroundClose : s.background}`}>
+        <div className={s.wrapper}>
+          <div className={s.gap}>
+            {sidebar.map((item, i) => {
+              if (item.pages && item.pages.length) {
+                return (
+                  <div key={item.id} className={s.content}>
                     <div
                       className={`${category === i ? s.active : ""}`}
                       onClick={() => setCategory(i)}
-                    >
-                      <div className={s.item}>
-                        <span>{item.img}</span>
-
-                        {item.mainTitle && (
-                          <p className={s.text}>{item.mainTitle}</p>
-                        )}
+                    ></div>
+                    {item.pages.map((page) => (
+                      <div className={s.pageItem} key={page.id}>
+                        {page.title}
                       </div>
-                    </div>
-                  </Link>
-                </div>
-              );
-            }
-          })}
-        </div>
-        <div className={s.titleWrapper}>
-          <BsGithub className={s.iconGit} />
-          <span className={s.text}>GitHub Repository</span>
-        </div>
-        <div className={s.footer}>
-          <div className={s.svgWrap}>
-            <AiOutlineBars className={s.footerImg} />
-            <Link href="/setting">
-              <IoMdSettings className={s.footerImg} />
-            </Link>
-            <Flags />
+                    ))}
+                  </div>
+                );
+              } else {
+                return (
+                  <div key={item.id} className={s.content}>
+                    <Link href={`/${item.href}`}>
+                      <div
+                        className={`${category === i ? s.active : ""}`}
+                        onClick={() => setCategory(i)}
+                      >
+                        <div className={s.item}>
+                          <span>{item.img}</span>
+
+                          {item.mainTitle && (
+                            <p className={s.text}>{item.mainTitle}</p>
+                          )}
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+                );
+              }
+            })}
+          </div>
+          <div className={s.titleWrapper}>
+            <BsGithub className={s.iconGit} />
+            <span className={s.text}>GitHub Repository</span>
+          </div>
+          <div className={s.footer}>
+            <div className={s.svgWrap}>
+              <AiOutlineBars className={s.footerImg} />
+              <Link href="/setting">
+                <IoMdSettings className={s.footerImg} />
+              </Link>
+              <Flags />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

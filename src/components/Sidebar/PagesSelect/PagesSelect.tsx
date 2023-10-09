@@ -30,7 +30,7 @@ const PagesSelect = ({ isOpen, pagesToggle }: PagesSelectProps) => {
         <div key={item.id} onClick={pagesToggle}>
           <div className={s.titleWrapper}>
             <LuFileSpreadsheet className={s.img} />
-            <h2 className={s.title}>{item.title}</h2>
+            <h2 className={s.mainTitle}>{item.title}</h2>
           </div>
           <div className={s.pagesWrapper}>
             {isOpen &&

@@ -10,7 +10,7 @@ const Pricing = () => {
   return (
     <div className={s.wrapper}>
       <SecondHeader />
-      <div className={s.content}>
+      <div className={s.container}>
         <h2 className={s.title}>Our pricing plan made simple</h2>
         <p className={s.description}>
           All types of businesses need access to development resources, so we

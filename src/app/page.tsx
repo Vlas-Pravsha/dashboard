@@ -4,6 +4,7 @@ import Header from "@/components/Header/Header";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import "./globals.css";
 import { getCryptoCoins } from "@/api/getCryptoCoins";
+import SideBarOpen from "@/components/Header/SideBarOpen/SideBarOpen";
 const Avatar1 = "/Img/UsersImg/neil-sims.png";
 const Avatar2 = "/Img/UsersImg/jese-leos.png";
 const Avatar3 = "/Img/UsersImg/lana-byrd.png";
@@ -59,17 +60,5 @@ export default async function Home() {
     price: item.RAW.USD.PRICE.toFixed(2),
   }));
 
-  return (
-    <div className="container">
-      <div className="header">
-        <Header />
-      </div>
-      <div className="app">
-        <DashBoard mapedData={mapedData} customersArr={customersArr} />
-      </div>
-      <div className="nav">
-        <Sidebar />
-      </div>
-    </div>
-  );
+  return <SideBarOpen customersArr={customersArr} mapedData={mapedData} />;
 }

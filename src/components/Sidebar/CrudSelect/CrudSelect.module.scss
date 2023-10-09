@@ -1,12 +1,12 @@
 .pagesWrapper {
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 .title {
   font-size: 16px;
   font-weight: 500;
   color: var(--nav-text-color);
+  margin-left: 36px;
 }
 .titleWrapper {
   display: flex;
@@ -20,6 +20,7 @@
   }
 }
 .pageItem {
+  margin-top: 10px;
   padding: 8px 10px;
   &:hover {
     background-color: var(--hover-bg);
@@ -31,4 +32,9 @@
   height: 26px;
   width: 26px;
   color: var(--icons-color);
+}
+.mainTitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--nav-text-color);
 }

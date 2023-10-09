@@ -1,5 +1,6 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import s from "./Accounts.module.scss";
 import Button from "../Button/Button";
 
@@ -39,11 +40,23 @@ const usersData = [
 ];
 
 const Accounts = () => {
+  const [userStatus, setUserStatus] = useState(
+    usersData.map((user) => ({ id: user.id, status: user.status }))
+  );
+
+  const handleChangeStatus = (userId: number) => {
+    setUserStatus((prevStatus) =>
+      prevStatus.map((user) =>
+        user.id === userId ? { ...user, status: !user.status } : user
+      )
+    );
+  };
+
   return (
     <div className={s.wrapper}>
       <h2 className={s.title}>Other accounts</h2>
       <div className={s.content}>
-        {usersData.map((user) => {
+        {usersData.map((user, index) => {
           return (
             <div key={user.id} className={s.cart}>
               <div className={s.avatarWrapper}>
@@ -60,10 +73,20 @@ const Accounts = () => {
                   <span className={s.visited}>{user.visited}</span>
                 </div>
               </div>
-              {user.status ? (
-                <Button type="third">Connect</Button>
+              {userStatus[index].status ? (
+                <Button
+                  type="third"
+                  onClick={() => handleChangeStatus(user.id)}
+                >
+                  Connect
+                </Button>
               ) : (
-                <Button type="secondary">Disconnect</Button>
+                <Button
+                  type="secondary"
+                  onClick={() => handleChangeStatus(user.id)}
+                >
+                  Disconnect
+                </Button>
               )}
             </div>
           );

@@ -1,13 +1,14 @@
 .background {
-  width: 260px;
+  width: 100%;
   height: 100%;
 }
 .wrapper {
-  height: 1280px;
+  top: 71px;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   padding: 30px 15px 30px 15px;
-  min-width: 260px;
+  width: 260px;
   border-right: 1px solid var(--border-color);
   background-color: var(--component-bg);
   position: fixed;
@@ -108,4 +109,12 @@
   height: 24px;
   width: 24px;
   color: var(--icons-color);
+}
+@media (max-width: 1024px) {
+  .backgroundClose {
+    display: none;
+  }
+  .wrapper {
+    top: 69px;
+  }
 }
