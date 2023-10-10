@@ -1,6 +1,6 @@
 .button {
   padding: 15px;
-  width: 315px;
+  width: 100%;
   background-color: var(--dark-grey-bg);
   border-top-left-radius: 10px;
   font-size: 14px;
@@ -11,7 +11,7 @@
 }
 .secondary {
   padding: 15px;
-  width: 315px;
+  width: 100%;
   border-top-right-radius: 10px;
   background-color: var(--dark-grey-bg);
   border-left: 1px solid var(--border-color);

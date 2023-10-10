@@ -1,0 +1,33 @@
+.paginationWrapper {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  margin: 15px 15px 15px 30px;
+}
+.back {
+  width: 16px;
+  height: 16px;
+  color: var(--icons-color);
+}
+.to {
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+  color: var(--icons-color);
+}
+.text {
+  color: var(--ligth-text-color);
+  font-size: 14px;
+}
+.span {
+  font-size: 16px;
+}
+.paginationTextWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.buttonWrapper {
+  display: flex;
+  gap: 15px;
+}

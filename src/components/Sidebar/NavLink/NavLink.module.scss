@@ -1,0 +1,26 @@
+.item {
+  display: flex;
+  padding: 8px 10px;
+  gap: 15px;
+  &:hover {
+    cursor: pointer;
+    background-color: var(--hover-bg);
+    border-radius: 10px;
+  }
+}
+.text {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--nav-text-color);
+}
+
+.active {
+  background-color: var(--hover-bg);
+  border-radius: 10px;
+}
+.pageItem {
+  &:hover {
+    cursor: pointer;
+    border-radius: 10px;
+  }
+}

@@ -33,7 +33,7 @@ const Statistics = ({ itemList, activeItem, setActiveItem }: Props) => {
   return (
     <div className={s.wrapper}>
       <h2 className={s.title}>Statistics this month</h2>
-      <div>
+      <div className={s.buttonsWrapper}>
         {itemList.map((item) => (
           <Button
             key={item.id}

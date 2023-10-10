@@ -4,87 +4,20 @@ import { v1 } from "uuid";
 import s from "./Table.module.scss";
 import { MdOutlineDone } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
-const tableData = [
-  {
-    id: v1(),
-    title: "Seperate business/personal",
-    Freelancer: "active",
-    Company: "active",
-    Enterprise: "active",
-  },
-  {
-    id: v1(),
-    title: "Estimate tax payments",
-    Freelancer: "active",
-    Company: "active",
-    Enterprise: "active",
-  },
-  {
-    id: v1(),
-    title: "Stock control",
-    Freelancer: "active",
-    Company: "active",
-    Enterprise: "active",
-  },
-  {
-    id: v1(),
-    title: "Create invoices & estimates",
-    Freelancer: "disabled",
-    Company: "active",
-    Enterprise: "active",
-  },
-  {
-    id: v1(),
-    title: "Manage bills & payments",
-    Freelancer: "disabled",
-    Company: "active",
-    Enterprise: "active",
-  },
-  {
-    id: v1(),
-    title: "Run payroll",
-    Freelancer: "disabled",
-    Company: "active",
-    Enterprise: "active",
-  },
-  {
-    id: v1(),
-    title: "Handle multiple currencies",
-    Freelancer: "disabled",
-    Company: "disabled",
-    Enterprise: "active",
-  },
-  {
-    id: v1(),
-    title: "Number of Users",
-    Freelancer: "1 User",
-    Company: "5-10 Users",
-    Enterprise: "20+ Users",
-  },
-  {
-    id: v1(),
-    title: "Track deductible mileage",
-    Freelancer: "disabled",
-    Company: "disabled",
-    Enterprise: "active",
-  },
-  {
-    id: v1(),
-    title: "Track employee time",
-    Freelancer: "disabled",
-    Company: "disabled",
-    Enterprise: "active",
-  },
-  {
-    id: v1(),
-    title: "Multi-device",
-    Freelancer: "disabled",
-    Company: "disabled",
-    Enterprise: "active",
-  },
-];
 
-const Table = () => {
+interface TableProps {
+  tableData: TableItem[];
+}
+
+type TableItem = {
+  id: string;
+  title: string;
+  Freelancer: string;
+  Company: string;
+  Enterprise: string;
+};
+
+const Table = ({ tableData }: TableProps) => {
   return (
     <div className={s.wrapper}>
       <table className={s.table}>

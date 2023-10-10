@@ -1,0 +1,53 @@
+.cart {
+  max-width: 500px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--component-bg);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.title {
+  font-size: 24px;
+  font-weight: 600;
+}
+.description {
+  color: var(--ligth-text-color);
+  font-size: 18px;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  color: rgb(49 196 141);
+}
+
+.price {
+  font-size: 48px;
+  font-weight: 700;
+}
+.month {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ligth-text-color);
+}
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.optionText {
+  font-size: 16px;
+  font-weight: 400;
+}
+@media (max-width: 1560px) {
+  .cart {
+    max-width: 400px;
+  }
+}

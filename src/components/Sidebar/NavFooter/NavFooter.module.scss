@@ -1,0 +1,16 @@
+.footer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin-bottom: 20px;
+}
+.footerImg {
+  height: 24px;
+  width: 24px;
+  color: var(--icons-color);
+}
+.svgWrap {
+  display: flex;
+  gap: 35px;
+}

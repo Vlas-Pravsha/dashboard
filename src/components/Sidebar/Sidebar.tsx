@@ -3,15 +3,14 @@ import React from "react";
 import { v1 } from "uuid";
 import Link from "next/link";
 import s from "./Sidebar.module.scss";
-import Image from "next/image";
-import Flags from "./Flags/Flags";
-import CrudSelect from "./CrudSelect/CrudSelect";
-import PagesSelect from "./PagesSelect/PagesSelect";
+import CrudSelect from "./SelectCrud/CrudSelect";
+import PagesSelect from "./SelectPages/PagesSelect";
 import { MdDashboardCustomize } from "react-icons/md";
 import { BiNotepad } from "react-icons/bi";
 import { IoMdSettings } from "react-icons/io";
 import { BsGithub } from "react-icons/bs";
-import { AiOutlineBars } from "react-icons/ai";
+import NavFooter from "./NavFooter/NavFooter";
+import Navlink from "./NavLink/Navlink";
 
 interface SidebarProps {
   navOpen?: boolean;
@@ -65,63 +64,23 @@ const Sidebar = ({ navOpen }: SidebarProps) => {
   ];
 
   return (
-    <>
-      <div className={`${navOpen ? s.backgroundClose : s.background}`}>
-        <div className={s.wrapper}>
-          <div className={s.gap}>
-            {sidebar.map((item, i) => {
-              if (item.pages && item.pages.length) {
-                return (
-                  <div key={item.id} className={s.content}>
-                    <div
-                      className={`${category === i ? s.active : ""}`}
-                      onClick={() => setCategory(i)}
-                    ></div>
-                    {item.pages.map((page) => (
-                      <div className={s.pageItem} key={page.id}>
-                        {page.title}
-                      </div>
-                    ))}
-                  </div>
-                );
-              } else {
-                return (
-                  <div key={item.id} className={s.content}>
-                    <Link href={`/${item.href}`}>
-                      <div
-                        className={`${category === i ? s.active : ""}`}
-                        onClick={() => setCategory(i)}
-                      >
-                        <div className={s.item}>
-                          <span>{item.img}</span>
-
-                          {item.mainTitle && (
-                            <p className={s.text}>{item.mainTitle}</p>
-                          )}
-                        </div>
-                      </div>
-                    </Link>
-                  </div>
-                );
-              }
-            })}
-          </div>
-          <div className={s.titleWrapper}>
-            <BsGithub className={s.iconGit} />
-            <span className={s.text}>GitHub Repository</span>
-          </div>
-          <div className={s.footer}>
-            <div className={s.svgWrap}>
-              <AiOutlineBars className={s.footerImg} />
-              <Link href="/setting">
-                <IoMdSettings className={s.footerImg} />
-              </Link>
-              <Flags />
-            </div>
-          </div>
+    <div className={`${navOpen ? s.backgroundClose : s.background}`}>
+      <div className={`${navOpen ? "" : s.overlay}`}></div>
+      <div className={s.wrapper}>
+        <div className={s.gap}>
+          <Navlink
+            sidebar={sidebar}
+            category={category}
+            setCategory={setCategory}
+          />
         </div>
+        <div className={s.titleWrapper}>
+          <BsGithub className={s.iconGit} />
+          <span className={s.text}>GitHub Repository</span>
+        </div>
+        <NavFooter />
       </div>
-    </>
+    </div>
   );
 };
 

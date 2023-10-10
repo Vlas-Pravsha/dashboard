@@ -1,5 +1,6 @@
 .wrapper {
   width: 100%;
+  padding: 20px;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -7,8 +8,7 @@
 }
 .q {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr minmax(480px, 690px);
   gap: 20px;
 }

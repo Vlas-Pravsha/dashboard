@@ -1,5 +1,4 @@
 .wrapper {
-  width: 690px;
   background-color: var(--component-bg);
   padding: 25px;
   border: 1px solid var(--border-color);
@@ -77,4 +76,7 @@
   width: 20px;
   height: 20px;
   color: var(--ligth-text-color);
+}
+.buttonsWrapper {
+  display: flex;
 }

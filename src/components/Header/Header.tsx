@@ -27,6 +27,7 @@ const Header = ({ navOpen, navToggle }: HeaderProps) => {
 
   return (
     <div className={s.background}>
+      <div className={`${navOpen ? "" : s.overlay}`}></div>
       <div className={s.headerWrapper}>
         <div className={s.gap}>
           {navOpen ? (

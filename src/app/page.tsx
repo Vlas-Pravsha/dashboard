@@ -4,7 +4,7 @@ import Header from "@/components/Header/Header";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import "./globals.css";
 import { getCryptoCoins } from "@/api/getCryptoCoins";
-import SideBarOpen from "@/components/Header/SideBarOpen/SideBarOpen";
+import SideBarOpen from "@/components/Header/SideBarOpenForDashboard/SideBarOpen";
 const Avatar1 = "/Img/UsersImg/neil-sims.png";
 const Avatar2 = "/Img/UsersImg/jese-leos.png";
 const Avatar3 = "/Img/UsersImg/lana-byrd.png";

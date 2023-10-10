@@ -73,17 +73,7 @@
     border-radius: 10px;
   }
 }
-.footer {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  margin-bottom: 20px;
-}
-.svgWrap {
-  display: flex;
-  gap: 35px;
-}
+
 .titleWrapper {
   margin-top: 20px;
   padding: 8px 10px;
@@ -105,16 +95,22 @@
   width: 24px;
   color: var(--icons-color);
 }
-.footerImg {
-  height: 24px;
-  width: 24px;
-  color: var(--icons-color);
-}
+
 @media (max-width: 1024px) {
   .backgroundClose {
     display: none;
   }
   .wrapper {
     top: 69px;
+  }
+  .overlay {
+    position: fixed;
+    top: 71px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(17, 24, 39, 0.7);
   }
 }

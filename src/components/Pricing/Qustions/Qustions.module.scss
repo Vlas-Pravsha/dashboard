@@ -32,3 +32,9 @@
   font-size: 16px;
   line-height: 26px;
 }
+@media (max-width: 1024px) {
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
