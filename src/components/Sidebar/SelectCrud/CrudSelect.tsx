@@ -4,6 +4,7 @@ import React from "react";
 import { v1 } from "uuid";
 import s from "./CrudSelect.module.scss";
 import { AiOutlineIdcard } from "react-icons/ai";
+import { BiChevronDown } from "react-icons/bi";
 
 const crudArr = [
   {
@@ -28,7 +29,10 @@ const CrudSelect = ({ crudToggle, crudOpen }: CrudSelectProps) => {
         <div key={item.id} onClick={crudToggle}>
           <div className={s.titleWrapper}>
             <AiOutlineIdcard className={s.img} />
-            <h2 className={s.mainTitle}>{item.title}</h2>
+            <div className={s.linkWrapper}>
+              <h2 className={s.mainTitle}>{item.title}</h2>
+              <BiChevronDown className={s.chevronDown} />
+            </div>
           </div>
           <div className={s.pagesWrapper}>
             {crudOpen &&

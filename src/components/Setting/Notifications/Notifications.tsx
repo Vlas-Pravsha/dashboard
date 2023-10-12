@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Button from "../Button/Button";
 import CheckBox from "./CheckBox/CheckBox";
@@ -57,6 +58,24 @@ const emailData = [
 ];
 
 const Notifications = () => {
+  const [emailArray, setEmailArray] = React.useState(emailData);
+  const [alertsArray, setAlertsArray] = React.useState(alertsData);
+
+  const changeAlertsStatus = (id: number) => {
+    setAlertsArray((prevAlerts) =>
+      prevAlerts.map((item) =>
+        item.id === id ? { ...item, status: !item.status } : item
+      )
+    );
+  };
+  const changeEmailStatus = (id: number) => {
+    setEmailArray((prevEmail) =>
+      prevEmail.map((item) =>
+        item.id === id ? { ...item, status: !item.status } : item
+      )
+    );
+  };
+
   return (
     <div className={s.wrapper}>
       <div className={s.cart}>
@@ -66,19 +85,20 @@ const Notifications = () => {
             You can set up Themesberg to get notifications
           </span>
         </div>
-        {alertsData.map((item) => (
-          <div key={item.id} className={s.content}>
-            <div className={s.q}>
-              <h2 className={s.title}>{item.title}</h2>
-              <span className={s.span}>{item.text}</span>
+        {alertsArray.map((item) => {
+          return (
+            <div key={item.id} className={s.content}>
+              <div className={s.q}>
+                <h2 className={s.title}>{item.title}</h2>
+                <span className={s.span}>{item.text}</span>
+              </div>
+              <CheckBox
+                status={item.status}
+                changeStatus={() => changeAlertsStatus(item.id)}
+              />
             </div>
-            {item.status ? (
-              <CheckBox status={item.status}></CheckBox>
-            ) : (
-              <CheckBox status={item.status}></CheckBox>
-            )}
-          </div>
-        ))}
+          );
+        })}
         <Button>Save all</Button>
       </div>
       <div className={s.cart}>
@@ -88,17 +108,16 @@ const Notifications = () => {
             You can set up Themesberg to get email notifications
           </span>
         </div>
-        {emailData.map((item) => (
+        {emailArray.map((item) => (
           <div key={item.id} className={s.content}>
             <div className={s.q}>
               <h2 className={s.title}>{item.title}</h2>
               <span className={s.span}>{item.text}</span>
             </div>
-            {item.status ? (
-              <CheckBox status={item.status}></CheckBox>
-            ) : (
-              <CheckBox status={item.status}></CheckBox>
-            )}
+            <CheckBox
+              status={item.status}
+              changeStatus={() => changeEmailStatus(item.id)}
+            />
           </div>
         ))}
         <Button>Save all</Button>

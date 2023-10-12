@@ -4,6 +4,7 @@ import React from "react";
 import { v1 } from "uuid";
 import s from "./PagesSelect.module.scss";
 import { LuFileSpreadsheet } from "react-icons/lu";
+import { BiChevronDown } from "react-icons/bi";
 
 const pagesArr = [
   {
@@ -30,7 +31,10 @@ const PagesSelect = ({ isOpen, pagesToggle }: PagesSelectProps) => {
         <div key={item.id} onClick={pagesToggle}>
           <div className={s.titleWrapper}>
             <LuFileSpreadsheet className={s.img} />
-            <h2 className={s.mainTitle}>{item.title}</h2>
+            <div className={s.linkWrapper}>
+              <h2 className={s.mainTitle}>{item.title}</h2>
+              <BiChevronDown className={s.chevronDown} />
+            </div>
           </div>
           <div className={s.pagesWrapper}>
             {isOpen &&

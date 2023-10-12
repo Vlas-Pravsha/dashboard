@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode } from "react";
 import Link from "next/link";
 import s from "./Navlink.module.scss";
 
@@ -9,11 +9,18 @@ interface NavlinkProps {
 }
 
 type SidebarItem = {
+  title: ReactNode;
   img?: ReactNode;
   id: string;
   pages?: SidebarItem[];
   mainTitle?: string;
   href?: string;
+};
+
+type Page = {
+  id: string;
+  title: ReactNode;
+  href?: string | React.ReactNode;
 };
 
 const Navlink = ({ sidebar, category, setCategory }: NavlinkProps) => {
@@ -23,15 +30,19 @@ const Navlink = ({ sidebar, category, setCategory }: NavlinkProps) => {
         <div key={item.id} className={s.content}>
           {item.pages && item.pages.length ? (
             <>
-              {item.pages.map((page: any) => (
-                <div
-                  className={s.pageItem}
-                  key={page.id}
-                  onClick={() => setCategory(i)}
-                >
-                  {page.title}
-                </div>
-              ))}
+              {item.pages.map(
+                (
+                  page: Page // Change the parameter type here
+                ) => (
+                  <div
+                    className={s.pageItem}
+                    key={page.id}
+                    onClick={() => setCategory(i)}
+                  >
+                    {page.title}
+                  </div>
+                )
+              )}
             </>
           ) : (
             <Link href={`/${item.href}`}>

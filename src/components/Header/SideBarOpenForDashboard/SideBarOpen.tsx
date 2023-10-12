@@ -4,10 +4,11 @@ import Sidebar from "@/components/Sidebar/Sidebar";
 import React, { useState } from "react";
 import Header from "../Header";
 import "../../../app/globals.css";
+import { DataType } from "@/components/DashBoard/Statistics/Statistics";
 
 interface SideBarOpenProps {
-  mapedData: any;
-  customersArr: any;
+  mapedData: DataType[];
+  customersArr: DataType[];
 }
 
 const SideBarOpen = ({ mapedData, customersArr }: SideBarOpenProps) => {

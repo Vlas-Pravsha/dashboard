@@ -2,7 +2,11 @@ import React from "react";
 import { DataType } from "../Statistics";
 import s from "./ShowArray.module.scss";
 
-const ShowArray = ({ list }: any) => {
+interface ListProps {
+  list: DataType[];
+}
+
+const ShowArray = ({ list }: ListProps) => {
   return (
     <>
       {list.map((item: DataType, i: number) => {
@@ -22,7 +26,7 @@ const ShowArray = ({ list }: any) => {
                 <span className={s.email}>{description}</span>
               </div>
             </div>
-            <span>{price}</span>
+            <span>${price}</span>
           </div>
         );
       })}

@@ -1,0 +1,16 @@
+.wrapper {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background-color: rgb(144 97 249);
+  border-radius: 100%;
+}
+.svg {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  transform: translate(-50%, -50%);
+  color: var(--black-color);
+}

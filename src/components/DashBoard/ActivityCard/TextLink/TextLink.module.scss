@@ -1,0 +1,14 @@
+.textLinkWrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--link-color-blue);
+  margin-top: 10px;
+}
+.text {
+  font-size: 14px;
+  color: var(--link-color-blue);
+}
+.svg {
+  color: var(--link-color-blue);
+}

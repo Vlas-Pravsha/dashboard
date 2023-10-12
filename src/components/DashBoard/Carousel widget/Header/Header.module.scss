@@ -1,0 +1,27 @@
+.grow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: rgb(126 58 242);
+  color: rgb(6 148 162);
+  margin-bottom: 15px;
+}
+.features {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: rgb(126 58 242);
+  margin-bottom: 15px;
+}
+.insights {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--dark-blue);
+
+  margin-bottom: 15px;
+}
+.svg {
+  width: 20px;
+  height: 20px;
+}

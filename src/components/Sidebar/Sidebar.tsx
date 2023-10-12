@@ -76,7 +76,9 @@ const Sidebar = ({ navOpen }: SidebarProps) => {
         </div>
         <div className={s.titleWrapper}>
           <BsGithub className={s.iconGit} />
-          <span className={s.text}>GitHub Repository</span>
+          <Link href="https://github.com/Vlas-Pravsha" className={s.text}>
+            GitHub Repository
+          </Link>
         </div>
         <NavFooter />
       </div>

@@ -8,9 +8,15 @@
   color: var(--nav-text-color);
   margin-left: 36px;
 }
+.linkWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .titleWrapper {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   padding: 8px 10px;
 
   &:hover {
@@ -37,4 +43,8 @@
   font-size: 16px;
   font-weight: 500;
   color: var(--nav-text-color);
+}
+.chevronDown {
+  width: 26px;
+  height: 26px;
 }

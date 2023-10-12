@@ -3,6 +3,7 @@ import Button from "./Button/Button";
 import ShowArray from "./ShowArray/ShowArray";
 import s from "./Statistics.module.scss";
 import { FiChevronDown } from "react-icons/fi";
+
 interface Props {
   itemList: ItemType[];
   activeItem: string;

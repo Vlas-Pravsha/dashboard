@@ -71,10 +71,11 @@ const TodoList = ({ title }: TodoListProps) => {
   }
 
   function changeStatus(taskId: string) {
-    const updatedTasks = tasks.map((task) =>
-      task.id === taskId ? { ...task, status: !task.status } : task
+    setTasks((prev) =>
+      prev.map((task) =>
+        task.id === taskId ? { ...task, status: !task.status } : task
+      )
     );
-    setTasks(updatedTasks);
   }
 
   function addTodoTask() {

@@ -17,35 +17,35 @@ const customersArr = [
     name: "Neil Sims",
     imageUrl: Avatar1,
     description: "neil.sims@flowbite.com",
-    price: "1238$",
+    price: "1238",
   },
   {
     id: 2,
     name: "Roberta Casas",
     imageUrl: Avatar2,
     description: "roberta.casas@flowbite.com",
-    price: "2348$",
+    price: "2348",
   },
   {
     id: 3,
     name: "Michael Gough",
     imageUrl: Avatar3,
     description: "michael.gough@flowbite.com",
-    price: "958$",
+    price: "958",
   },
   {
     id: 4,
     name: "Jese Leos",
     imageUrl: Avatar4,
     description: "jese.leos@flowbite.com",
-    price: "1558$",
+    price: "1558",
   },
   {
     id: 5,
     name: "Bonnie Green",
     imageUrl: Avatar5,
     description: "bonnie.green@flowbite.com",
-    price: "3378$",
+    price: "3378",
   },
 ];
 
@@ -57,7 +57,7 @@ export default async function Home() {
     name: item.CoinInfo.Name,
     imageUrl: `https://www.cryptocompare.com${item.CoinInfo.ImageUrl}`,
     description: item.CoinInfo.AssetLaunchDate,
-    price: item.RAW.USD.PRICE.toFixed(2),
+    // price: item.RAW.USD.PRICE.toFixed(2),
   }));
 
   return <SideBarOpen customersArr={customersArr} mapedData={mapedData} />;

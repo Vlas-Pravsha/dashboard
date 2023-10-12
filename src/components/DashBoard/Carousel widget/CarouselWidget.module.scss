@@ -1,0 +1,29 @@
+.wrapper {
+  border-radius: 10px;
+  background-color: var(--component-bg);
+  padding: 25px;
+  border: 1px solid var(--border-color);
+}
+.header {
+  font-size: 18px;
+  font-weight: 600;
+}
+.title {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.text {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ligth-text-color);
+}
+.listTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+.arrow {
+  width: 40px;
+  height: 40px;
+}

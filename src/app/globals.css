@@ -6,6 +6,7 @@
   --dark-blue-bg: rgb(17 24 39);
   --component-bg: rgb(31, 41, 55);
   --hover-bg: rgba(249, 250, 251, 0.1);
+  --black-color: #000;
   --ligth-text-color: rgb(156 163 175);
   --link-color-blue: rgba(63, 131, 248, 1);
   --dark-blue: rgb(37 99 235);
@@ -26,8 +27,9 @@ body {
   color: #fff;
 }
 body.dark {
+  --black-color: #fff;
   --nav-text-color: rgba(17, 24, 39, 0.7);
-  --ligth-grey-text: rgb(117 114 128);
+  --ligth-grey-text:rgba(14, 14, 15, 0.7)
   --dark-grey-bg: rgb(243 244 246);
   --dark-blue-bg: rgb(249 250 251);
   --component-bg: rgb(255 255 255);
@@ -73,6 +75,6 @@ body.dark {
     grid-template-areas:
       "h h"
       "n c";
-    grid-template-columns: 21px 1fr;
+    grid-template-columns: 0px 1fr;
   }
 }
