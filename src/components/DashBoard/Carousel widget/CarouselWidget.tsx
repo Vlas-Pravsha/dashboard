@@ -6,8 +6,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Header from "./Header/Header";
 import CarouselList from "./CarouselList/CarouselList";
-import { Navigation } from "swiper/modules";
-import "swiper/css/navigation";
 
 type CarouselItem = {
   id: string;
@@ -27,15 +25,7 @@ interface CarouselWidgetProps {
 const CarouselWidget = ({ CarouselData }: CarouselWidgetProps) => {
   return (
     <div className={s.wrapper}>
-      <Swiper
-        spaceBetween={100}
-        slidesPerView={1}
-        pagination={{
-          type: "fraction",
-        }}
-        // navigation={true}
-        // modules={[Navigation]}
-      >
+      <Swiper spaceBetween={100} slidesPerView={1}>
         {CarouselData.map((item) => (
           <SwiperSlide key={item.id} className={s.itemWrapper}>
             <Header type={item.header}>

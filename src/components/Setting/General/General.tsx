@@ -1,6 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import { setSelectedValue } from "@/store/slices/Settings/SettingsSlice";
+import { RootState } from "@/store/store";
+import React from "react";
 import { useForm } from "react-hook-form";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import Button from "../Button/Button";
 import Input from "../Input/Input";
 import Label from "../Label/Label";
@@ -34,7 +38,10 @@ export type RegisterItem = {
   Confirm: string;
 };
 const General = () => {
-  const [selectedValue, setSelectedValue] = useState("");
+  const dispatch = useDispatch();
+  const selectedValue = useSelector(
+    (state: RootState) => state.settings.selectedValue
+  );
 
   const {
     register,
@@ -46,7 +53,7 @@ const General = () => {
   };
 
   const handleValueChange = (value: string) => {
-    setSelectedValue(value);
+    dispatch(setSelectedValue(value));
   };
 
   return (

@@ -1,7 +1,11 @@
 "use client";
+import { ProfileIsOpen } from "@/store/slices/Header/HeaderSlice";
+import { RootState } from "@/store/store";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { v1 } from "uuid";
 import s from "./Profile.module.scss";
 
@@ -20,20 +24,23 @@ const profileArr = [
 ];
 
 const Profile = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const dispatch = useDispatch();
+  const isOpen = useSelector((state: RootState) => state.header.ProfileIsOpen);
 
-  const toggle = () => setIsOpen(!isOpen);
+  const toggle = () => dispatch(ProfileIsOpen(!isOpen));
 
   return (
     <div className={s.wrapper}>
-      <Image
-        src={"/Img/HeaderImg/Pr.jpg"}
-        alt="Profile"
-        className={s.profile}
-        width="30"
-        height="30"
-        onClick={toggle}
-      />
+      <div className={s.profileImgWrapper}>
+        <Image
+          src="/Img/HeaderImg/Pr.jpg"
+          alt="Profile"
+          className={s.profile}
+          width={30}
+          height={30}
+          onClick={toggle}
+        />
+      </div>
       <div className={s.content}>
         {isOpen &&
           profileArr.map((item) => (

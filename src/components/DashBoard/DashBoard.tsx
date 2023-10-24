@@ -124,7 +124,6 @@ const CarouselData = [
 ];
 
 const DashBoard = ({ mapedData, customersArr }: DashBoardProps) => {
-  const [activeItem, setActiveItem] = React.useState("Coins");
   const slicedCoins = mapedData.slice(0, 5);
   const itemList = [
     {
@@ -148,8 +147,6 @@ const DashBoard = ({ mapedData, customersArr }: DashBoardProps) => {
         <LineChart />
         <Statistics
           itemList={itemList}
-          activeItem={activeItem}
-          setActiveItem={setActiveItem}
         />
       </div>
       <div className={s.a}>

@@ -3,11 +3,15 @@ import Button from "./Button/Button";
 import ShowArray from "./ShowArray/ShowArray";
 import s from "./Statistics.module.scss";
 import { FiChevronDown } from "react-icons/fi";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { changeActiveItem } from "@/store/slices/Dashboard/DashboardSlice";
+import { RootState } from "@/store/store";
 
 interface Props {
   itemList: ItemType[];
-  activeItem: string;
-  setActiveItem: React.Dispatch<React.SetStateAction<string>>;
+  // activeItem: string;
+  // setActiveItem: React.Dispatch<React.SetStateAction<string>>;
 }
 interface ItemType {
   title: string;
@@ -25,7 +29,12 @@ export interface DataType {
   imageUrl: string;
 }
 
-const Statistics = ({ itemList, activeItem, setActiveItem }: Props) => {
+const Statistics = ({ itemList }: Props) => {
+  const activeItem = useSelector(
+    (state: RootState) => state.dashboard.activeItem
+  );
+  const dispatch = useDispatch();
+
   const list = useMemo(
     () => itemList.find((el) => el.title === activeItem)?.arr || [],
     [itemList, activeItem]
@@ -39,7 +48,7 @@ const Statistics = ({ itemList, activeItem, setActiveItem }: Props) => {
           <Button
             key={item.id}
             type={item.type}
-            onClick={() => setActiveItem(item.title)}
+            onClick={() => dispatch(changeActiveItem(item.title))}
           >
             {item.buttonText}
           </Button>

@@ -45,3 +45,27 @@
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 10px;
+  }
+  .title {
+    font-size: 32px;
+    font-weight: 700;
+  }
+}
+@media (max-width: 1024px) {
+  .title {
+    font-size: 32px;
+    font-weight: 700;
+  }
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .text {
+    font-size: 16px;
+  }
+}

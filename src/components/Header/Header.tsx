@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import s from "./Header.module.scss";
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import Profile from "./Profile/Profile";
 import { changeTheme } from "@/utils";
@@ -11,19 +11,26 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { HiMenuAlt1 } from "react-icons/hi";
 import { MdOutlineClose } from "react-icons/md";
 import Sidebar from "../Sidebar/Sidebar";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store/store";
+import { setChangeThemeImg, setNavOpen } from "@/store/slices/Header/HeaderSlice";
 
-interface HeaderProps {
-  navOpen?: boolean;
-  navToggle?: () => void;
-}
-const Header = ({ navOpen, navToggle }: HeaderProps) => {
-  const [changeThemeImg, setChangeThemeImg] = useState(false);
+const Header = () => {
+  const navOpen = useSelector((state: RootState) => state.header.navOpen);
 
-  const toggle = () => setChangeThemeImg(!changeThemeImg);
+  const dispatch = useDispatch();
+  const changeThemeImg = useSelector(
+    (state: RootState) => state.header.changeThemeImg
+  );
+
+  const toggle = () => dispatch(setChangeThemeImg(!changeThemeImg));
   const changeThemeAndIcon = () => {
     toggle();
     changeTheme();
   };
+
+  const navToggle = () => dispatch(setNavOpen(!navOpen));
 
   return (
     <div className={s.background}>
@@ -33,13 +40,13 @@ const Header = ({ navOpen, navToggle }: HeaderProps) => {
           {navOpen ? (
             <>
               <div onClick={navToggle} className={s.svgBackground}>
-                <MdOutlineClose className={s.svgClose} />
+                <HiMenuAlt1 className={s.svgOpen} />
               </div>
             </>
           ) : (
             <>
               <div onClick={navToggle} className={s.svgBackground}>
-                <HiMenuAlt1 className={s.svgOpen} />
+                <MdOutlineClose className={s.svgClose} />
               </div>
             </>
           )}

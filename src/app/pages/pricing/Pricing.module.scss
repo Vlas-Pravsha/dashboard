@@ -18,3 +18,47 @@
   color: var(--ligth-text-color);
   font-size: 20px;
 }
+@media (max-width: 1536px) {
+  .container {
+    max-width: 1280px;
+    padding: 0 10px;
+  }
+}
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+    padding: 0 10px;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+    padding: 0 10px;
+  }
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 26px;
+  }
+  .container {
+    max-width: 640px;
+    padding: 0 5px;
+  }
+  .description {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+@media (max-width: 448px) {
+  .title {
+    font-size: 22px;
+  }
+  .container {
+    max-width: 640px;
+    padding: 0 5px;
+  }
+  .description {
+    width: 360px;
+    font-size: 14px;
+  }
+}

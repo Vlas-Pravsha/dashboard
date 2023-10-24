@@ -50,7 +50,7 @@ const sessionsData = [
 const Sessions = () => {
   return (
     <div className={s.wrapper}>
-      <h2 className={s.mainTitle}>General information</h2>
+      <h2 className={s.mainTitle}>Sessions</h2>
       <div className={s.content}>
         {sessionsData.map((item) => (
           <div key={item.id} className={s.cart}>

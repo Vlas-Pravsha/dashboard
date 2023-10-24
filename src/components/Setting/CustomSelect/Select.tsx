@@ -1,6 +1,10 @@
 "use client";
+import { setOpen, setSelected } from "@/store/slices/Settings/SettingsSlice";
+import { RootState } from "@/store/store";
 import React from "react";
 import { FieldError } from "react-hook-form";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import s from "./Select.module.scss";
 
 type Selectitem = {
@@ -12,23 +16,20 @@ interface SelectProps {
   hasError: FieldError | undefined;
 }
 
-const selectItem = [
-  { value: "Front End", id: 1 },
-  { value: "Back End", id: 2 },
-  { value: "Full Stack", id: 3 },
-  { value: "Other", id: 4 },
-];
-
 const Select = React.forwardRef<HTMLDivElement, SelectProps>(
   ({ title, hasError, ...rest }, ref) => {
-    const [selected, setSelected] = React.useState("");
-    const [open, setOpen] = React.useState(false);
+    const dispatch = useDispatch();
+    const selectItem = useSelector(
+      (state: RootState) => state.settings.selectItem
+    );
+    const selected = useSelector((state: RootState) => state.settings.selected);
+    const open = useSelector((state: RootState) => state.settings.selectOpen);
 
     function changeSelectItem(item: string) {
-      setSelected(item);
-      setOpen(false);
+      dispatch(setSelected(item));
+      dispatch(setOpen(false));
     }
-    const toggle = () => setOpen(!open);
+    const toggle = () => dispatch(setOpen(!open));
 
     return (
       <div className={s.wrapper} {...rest}>

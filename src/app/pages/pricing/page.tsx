@@ -1,4 +1,4 @@
-import SecondHeader from "@/components/Header/SecondHeader/SecondHeader";
+import SecondHeader from "@/components/Header/HeaderForPricing/HeaderForPricing";
 import Cart from "@/components/Pricing/Cart/Cart";
 import { Item } from "@/components/Pricing/Cart/CartItem/CartItem";
 import Footer from "@/components/Pricing/Footer/Footer";

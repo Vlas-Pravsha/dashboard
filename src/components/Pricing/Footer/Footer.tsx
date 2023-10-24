@@ -67,18 +67,20 @@ const Footer = () => {
               more efficiently.
             </p>
           </Link>
-          {footerData.map((item) => (
-            <div className={s.item} key={item.id}>
-              <h3 className={s.itemTitle}>{item.title}</h3>
-              <ul className={s.list}>
-                {item.opitons.map((item) => (
-                  <li key={item.id} className={s.text}>
-                    {item.title}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className={s.test}>
+            {footerData.map((item) => (
+              <div className={s.item} key={item.id}>
+                <h3 className={s.itemTitle}>{item.title}</h3>
+                <ul className={s.list}>
+                  {item.opitons.map((item) => (
+                    <li key={item.id} className={s.text}>
+                      {item.title}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div className={s.footerText}>© 2023 DashBoard. My Best Project.</div>

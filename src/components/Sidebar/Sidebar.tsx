@@ -11,17 +11,19 @@ import { IoMdSettings } from "react-icons/io";
 import { BsGithub } from "react-icons/bs";
 import NavFooter from "./NavFooter/NavFooter";
 import Navlink from "./NavLink/Navlink";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store/store";
+import { setCrudOpen, setIsOpen } from "@/store/slices/Sidebar/SidebarSlice";
 
-interface SidebarProps {
-  navOpen?: boolean;
-}
-const Sidebar = ({ navOpen }: SidebarProps) => {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const [crudOpen, setCrudOpen] = React.useState(false);
-  const [category, setCategory] = React.useState(0);
 
-  const pagesToggle = () => setIsOpen(!isOpen);
-  const crudToggle = () => setCrudOpen(!crudOpen);
+const Sidebar = () => {
+  const dispatch = useDispatch();
+  const navOpen = useSelector((state: RootState) => state.header.navOpen);
+  const isOpen = useSelector((state: RootState) => state.sidebar.isOpen);
+  const crudOpen = useSelector((state: RootState) => state.sidebar.crudOpen);
+  const pagesToggle = () => dispatch(setIsOpen(!isOpen));
+  const crudToggle = () => dispatch(setCrudOpen(!crudOpen));
 
   const sidebar = [
     {
@@ -68,11 +70,7 @@ const Sidebar = ({ navOpen }: SidebarProps) => {
       <div className={`${navOpen ? "" : s.overlay}`}></div>
       <div className={s.wrapper}>
         <div className={s.gap}>
-          <Navlink
-            sidebar={sidebar}
-            category={category}
-            setCategory={setCategory}
-          />
+          <Navlink sidebar={sidebar} />
         </div>
         <div className={s.titleWrapper}>
           <BsGithub className={s.iconGit} />

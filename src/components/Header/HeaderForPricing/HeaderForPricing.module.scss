@@ -60,3 +60,33 @@
     color: var(--dark-blue);
   }
 }
+@media (max-width: 1536px) {
+  .content {
+    max-width: 1280px;
+  }
+}
+@media (max-width: 1280px) {
+  .content {
+    max-width: 1024px;
+  }
+}
+@media (max-width: 1024px) {
+  .content {
+    max-width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  .content {
+    max-width: 640px;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 560px) {
+  .content {
+    max-width: 360px;
+    padding: 0 5px;
+  }
+  .pageItem {
+    display: none;
+  }
+}

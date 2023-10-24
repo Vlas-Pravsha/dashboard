@@ -26,10 +26,16 @@ body {
   background-color: var(--component-bg);
   color: #fff;
 }
+img {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  width: auto;
+}
 body.dark {
   --black-color: #fff;
   --nav-text-color: rgba(17, 24, 39, 0.7);
-  --ligth-grey-text:rgba(14, 14, 15, 0.7)
+  --ligth-grey-text: rgba(14, 14, 15, 0.7);
   --dark-grey-bg: rgb(243 244 246);
   --dark-blue-bg: rgb(249 250 251);
   --component-bg: rgb(255 255 255);
@@ -78,3 +84,8 @@ body.dark {
     grid-template-columns: 0px 1fr;
   }
 }
+/* @media (max-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+} */

@@ -1,18 +1,19 @@
 import React, { ReactNode } from "react";
 import Link from "next/link";
 import s from "./Navlink.module.scss";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store/store";
+import { useDispatch } from "react-redux";
+import { setCategory } from "@/store/slices/Sidebar/SidebarSlice";
 
 interface NavlinkProps {
   sidebar: SidebarItem[];
-  category: number;
-  setCategory: (i: number) => void;
 }
 
 type SidebarItem = {
-  title: ReactNode;
   img?: ReactNode;
   id: string;
-  pages?: SidebarItem[];
+  pages?: Page[];
   mainTitle?: string;
   href?: string;
 };
@@ -20,35 +21,33 @@ type SidebarItem = {
 type Page = {
   id: string;
   title: ReactNode;
-  href?: string | React.ReactNode;
 };
 
-const Navlink = ({ sidebar, category, setCategory }: NavlinkProps) => {
+const Navlink = ({ sidebar }: NavlinkProps) => {
+  const category = useSelector((state: RootState) => state.sidebar.category);
+  const dispatch = useDispatch();
+
   return (
     <>
       {sidebar.map((item: SidebarItem, i: number) => (
         <div key={item.id} className={s.content}>
           {item.pages && item.pages.length ? (
             <>
-              {item.pages.map(
-                (
-                  page: Page // Change the parameter type here
-                ) => (
-                  <div
-                    className={s.pageItem}
-                    key={page.id}
-                    onClick={() => setCategory(i)}
-                  >
-                    {page.title}
-                  </div>
-                )
-              )}
+              {item.pages.map((page) => (
+                <div
+                  className={s.pageItem}
+                  key={page.id}
+                  onClick={() => dispatch(setCategory(i))}
+                >
+                  {page.title}
+                </div>
+              ))}
             </>
           ) : (
             <Link href={`/${item.href}`}>
               <div
                 className={`${category === i ? s.active : ""}`}
-                onClick={() => setCategory(i)}
+                onClick={() => dispatch(setCategory(i))}
               >
                 <div className={s.item}>
                   <span>{item.img}</span>

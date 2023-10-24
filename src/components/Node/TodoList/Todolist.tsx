@@ -1,13 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import s from "./TodoList.module.scss";
-import Add from "/Img/NodeImg/circle-plus-solid.svg";
-import Edit from "/Img/NodeImg/pen-solid.svg";
-import Delete from "/Img/NodeImg/trash-solid.svg";
-import Save from "/Img/NodeImg/share-solid.svg";
+import s from "./TodoList.module.scss"
 import Image from "next/image";
-import CheckBox from "../AddTodoList/CheckBox/CheckBox";
 import { v1 } from "uuid";
+import Buttons from "../Buttons/Buttons";
+import TodoItem from "../TodoItem/TodoItem";
 
 type Task = {
   id: string;
@@ -124,80 +121,19 @@ const TodoList = ({ title }: TodoListProps) => {
         </div>
         <div>
           {tasksForTodoList.map((task) => (
-            <div key={task.id} className={s.taskWrapper}>
-              {edit === task.id ? (
-                <div>
-                  <input
-                    value={value}
-                    onChange={(e) => setValue(e.target.value)}
-                    className={s.taskInput}
-                  />
-                </div>
-              ) : (
-                <div className={s.qq}>
-                  <CheckBox
-                    onChange={() => changeStatus(task.id)}
-                    checked={task.status}
-                  ></CheckBox>
-                  <div className={task.status ? s.completed : ""}>
-                    {task.title}
-                  </div>
-                </div>
-              )}
-              {edit === task.id ? (
-                <div>
-                  <Image
-                    src={"/Img/NodeImg/share-solid.svg"}
-                    alt="Save"
-                    className={s.save}
-                    onClick={() => saveTodo(task.id)}
-                    width="30"
-                    height="30"
-                  />
-                </div>
-              ) : (
-                <div className={s.imgQ}>
-                  <Image
-                    src={"/Img/NodeImg/pen-solid.svg"}
-                    alt="Edit"
-                    className={s.edit}
-                    onClick={() => editTodo(task.id, task.title)}
-                    width="30"
-                    height="30"
-                  />
-                  <Image
-                    src={"/Img/NodeImg/trash-solid.svg"}
-                    alt="Delete"
-                    className={s.delete}
-                    onClick={() => deleteTask(task.id)}
-                    width="30"
-                    height="30"
-                  />
-                </div>
-              )}
-            </div>
+            <TodoItem
+              key={task.id}
+              task={task}
+              changeStatus={changeStatus}
+              deleteTask={deleteTask}
+              edit={edit}
+              value={value}
+              saveTodo={saveTodo}
+              editTodo={editTodo}
+            />
           ))}
         </div>
-        <div className={s.status}>
-          <button
-            onClick={() => changeFilter("all")}
-            className={`${filter === "all" ? s.active : ""}`}
-          >
-            All
-          </button>
-          <button
-            onClick={() => changeFilter("active")}
-            className={`${filter === "active" ? s.active : ""}`}
-          >
-            Active
-          </button>
-          <button
-            onClick={() => changeFilter("completed")}
-            className={`${filter === "completed" ? s.active : ""}`}
-          >
-            Completed
-          </button>
-        </div>
+        <Buttons changeFilter={changeFilter} filter={filter}></Buttons>
       </div>
     </div>
   );

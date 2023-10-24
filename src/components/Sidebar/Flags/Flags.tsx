@@ -1,48 +1,25 @@
 "use client";
+import { setFlagChangeValue, setFlagOpen } from "@/store/slices/Sidebar/SidebarSlice";
+import { RootState } from "@/store/store";
 import Image from "next/image";
-import React, { useState } from "react";
-import { v1 } from "uuid";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import s from "./Flags.module.scss";
 
-const flagsArr = [
-  {
-    id: v1(),
-    src: "/Img/SideBarImg/Flags/ua.svg",
-    title: "Ukraine",
-  },
-  {
-    id: v1(),
-    src: "/Img/SideBarImg/Flags/ai.svg",
-    title: "Azerbaijan",
-  },
-  {
-    id: v1(),
-    src: "/Img/SideBarImg/Flags/cz.svg",
-    title: "Czech",
-  },
-  {
-    id: v1(),
-    src: "/Img/SideBarImg/Flags/id.svg",
-    title: "Indonesia",
-  },
-  {
-    id: v1(),
-    src: "/Img/SideBarImg/Flags/au.svg",
-    title: "Australia",
-  },
-];
-
 const Flags = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [changeValue, setChangeValue] = useState("");
+  const dispatch = useDispatch();
+  const isOpen = useSelector((state: RootState) => state.sidebar.flagOpen);
+  const flagsArr = useSelector((state: RootState) => state.sidebar.flagsArr);
+  const changeValue = useSelector(
+    (state: RootState) => state.sidebar.changeValue
+  );
 
-  const toggle = () => setIsOpen(!isOpen);
+  const toggle = () => dispatch(setFlagOpen(!isOpen));
 
   const handleFlagSelect = (src: string) => {
-    setChangeValue(src);
+    dispatch(setFlagChangeValue(src));
     toggle();
   };
-
   return (
     <div className={s.wrapper}>
       <div className={s.content}>
