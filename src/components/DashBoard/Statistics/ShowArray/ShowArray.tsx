@@ -1,6 +1,7 @@
 import React from "react";
 import { DataType } from "../Statistics";
 import s from "./ShowArray.module.scss";
+import Image from "next/image";
 
 interface ListProps {
   list: DataType[];
@@ -14,7 +15,7 @@ const ShowArray = ({ list }: ListProps) => {
         return (
           <div key={i} className={s.itemWrapper}>
             <div className={s.coinAndTextWrapper}>
-              <img
+              <Image
                 src={imageUrl}
                 alt="img"
                 width="35"
