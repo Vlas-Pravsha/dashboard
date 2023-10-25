@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import Link from "next/link";
-import s from "./Navlink.module.scss";
+import s from "./NavLink.module.scss";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/store";
 import { useDispatch } from "react-redux";
