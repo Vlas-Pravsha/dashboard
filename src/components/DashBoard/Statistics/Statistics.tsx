@@ -7,26 +7,10 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { changeActiveItem } from "@/store/slices/Dashboard/DashboardSlice";
 import { RootState } from "@/store/store";
+import { ItemType } from "../DashBoard";
 
 interface Props {
   itemList: ItemType[];
-  // activeItem: string;
-  // setActiveItem: React.Dispatch<React.SetStateAction<string>>;
-}
-interface ItemType {
-  title: string;
-  arr: DataType[];
-  id: string;
-  // type: "button" | "secondary";
-  type: any;
-  buttonText: string;
-}
-
-export interface DataType {
-  name: string;
-  description: string;
-  price: string;
-  imageUrl: string;
 }
 
 const Statistics = ({ itemList }: Props) => {

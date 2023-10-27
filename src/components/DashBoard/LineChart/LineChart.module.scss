@@ -3,4 +3,15 @@
   background-color: var(--component-bg);
   padding: 25px;
   border: 1px solid var(--border-color);
+  // max-height: 650px;
+}
+@media (max-width: 1024px) {
+  .wrapper {
+    max-width: 800px;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 380px;
+  }
 }

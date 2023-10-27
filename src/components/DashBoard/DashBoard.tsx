@@ -2,11 +2,40 @@
 import React from "react";
 import s from "./DashBoard.module.scss";
 import Footer from "../Footer/Footer";
-import Statistics, { DataType } from "./Statistics/Statistics";
 import { v1 } from "uuid";
 import LineChart from "./LineChart/LineChart";
 import ActivityCard from "./ActivityCard/ActivityCard";
 import CarouselWidget from "./Carousel widget/CarouselWidget";
+import Statistics from "./Statistics/Statistics";
+import { getBtcToUsd, getETHToUsd } from "@/api/getCoinsToUsd";
+import BarChart from "./BarChart/BarChart";
+import PieCharts from "./PieCharts/PieCharts";
+
+export interface ItemType {
+  title: string;
+  arr: DataType[];
+  id: string;
+  type: any;
+  buttonText: string;
+}
+
+export interface DataType {
+  name: string;
+  description: string;
+  price: string;
+  imageUrl: string;
+}
+export interface CoinsItem {
+  time: number;
+  high: number;
+  low: number;
+  open: number;
+  volumefrom: number;
+  volumeto: number;
+  close: number;
+  conversionType: string;
+  conversionSymbol: string;
+}
 
 interface DashBoardProps {
   mapedData: DataType[];
@@ -124,6 +153,24 @@ const CarouselData = [
 ];
 
 const DashBoard = ({ mapedData, customersArr }: DashBoardProps) => {
+  const [btcData, setBtcData] = React.useState([]);
+  const [ethData, setEthData] = React.useState([]);
+
+  React.useEffect(() => {
+    async function fetchDataBtc() {
+      const fetchedData = await getBtcToUsd();
+      setBtcData(fetchedData);
+    }
+    async function fetchDataEth() {
+      const fetchedData = await getETHToUsd();
+      setEthData(fetchedData);
+    }
+    fetchDataBtc();
+    fetchDataEth();
+  }, []);
+  console.log(ethData);
+
+  console.log(btcData);
   const slicedCoins = mapedData.slice(0, 5);
   const itemList = [
     {
@@ -144,15 +191,18 @@ const DashBoard = ({ mapedData, customersArr }: DashBoardProps) => {
   return (
     <div className={s.wrapper}>
       <div className={s.q}>
-        <LineChart />
-        <Statistics
-          itemList={itemList}
-        />
+        <LineChart btcData={btcData} ethData={ethData} />
+        <Statistics itemList={itemList} />
+      </div>
+      <div className={s.a}>
+        <PieCharts />
+        <BarChart />
       </div>
       <div className={s.a}>
         <ActivityCard ActivityCardData={ActivityCardData} />
         <CarouselWidget CarouselData={CarouselData} />
       </div>
+
       <Footer />
       <div className={s.footerText}>© 2023 Dashboard.com. My Best Project.</div>
     </div>

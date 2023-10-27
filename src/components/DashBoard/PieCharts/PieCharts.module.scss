@@ -1,0 +1,16 @@
+.wrapper {
+  border-radius: 10px;
+  background-color: var(--component-bg);
+  padding: 25px;
+  border: 1px solid var(--border-color);
+}
+.chart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 650px;
+}
+.title {
+  font-size: 24px;
+  font-weight: 600;
+}

@@ -51,13 +51,12 @@ const customersArr = [
 export default async function Home() {
   const cryptoData = await getCryptoCoins();
 
-  const mapedData = cryptoData.map((item: any) => ({
-    coinInfo: item.CoinInfo,
+  const mapedData = cryptoData.map((item) => ({
+    // coinInfo: item.CoinInfo,
     name: item.CoinInfo.Name,
     imageUrl: `https://www.cryptocompare.com${item.CoinInfo.ImageUrl}`,
     description: item.CoinInfo.AssetLaunchDate,
-    // price: item.RAW.USD.PRICE.toFixed(2),
-    price: Math.random().toFixed(2),
+    price: item.RAW?.USD.PRICE.toFixed(2) || "0",
   }));
 
   return (
