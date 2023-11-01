@@ -10,16 +10,16 @@ interface SelectProps {
   selectOptions: LanguageOption[];
 }
 
-const Select = ({ selectOptions }: SelectProps) => {
-  return (
-    <select className={s.select}>
+const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
+  ({ selectOptions, ...rest }, ref) => (
+    <select className={s.select} {...rest} ref={ref}>
       {selectOptions.map((item) => (
-        <option key={item.id} value={item.id}>
+        <option key={item.id} value={item.value}>
           {item.value}
         </option>
       ))}
     </select>
-  );
-};
-
+  )
+);
+Select.displayName = "Select";
 export default Select;

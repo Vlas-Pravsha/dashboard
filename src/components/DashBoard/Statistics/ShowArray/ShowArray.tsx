@@ -1,7 +1,7 @@
 import React from "react";
-import { DataType } from "../Statistics";
 import s from "./ShowArray.module.scss";
 import Image from "next/image";
+import { DataType } from "../../DashBoard";
 
 interface ListProps {
   list: DataType[];

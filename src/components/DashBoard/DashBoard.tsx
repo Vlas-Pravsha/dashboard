@@ -10,6 +10,10 @@ import Statistics from "./Statistics/Statistics";
 import { getBtcToUsd, getETHToUsd } from "@/api/getCoinsToUsd";
 import BarChart from "./BarChart/BarChart";
 import PieCharts from "./PieCharts/PieCharts";
+import Products from "./Products/Products";
+import Users from "./Users/Users";
+import Audience from "./Audience/Audience";
+import SmartChat from "./SmartChat/SmartChat";
 
 export interface ItemType {
   title: string;
@@ -24,6 +28,12 @@ export interface DataType {
   description: string;
   price: string;
   imageUrl: string;
+}
+export interface BarChartsItem {
+  id: string;
+  DesktopPC: number;
+  Phone: number;
+  Gaming: number;
 }
 export interface CoinsItem {
   time: number;
@@ -152,6 +162,51 @@ const CarouselData = [
   },
 ];
 
+const BarChartsData = [
+  {
+    id: v1(),
+    DesktopPC: 170,
+    Phone: 120,
+    Gaming: 220,
+  },
+  {
+    id: v1(),
+    DesktopPC: 180,
+    Phone: 294,
+    Gaming: 194,
+  },
+  {
+    id: v1(),
+    DesktopPC: 164,
+    Phone: 167,
+    Gaming: 217,
+  },
+  {
+    id: v1(),
+    DesktopPC: 145,
+    Phone: 179,
+    Gaming: 279,
+  },
+  {
+    id: v1(),
+    DesktopPC: 194,
+    Phone: 245,
+    Gaming: 215,
+  },
+  {
+    id: v1(),
+    DesktopPC: 170,
+    Phone: 182,
+    Gaming: 263,
+  },
+  {
+    id: v1(),
+    DesktopPC: 155,
+    Phone: 143,
+    Gaming: 183,
+  },
+];
+
 const DashBoard = ({ mapedData, customersArr }: DashBoardProps) => {
   const [btcData, setBtcData] = React.useState([]);
   const [ethData, setEthData] = React.useState([]);
@@ -190,15 +245,23 @@ const DashBoard = ({ mapedData, customersArr }: DashBoardProps) => {
   ];
   return (
     <div className={s.wrapper}>
-      <div className={s.q}>
+      <div className={s.cryptoWrapper}>
         <LineChart btcData={btcData} ethData={ethData} />
         <Statistics itemList={itemList} />
       </div>
-      <div className={s.a}>
-        <PieCharts />
-        <BarChart />
+      <div className={s.statsWrapper}>
+        <Products />
+        <Users />
+        <Audience />
       </div>
-      <div className={s.a}>
+      <div className={s.sectionWrapper}>
+        <div className={s.gridItem}>
+          <SmartChat />
+        </div>
+        <PieCharts />
+        <BarChart BarChartsData={BarChartsData} />
+      </div>
+      <div className={s.secondSectionWrapper}>
         <ActivityCard ActivityCardData={ActivityCardData} />
         <CarouselWidget CarouselData={CarouselData} />
       </div>

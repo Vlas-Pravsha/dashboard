@@ -1,21 +1,12 @@
 "use client";
-import { setSelectedValue } from "@/store/slices/Settings/SettingsSlice";
-import { RootState } from "@/store/store";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import { v1 } from "uuid";
 import Button from "../Button/Button";
 import Input from "../Input/Input";
 import Label from "../Label/Label";
 import s from "./General.module.scss";
-
-// const radioInputData = [
-//   { id: 1, value: "Trainee" },
-//   { id: 2, value: "Junior" },
-//   { id: 3, value: "Middle" },
-//   { id: 4, value: "Senior" },
-// ];
+import Modal from "./modal/Modal";
 
 export type RegisterItem = {
   Radio: string;
@@ -32,16 +23,18 @@ export type RegisterItem = {
   Organization: string;
   Role: string;
   Department: string;
-  Сode: string;
+  Code: string;
   Current: string;
   New: string;
   Confirm: string;
 };
 const General = () => {
-  const dispatch = useDispatch();
-  const selectedValue = useSelector(
-    (state: RootState) => state.settings.selectedValue
-  );
+  const [isVisible, setIsVisible] = React.useState(false);
+  const [data, setData] = React.useState<RegisterItem>();
+
+  const handleToogleFn = () => {
+    setIsVisible(!isVisible);
+  };
 
   const {
     register,
@@ -49,224 +42,148 @@ const General = () => {
     formState: { errors },
   } = useForm<RegisterItem>();
   const onSubmit = (data: RegisterItem) => {
+    setData(data);
+    setIsVisible(true);
     console.log(data);
   };
 
-  const handleValueChange = (value: string) => {
-    dispatch(setSelectedValue(value));
-  };
+  const InputsArray = [
+    {
+      id: v1(),
+      errorText: "Invalid name",
+      title: "First name",
+      text: "Tip",
+      hasError: errors.Name,
+      placeholder: "Bonnie",
+      register: "Name" as keyof RegisterItem,
+    },
+    {
+      id: v1(),
+      errorText: "Invalid sername",
+      title: "Last name",
+      text: "Tip",
+      hasError: errors.Sername,
+      placeholder: "Green",
+      register: "Sername" as keyof RegisterItem,
+    },
+    {
+      id: v1(),
+      errorText: "Invalid country",
+      title: "Country",
+      text: "Tip",
+      hasError: errors.Country,
+      placeholder: "United States",
+      register: "Country" as keyof RegisterItem,
+    },
+    {
+      id: v1(),
+      errorText: "Invalid city",
+      title: "City",
+      text: "Tip",
+      hasError: errors.City,
+      placeholder: "New York",
+      register: "City" as keyof RegisterItem,
+    },
+    {
+      id: v1(),
+      errorText: "Invalid address",
+      title: "Address",
+      text: "Tip",
+      hasError: errors.Address,
+      placeholder: "e.g. San Francisco",
+      register: "Address" as keyof RegisterItem,
+    },
+    {
+      id: v1(),
+      errorText: "Invalid email",
+      title: "Email",
+      text: "Tip",
+      hasError: errors.Email,
+      placeholder: "example@company.com",
+      register: "Email" as keyof RegisterItem,
+    },
+    {
+      id: v1(),
+      errorText: "Invalid number",
+      title: "Number",
+      text: "Tip",
+      hasError: errors.Number,
+      placeholder: "e.g. 123 456 7890",
+      register: "Number" as keyof RegisterItem,
+    },
+    {
+      id: v1(),
+      errorText: "Invalid birthday",
+      title: "Birthday",
+      text: "Tip",
+      hasError: errors.Birthday,
+      placeholder: "e.g. 01/01/2000",
+      register: "Birthday" as keyof RegisterItem,
+    },
+    {
+      id: v1(),
+      errorText: "Invalid organization",
+      title: "Organization",
+      text: "Tip",
+      hasError: errors.Organization,
+      placeholder: "Company Name",
+      register: "Organization" as keyof RegisterItem,
+    },
+    {
+      id: v1(),
+      errorText: "Invalid role",
+      title: "Role",
+      text: "Tip",
+      hasError: errors.Role,
+      placeholder: "React Developer",
+      register: "Role" as keyof RegisterItem,
+    },
+    {
+      id: v1(),
+      errorText: "Invalid department",
+      title: "Department",
+      text: "Tip",
+      hasError: errors.Department,
+      placeholder: "Development",
+      register: "Department" as keyof RegisterItem,
+    },
+    {
+      id: v1(),
+      errorText: "Invalid code",
+      title: "Code",
+      text: "Tip",
+      hasError: errors.Code,
+      placeholder: "e.g. 123456",
+      register: "Code" as keyof RegisterItem,
+    },
+  ];
 
   return (
     <form className={s.wrapper} onSubmit={handleSubmit(onSubmit)}>
       <h2 className={s.title}>General information</h2>
       <div className={s.lineWrapper}>
-        <Label
-          title="First name"
-          text="Tip"
-          errorText="Invalid name"
-          hasError={errors.Name}
-        >
-          <Input
-            hasError={errors.Name}
-            placeholder="Bonnie"
-            {...register("Name", {
-              required: true,
-              maxLength: 20,
-              minLength: 2,
-              pattern: /[a-zA-Z]+/g,
-            })}
-          />
-        </Label>
-        <Label
-          errorText="Invalid sername"
-          hasError={errors.Sername}
-          text="Tip"
-          title="Last name"
-        >
-          <Input
-            hasError={errors.Sername}
-            placeholder="Green"
-            {...register("Sername", {
-              required: true,
-              maxLength: 20,
-              minLength: 2,
-              pattern: /[a-zA-Z]+/g,
-            })}
-          />
-        </Label>
+        {InputsArray.map((item) => (
+          <Label
+            key={item.id}
+            title={item.title}
+            text={item.text}
+            errorText={item.errorText}
+            hasError={item.hasError}
+          >
+            <Input
+              hasError={item.hasError}
+              placeholder={item.placeholder}
+              {...register(item.register, {
+                required: true,
+                maxLength: 20,
+                minLength: 2,
+                pattern: /[a-zA-Z]+/g,
+              })}
+            />
+          </Label>
+        ))}
       </div>
-      <div className={s.lineWrapper}>
-        <Label
-          title="Country"
-          text="Tip"
-          errorText="Invalid Country"
-          hasError={errors.Name}
-        >
-          <Input
-            hasError={errors.Name}
-            placeholder="United States"
-            {...register("Country", {
-              required: true,
-              maxLength: 20,
-              minLength: 2,
-              pattern: /[a-zA-Z]+/g,
-            })}
-          />
-        </Label>
-        <Label
-          errorText="Invalid City"
-          hasError={errors.Country}
-          text="Tip"
-          title="City"
-        >
-          <Input
-            hasError={errors.City}
-            placeholder="e.g. San Francisco"
-            {...register("City", {
-              required: true,
-              maxLength: 20,
-              minLength: 2,
-              pattern: /[a-zA-Z]+/g,
-            })}
-          />
-        </Label>
-      </div>
-      <div className={s.lineWrapper}>
-        <Label
-          title="Address"
-          text="Tip"
-          errorText="Invalid Address"
-          hasError={errors.Name}
-        >
-          <Input
-            hasError={errors.Address}
-            placeholder="e.g. California"
-            {...register("Address", {
-              required: true,
-              maxLength: 20,
-              minLength: 2,
-              pattern: /[a-zA-Z]+/g,
-            })}
-          />
-        </Label>
-        <Label
-          errorText="Invalid Email"
-          hasError={errors.Email}
-          text="Tip"
-          title="Email"
-        >
-          <Input
-            hasError={errors.Email}
-            placeholder="example@company.com"
-            {...register("Email", {
-              required: true,
-              maxLength: 20,
-              minLength: 2,
-              pattern: /[a-zA-Z]+/g,
-            })}
-          />
-        </Label>
-      </div>
-      <div className={s.lineWrapper}>
-        <Label
-          title="Phone Number"
-          text="Tip"
-          errorText="Invalid Phone Number"
-          hasError={errors.Number}
-        >
-          <Input
-            hasError={errors.Number}
-            placeholder="e.g. +1 123 456 7890"
-            {...register("Number", {
-              required: true,
-            })}
-          />
-        </Label>
-        <Label
-          errorText="Invalid Birthday"
-          hasError={errors.Birthday}
-          text="Tip"
-          title="Birthday"
-        >
-          <Input
-            hasError={errors.Birthday}
-            placeholder="01/21/2000"
-            {...register("Birthday", {
-              required: true,
-              pattern: /^(0[1-9]|1[0-2])\/(0[1-9]|[1-2][0-9]|3[0-1])\/\d{4}$/,
-            })}
-          />
-        </Label>
-      </div>
-      <div className={s.lineWrapper}>
-        <Label
-          title="Organization"
-          text="Tip"
-          errorText="Invalid Organization"
-          hasError={errors.Organization}
-        >
-          <Input
-            hasError={errors.Organization}
-            placeholder="Company Name"
-            {...register("Organization", {
-              required: true,
-              maxLength: 20,
-              minLength: 2,
-              pattern: /[a-zA-Z]+/g,
-            })}
-          />
-        </Label>
-        <Label
-          errorText="Invalid Role"
-          hasError={errors.Sername}
-          text="Tip"
-          title="Role"
-        >
-          <Input
-            hasError={errors.Role}
-            placeholder="React Developer"
-            {...register("Role", {
-              required: true,
-              maxLength: 20,
-              minLength: 2,
-              pattern: /[a-zA-Z]+/g,
-            })}
-          />
-        </Label>
-      </div>
-      <div className={s.lineWrapper}>
-        <Label
-          title="Department"
-          text="Tip"
-          errorText="Invalid Department"
-          hasError={errors.Name}
-        >
-          <Input
-            hasError={errors.Department}
-            placeholder="Development"
-            {...register("Department", {
-              required: true,
-              maxLength: 20,
-              minLength: 2,
-              pattern: /[a-zA-Z]+/g,
-            })}
-          />
-        </Label>
-        <Label
-          errorText="Invalid code"
-          hasError={errors.Sername}
-          text="Tip"
-          title="Zip/postal code"
-        >
-          <Input
-            hasError={errors.Sername}
-            placeholder="Green"
-            {...register("Сode", {
-              required: true,
-            })}
-          />
-        </Label>
-      </div>
+      {isVisible && <Modal data={data} onClose={handleToogleFn} />}
       <Button>Save all</Button>
     </form>
   );

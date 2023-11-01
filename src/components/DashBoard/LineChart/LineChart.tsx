@@ -10,7 +10,6 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import { en, Faker } from "@faker-js/faker";
 import { CoinsItem } from "../DashBoard";
 
 ChartJS.register(
@@ -32,6 +31,8 @@ interface LineChartProps {
 // });
 
 export const options = {
+  type: "line",
+  aspectRatio: 3,
   responsive: true,
   scales: {
     x: {
@@ -40,6 +41,9 @@ export const options = {
       },
     },
     y: {
+      ticks: {
+        callback: (value: string | number) => `${value} $`,
+      },
       grid: {
         display: false,
       },
@@ -47,11 +51,14 @@ export const options = {
   },
   plugins: {
     // legend: {
+    //   display: false,
+    // },
+    // legend: {
     //   position: "top" as const,
     // },
-    // title: {
-    //   display: true,
-    // },
+    title: {
+      display: false,
+    },
   },
 };
 
@@ -86,7 +93,8 @@ const LineChart = ({ btcData, ethData }: LineChartProps) => {
   };
   return (
     <div className={s.wrapper}>
-      LineChart
+      <h2 className={s.title}>LineChart</h2>
+      <div className={s.text}>Crypto dashboard</div>
       <Line options={options} data={data} />
     </div>
   );

@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "up": "taze major -I",
     "start": "next start",
     "lint": "next lint"
   },
@@ -15,8 +16,8 @@
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
     "@types/react-redux": "^7.1.28",
-    "@types/uuid": "^9.0.3",
-    "@unocss/reset": "^0.55.0",
+    "@types/uuid": "^9.0.6",
+    "@unocss/reset": "^0.57.1",
     "chart.js": "^4.4.0",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.13",
@@ -25,12 +26,15 @@
     "react": "18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "^7.46.1",
+    "react-hook-form": "^7.47.0",
     "react-icons": "^4.11.0",
     "react-redux": "^8.1.3",
-    "sass": "^1.65.1",
-    "swiper": "^10.3.1",
+    "sass": "^1.69.5",
+    "swiper": "^11.0.3",
     "typescript": "5.1.6",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "taze": "^0.12.0"
   }
 }

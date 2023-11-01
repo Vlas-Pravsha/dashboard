@@ -1,5 +1,5 @@
 import React from "react";
-import DashBoard from "@/components/DashBoard/DashBoard";
+import DashBoard, { DataType } from "@/components/DashBoard/DashBoard";
 import Header from "@/components/Header/Header";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import "./globals.css";
@@ -48,10 +48,23 @@ const customersArr = [
   },
 ];
 
+interface CryptoItem {
+  CoinInfo: {
+    Name: string;
+    ImageUrl: string;
+    AssetLaunchDate: string;
+  };
+  RAW?: {
+    USD: {
+      PRICE: number;
+    };
+  };
+}
+
 export default async function Home() {
   const cryptoData = await getCryptoCoins();
 
-  const mapedData = cryptoData.map((item) => ({
+  const mapedData = cryptoData.map((item: CryptoItem) => ({
     // coinInfo: item.CoinInfo,
     name: item.CoinInfo.Name,
     imageUrl: `https://www.cryptocompare.com${item.CoinInfo.ImageUrl}`,

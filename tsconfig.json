@@ -24,6 +24,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/DashBoard/DashBoard.tsч", "src/components/Node/TodoList/Todolist.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/DashBoard/DashBoard.tsч", "src/components/Node/TodoList/Todolist.tsx", "src/components/Crud/Products/ProductsList/ProductsList.jsx", "src/components/Setting/General/General.tsx"],
   "exclude": ["node_modules"]
 }

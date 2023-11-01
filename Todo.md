@@ -1,7 +1,8 @@
-1 - validation in Settings
-
-2 - Mobile adaptation
-
-# - Переверстать 2 пукнт(in Settings исрправить проблему с шириной), исправить мобильную адаптацию в Pricing
-
-3 - Dashboard
+1 - Исправить мобильную адаптацию в Pricing
+2 - Исправить мобильную адаптацию в Setting
+3 - Исправить мобильную адаптацию в Dashboard
+4 - Добавить функцию в DashBoard для отображения Coins
+5 - Убрать все any с компонентов
+6 - Исправить мобильную адаптацию в Node
+7 - Upload img in Setting
+8 - Чекнуть что там в users and products

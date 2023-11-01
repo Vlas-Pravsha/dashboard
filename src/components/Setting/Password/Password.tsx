@@ -1,18 +1,25 @@
+"use client";
 import React from "react";
 import { useForm } from "react-hook-form";
 import Button from "../Button/Button";
 import { RegisterItem } from "../General/General";
 import Input from "../Input/Input";
 import Label from "../Label/Label";
+import Modal from "./modal/Modal";
 import s from "./Password.module.scss";
 
 const Password = () => {
+  const [isVisible, setIsVisible] = React.useState(false);
+  const [data, setData] = React.useState<RegisterItem>();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<RegisterItem>();
   const onSubmit = (data: RegisterItem) => {
+    setData(data);
+    setIsVisible(true);
     console.log(data);
   };
 
@@ -69,6 +76,9 @@ const Password = () => {
         </Label>
         <div className={s.hiddenElement}></div>
       </div>
+      {isVisible && (
+        <Modal data={data} onClose={() => setIsVisible(!isVisible)} />
+      )}
       <Button>Save all</Button>
     </form>
   );

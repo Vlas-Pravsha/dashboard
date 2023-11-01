@@ -10,6 +10,7 @@ import {
   Legend,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
+import { BarChartsItem } from "../DashBoard";
 
 ChartJS.register(
   CategoryScale,
@@ -19,16 +20,22 @@ ChartJS.register(
   Tooltip,
   Legend
 );
+interface BarChartProps {
+  BarChartsData: BarChartsItem[];
+}
 
 export const options = {
   responsive: true,
   scales: {
     x: {
+      minBarLength: 12,
       grid: {
         display: false,
       },
     },
     y: {
+      display: false,
+
       grid: {
         display: false,
       },
@@ -44,30 +51,37 @@ export const options = {
   },
 };
 
-const labels = ["January", "February", "March", "April", "May", "June", "July"];
+const labels = [
+  "20 Oct",
+  "21 Oct",
+  "22 Oct",
+  "23 Oct",
+  "24 Oct",
+  "25 Oct",
+  "26 Oct",
+];
 
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: "Dataset 1",
-      data: [19, 54, 24, 54, 22, 61, 23],
-      backgroundColor: "rgba(26, 86, 219, 1)",
-    },
-    {
-      label: "Dataset 2",
-      data: [15, 64, 34, 53, 51, 51, 29],
-      backgroundColor: "rgba(253, 186, 140, 1)",
-    },
-    {
-      label: "Dataset 2",
-      data: [12, 24, 14, 43, 21, 31, 31],
-      backgroundColor: "rgba(23, 176, 189, 1)",
-    },
-  ],
-};
-
-function BarChart() {
+function BarChart({ BarChartsData }: BarChartProps) {
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: "Desktop PC",
+        data: BarChartsData.map((item) => item.DesktopPC),
+        backgroundColor: "rgba(26, 86, 219, 1)",
+      },
+      {
+        label: "Phone",
+        data: BarChartsData.map((item) => item.Phone),
+        backgroundColor: "rgba(253, 186, 140, 1)",
+      },
+      {
+        label: "Gaming/Console",
+        data: BarChartsData.map((item) => item.Gaming),
+        backgroundColor: "rgba(23, 176, 189, 1)",
+      },
+    ],
+  };
   return (
     <div className={s.wrapper}>
       <div className={s.title}>BarChart</div>

@@ -1,0 +1,28 @@
+.default {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background-color: var(--dark-blue);
+  color: #fff;
+}
+.secondary {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  color: #fff;
+  border-radius: 8px;
+}
+.third {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  color: #fff;
+  background-color: rgb(224 36 36);
+  border-radius: 8px;
+  &:hover {
+    background-color: rgba(224, 36, 36, 0.7);
+  }
+}

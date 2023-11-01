@@ -18,21 +18,14 @@
   font-size: 20px;
   font-weight: 600;
 }
-.span {
-  font-size: 14px;
-  color: var(--ligth-text-color);
-}
-.content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--border-color);
-}
-.text {
+.titleWrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+}
+.span {
+  font-size: 14px;
+  color: var(--ligth-text-color);
 }
 @media (max-width: 1280px) {
   .wrapper {

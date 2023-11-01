@@ -1,0 +1,26 @@
+.wrapper {
+  border-radius: 10px;
+  background-color: var(--component-bg);
+  padding: 40px;
+  border: 1px solid var(--border-color);
+}
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  font-size: 24px;
+  font-weight: 600;
+}
+.text {
+  font-size: 16px;
+  color: var(--ligth-text-color);
+}
+.percent {
+  color: rgb(49 196 141);
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
