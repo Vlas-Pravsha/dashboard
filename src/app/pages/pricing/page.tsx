@@ -39,7 +39,7 @@ const cartData: Item[] = [
     id: v1(),
     title: "Starter",
     description: "Best option for personal use & for your next project.",
-    price: "$29",
+    price: "$499",
     options: [
       { id: v1(), text: "Individual configuration" },
       { id: v1(), text: "No setup, or hidden fees" },
