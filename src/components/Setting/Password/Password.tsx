@@ -2,12 +2,16 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import Button from "../Button/Button";
-import { RegisterItem } from "../General/General";
 import Input from "../Input/Input";
 import Label from "../Label/Label";
 import Modal from "./modal/Modal";
 import s from "./Password.module.scss";
 
+export interface RegisterItem {
+  New: string;
+  Current: string;
+  Confirm: string;
+}
 const Password = () => {
   const [isVisible, setIsVisible] = React.useState(false);
   const [data, setData] = React.useState<RegisterItem>();

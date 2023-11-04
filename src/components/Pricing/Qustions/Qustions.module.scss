@@ -36,6 +36,6 @@
 }
 @media (max-width: 530px) {
   .wrapper {
-    grid-template-columns: 360px;
+    grid-template-columns: minmax(300px, 480px);
   }
 }

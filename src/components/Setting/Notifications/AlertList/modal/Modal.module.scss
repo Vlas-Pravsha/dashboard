@@ -57,3 +57,13 @@
 .emptyIcon {
   font-size: 22px;
 }
+@media (max-width: 1280px) {
+  .wrapper {
+    min-width: 470px;
+  }
+}
+@media (max-width: 524px) {
+  .wrapper {
+    min-width: 330px;
+  }
+}

@@ -24,3 +24,8 @@
   font-size: 16px;
   color: var(--ligth-text-color);
 }
+@media (max-width: 468px) {
+  .content {
+    max-width: 80px;
+  }
+}

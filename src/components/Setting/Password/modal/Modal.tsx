@@ -2,21 +2,12 @@ import Image from "next/image";
 import s from "./Modal.module.scss";
 import React from "react";
 import Button from "./Button/Button";
-import { spawn } from "child_process";
+import { RegisterItem } from "../Password";
 
 interface ModalProps {
-  data: any;
+  data: RegisterItem | undefined;
   onClose: () => void;
 }
-
-type DataItem = {
-  name: string;
-  email: string;
-  phone: string;
-  position: string;
-  photo: any;
-};
-
 const Modal = ({ data, onClose }: ModalProps) => {
   const [isVisible, setIsVisible] = React.useState(false);
   function showPasswords(event: React.MouseEvent<HTMLButtonElement>) {
@@ -36,7 +27,7 @@ const Modal = ({ data, onClose }: ModalProps) => {
             {isVisible === false ? (
               <span>********</span>
             ) : (
-              <span className={s.itemText}>{data.Confirm}</span>
+              <span className={s.itemText}>{data?.Confirm}</span>
             )}
           </p>
           <p className={s.itemTextWrapper}>
@@ -44,7 +35,7 @@ const Modal = ({ data, onClose }: ModalProps) => {
             {isVisible === false ? (
               <span> ********</span>
             ) : (
-              <span className={s.itemText}>{data.Current}</span>
+              <span className={s.itemText}>{data?.Current}</span>
             )}
           </p>
           <p className={s.itemTextWrapper}>
@@ -52,7 +43,7 @@ const Modal = ({ data, onClose }: ModalProps) => {
             {isVisible === false ? (
               <span> ********</span>
             ) : (
-              <span className={s.itemText}>{data.New}</span>
+              <span className={s.itemText}>{data?.New}</span>
             )}
           </p>
         </div>

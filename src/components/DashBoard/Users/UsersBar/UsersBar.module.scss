@@ -1,37 +1,12 @@
-.wrapper {
+.charts {
+  height: 120px !important;
 }
-// .doneLine {
-//   background-color: var(--component-bg);
-//   padding: 5px;
-//   border: 1px solid var(--border-color);
-//   border-radius: 10px;
-// }
-.bar {
-  display: flex;
-  height: 80px;
-  gap: 15px;
+
+@media (max-width: 468px) {
+  .wrapper {
+    padding: 15px;
+  }
+  .charts {
+    max-width: 200px !important;
+  }
 }
-.stepList {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    width: 100%;
-    gap: 20px;
-  }
-  
-  .lineMain {
-    position: absolute;
-    width: 100%;
-    border-radius: 8px;
-    background: rgba(0, 0, 0, 0.08);
-    height: 8px;
-    top: 3px;
-  }
-  
-  .doneLine {
-    border-radius: 8px;
-    background: #5558fa;
-    height: 8px;
-  }
-  
-  

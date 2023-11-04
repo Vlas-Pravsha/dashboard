@@ -9,20 +9,27 @@ import Modal from "./modal/Modal";
 import Select from "./Select/Select";
 import s from "./Time.module.scss";
 
+export interface RegisterItem {
+  Language: string;
+  Time: string;
+}
+
 const Time = () => {
   const [isVisible, setIsVisible] = React.useState(false);
-  const [data, setData] = React.useState();
-  const { register, handleSubmit } = useForm();
+  const [data, setData] = React.useState<RegisterItem>();
+  const { register, handleSubmit } = useForm<RegisterItem>();
   const languageOptions = useSelector(
     (state: RootState) => state.settings.languageOptions
   );
   const timeOptions = useSelector(
     (state: RootState) => state.settings.timeOptions
   );
-  const onSubmit = (data: any) => {
-    console.log(data);
-    setData(data);
-    setIsVisible(true);
+  const onSubmit = (formData: RegisterItem | undefined) => {
+    if (formData) {
+      console.log(formData);
+      setData(formData);
+      setIsVisible(true);
+    }
   };
   return (
     <form className={s.wrapper} onSubmit={handleSubmit(onSubmit)}>

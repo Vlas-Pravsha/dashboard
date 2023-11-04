@@ -25,20 +25,16 @@ const Node = () => {
 
   return (
     <div className={s.wrapper}>
-      <div className={s.todolist}>
-        <div>
-          <AddTodoList
-            addTodoList={addTodoList}
-            searchValue={searchValue}
-            setSearchValue={setSearchValue}
-            error={error}
-          />
-        </div>
-        <TodoList title="New TodoList" />
-        {todoLists.map((todoList, index) => (
-          <div key={index}>{todoList}</div>
-        ))}
-      </div>
+      <AddTodoList
+        addTodoList={addTodoList}
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+        error={error}
+      />
+      <TodoList title="New TodoList" />
+      {todoLists.map((todoList, index) => (
+        <div key={index}>{todoList}</div>
+      ))}
     </div>
   );
 };

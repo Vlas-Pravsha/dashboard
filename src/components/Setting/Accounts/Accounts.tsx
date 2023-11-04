@@ -19,8 +19,8 @@ const Accounts = () => {
                   src={user.avatar}
                   alt={user.name}
                   className={s.avatar}
-                  height="50"
-                  width="50"
+                  height={50}
+                  width={50}
                 />
                 <div className={s.textWrapper}>
                   <div className={s.name}>{user.name}</div>

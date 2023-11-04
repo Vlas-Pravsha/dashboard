@@ -62,24 +62,23 @@
     grid-template-columns: minmax(360px, 1000px);
   }
 }
-
 @media (max-width: 1024px) {
   .secondSectionWrapper {
     gap: 10px;
+    margin-bottom: 10px;
   }
   .cryptoWrapper {
     margin-bottom: 10px;
     gap: 10px;
   }
   .statsWrapper {
-    display: grid;
-    grid-template-columns: minmax(360px, 1000px);
+    gap: 10px;
   }
   .wrapper {
     padding: 10px;
   }
   .sectionWrapper {
-    display: grid;
-    grid-template-columns: minmax(360px, 1000px);
+    margin-bottom: 10px;
+    gap: 10px;
   }
 }

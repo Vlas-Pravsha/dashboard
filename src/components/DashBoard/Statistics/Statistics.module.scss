@@ -80,3 +80,8 @@
 .buttonsWrapper {
   display: flex;
 }
+@media (max-width: 468px) {
+  .wrapper {
+    padding: 15px;
+  }
+}

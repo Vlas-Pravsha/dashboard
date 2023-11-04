@@ -65,7 +65,7 @@ const Products = () => {
             Since last month
           </div>
         </div>
-          <Bar data={data} options={options} />
+        <Bar data={data} options={options} className={s.charts} />
       </div>
     </div>
   );

@@ -9,20 +9,26 @@ import CheckBox from "../CheckBox/CheckBox";
 import s from "./EmailList.module.scss";
 import Modal from "./modal/Modal";
 
+export interface RegisterItem {
+  status: string[];
+  id: string;
+}
 const EmailList = () => {
   const emailData = useSelector((state: RootState) => state.settings.emailData);
   const [isVisible, setIsVisible] = React.useState(false);
-  const [data, setData] = React.useState();
+  const [data, setData] = React.useState<RegisterItem | undefined>();
+  const dispatch = useDispatch();
+  const { register, handleSubmit } = useForm<RegisterItem>();
 
   const handleToogleFn = () => {
     setIsVisible(!isVisible);
   };
-  const dispatch = useDispatch();
-  const { register, handleSubmit } = useForm();
-  const onSubmit = (data: any) => {
-    setData(data);
-    setIsVisible(true);
-    console.log(data.status);
+  const onSubmit = (formData: RegisterItem | undefined) => {
+    if (formData) {
+      setData(formData);
+      setIsVisible(true);
+      console.log(formData.status);
+    }
   };
 
   return (

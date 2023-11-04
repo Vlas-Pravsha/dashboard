@@ -47,12 +47,12 @@ const Social = () => {
         {socialData.map((item) => (
           <div key={item.id} className={s.cart}>
             <div className={s.content}>
-              <span>{item.img}</span>
+              {item.img}
               <div className={s.textWrapper}>
                 <div className={s.title}>{item.value}</div>
                 {item.status ? (
                   <a href="/setting" className={s.link}>
-                    {item.link}
+                    {item.link.slice(0, 15)}
                   </a>
                 ) : (
                   <span className={s.spanLink}>Not connected</span>

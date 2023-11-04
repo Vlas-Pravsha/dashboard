@@ -1,79 +1,4 @@
-// .mainWrapper {
-//   padding: 15px;
-// }
-// .contentWrapper {
-//   display: grid;
-//   // grid-template-columns: minmax(320px, 750px) minmax(650px, 1510px);
-//   grid-template-areas:
-//     "one one two two"
-//     "one one two two"
-//     "three three two two"
-//     "three three two two"
-//     "four four two two"
-//     "four four five five"
-//     "six six five five"
-//     "six six seven seven"
-//     "six six seven seven"
-//     ;
-//   width: 100%;
-//   gap: 15px;
-// }
-// .title {
-//   font-size: 22px;
-//   font-weight: 600;
-//   margin-bottom: 25px;
-// }
-// .item1 {
-//   grid-area: one;
-// }
-// .item2 {
-//   grid-area: two;
-// }
-// .item3 {
-//   grid-area: three;
-// }
-// .item4 {
-//   grid-area: four;
-// }
-// .item5 {
-//   grid-area: five;
-// }
-// .item6 {
-//   grid-area: six;
-// }
-// .item7 {
-//   grid-area: seven;
-// }
-
-// .footerText {
-//   font-size: 14px;
-//   color: var(--ligth-text-color);
-//   text-align: center;
-//   margin: 30px 0;
-// }
-
-// @media (max-width: 1280px) {
-//   .contentWrapper {
-//     grid-template-columns: 1fr;
-//     grid-template-areas:
-//       "one "
-//       "two "
-//       "three "
-//       "four "
-//       "five "
-//       "six"
-//       "seven";
-//   }
-// }
-// @media (max-width: 768px) {
-//   .title {
-//     margin-bottom: 10px;
-//   }
-//   .mainWrapper {
-//     padding: 8px;
-//   }
-// }
-.mainWrapper {
+.wrapper {
   padding: 20px;
 }
 .contentWrapper {
@@ -117,5 +42,22 @@
   .p {
     width: 100%;
     flex-direction: column;
+  }
+}
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 10px;
+  }
+  .title {
+    margin-bottom: 15px;
+  }
+  .q {
+    gap: 10px;
+  }
+  .contentWrapper {
+    gap: 10px;
+  }
+  .p {
+    gap: 10px;
   }
 }

@@ -9,3 +9,8 @@
   padding-bottom: 5px;
   color: var(--ligth-text-color);
 }
+@media (max-width: 468px) {
+  .wrapper {
+    padding: 15px;
+  }
+}

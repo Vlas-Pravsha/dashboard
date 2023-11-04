@@ -17,11 +17,19 @@
   color: var(--ligth-text-color);
 }
 .percent {
-    color: rgb(49 196 141);
+  color: rgb(49 196 141);
 }
 .container {
   max-height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 468px) {
+  .wrapper {
+    padding: 15px;
+  }
+  .charts {
+    max-width: 170px !important;
+  }
 }

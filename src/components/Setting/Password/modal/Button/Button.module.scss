@@ -26,3 +26,18 @@
     background-color: rgba(224, 36, 36, 0.7);
   }
 }
+
+@media (max-width: 524px) {
+  .default {
+    font-size: 14px;
+    padding: 5px 6px;
+  }
+  .secondary {
+    font-size: 14px;
+    padding: 5px 6px;
+  }
+  .third {
+    font-size: 14px;
+    padding: 5px 6px;
+  }
+}

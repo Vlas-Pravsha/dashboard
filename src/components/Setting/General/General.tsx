@@ -9,7 +9,6 @@ import s from "./General.module.scss";
 import Modal from "./modal/Modal";
 
 export type RegisterItem = {
-  Radio: string;
   required: boolean;
   Country: string;
   Username: string;
@@ -26,7 +25,6 @@ export type RegisterItem = {
   Code: string;
   Current: string;
   New: string;
-  Confirm: string;
 };
 const General = () => {
   const [isVisible, setIsVisible] = React.useState(false);
@@ -176,7 +174,7 @@ const General = () => {
               {...register(item.register, {
                 required: true,
                 maxLength: 20,
-                minLength: 2,
+                minLength: 1,
                 pattern: /[a-zA-Z]+/g,
               })}
             />

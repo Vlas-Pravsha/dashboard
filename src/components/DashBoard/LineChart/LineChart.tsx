@@ -50,9 +50,9 @@ export const options = {
     },
   },
   plugins: {
-    // legend: {
-    //   display: false,
-    // },
+    legend: {
+      display: false,
+    },
     // legend: {
     //   position: "top" as const,
     // },
@@ -79,13 +79,16 @@ const LineChart = ({ btcData, ethData }: LineChartProps) => {
     datasets: [
       {
         label: "Bitcoin 1",
-        data: btcData.map((item) => item.high),
+        // data: btcData.map((item) => item.high),
+        data: [53, 41, 124, 53, 68, 96, 41, 65],
         borderColor: "rgb(53, 162, 235)",
         backgroundColor: "rgba(53, 162, 235, 0.5)",
       },
       {
         label: "Ethereum  2",
-        data: ethData.map((item) => item.high),
+        // data: ethData.map((item) => item.high),
+        data: [23, 56, 64, 83, 38, 66, 71, 100],
+
         borderColor: "rgb(255, 99, 132)",
         backgroundColor: "rgba(255, 99, 132, 0.5)",
       },

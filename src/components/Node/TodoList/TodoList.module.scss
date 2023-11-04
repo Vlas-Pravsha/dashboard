@@ -1,8 +1,7 @@
-.todolist {
+.wrapper {
   background-color: var(--component-bg);
   border-radius: 10px;
   border: 1px solid var(--border-color);
-  margin: 30px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -114,4 +113,9 @@
   font-size: 10px;
   line-height: 10px;
   color: red;
+}
+@media (max-width: 468px) {
+  .wrapper {
+    width: 100%;
+  }
 }

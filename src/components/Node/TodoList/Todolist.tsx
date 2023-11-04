@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import s from "./TodoList.module.scss"
+import s from "./TodoList.module.scss";
 import Image from "next/image";
 import { v1 } from "uuid";
 import Buttons from "../Buttons/Buttons";
@@ -40,7 +40,7 @@ const TodoList = ({ title }: TodoListProps) => {
     setEdit(null);
   }
 
-  let tasksForTodoList = tasks;
+  let tasksForTodoList = [...tasks];
 
   if (filter === "completed") {
     tasksForTodoList = tasks.filter((t) => t.status === true);
@@ -95,46 +95,43 @@ const TodoList = ({ title }: TodoListProps) => {
 
   return (
     <div className={s.wrapper}>
-      <div className={s.todolist}>
-        <div className={s.q}>
-          <h2 className={s.title}>{title}</h2>
-          <div className={s.inputWrap}>
-            <input
-              type="text"
-              className={`${error ? s.error : s.input}`}
-              placeholder="Add task"
-              value={searchValue}
-              onChange={(e) => searchTask(e.target.value)}
-              onKeyPress={(e) => onKeyPressAddTask(e)}
-            />
-            <Image
-              src={"/Img/NodeImg/circle-plus-solid.svg"}
-              alt="Add"
-              width="30"
-              height="30"
-              className={s.add}
-              onClick={() => addTodoTask()}
-            />
+      <div className={s.q}>
+        <h2 className={s.title}>{title}</h2>
+        <div className={s.inputWrap}>
+          <input
+            type="text"
+            className={`${error ? s.error : s.input}`}
+            placeholder="Add task"
+            value={searchValue}
+            onChange={(e) => searchTask(e.target.value)}
+            onKeyPress={(e) => onKeyPressAddTask(e)}
+          />
+          <Image
+            src={"/Img/NodeImg/circle-plus-solid.svg"}
+            alt="Add"
+            width="30"
+            height="30"
+            className={s.add}
+            onClick={() => addTodoTask()}
+          />
 
-            <span className={error ? s.errorMessage : ""}>{error}</span>
-          </div>
+          <span className={error ? s.errorMessage : ""}>{error}</span>
         </div>
-        <div>
-          {tasksForTodoList.map((task) => (
-            <TodoItem
-              key={task.id}
-              task={task}
-              changeStatus={changeStatus}
-              deleteTask={deleteTask}
-              edit={edit}
-              value={value}
-              saveTodo={saveTodo}
-              editTodo={editTodo}
-            />
-          ))}
-        </div>
-        <Buttons changeFilter={changeFilter} filter={filter}></Buttons>
       </div>
+      {tasksForTodoList.map((task) => (
+        <TodoItem
+          key={task.id}
+          task={task}
+          changeStatus={changeStatus}
+          deleteTask={deleteTask}
+          edit={edit}
+          value={value}
+          setValue={setValue}
+          saveTodo={saveTodo}
+          editTodo={editTodo}
+        />
+      ))}
+      <Buttons changeFilter={changeFilter} filter={filter}></Buttons>
     </div>
   );
 };

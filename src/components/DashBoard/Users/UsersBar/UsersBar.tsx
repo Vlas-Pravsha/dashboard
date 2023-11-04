@@ -1,4 +1,5 @@
 import React from "react";
+import s from "./UsersBar.module.scss";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -74,10 +75,6 @@ export const data = {
 };
 
 function UsersBar() {
-  return (
-    <div style={{ height: "120px" }}>
-      <Bar options={options} data={data} />
-    </div>
-  );
+  return <Bar options={options} data={data} className={s.charts} />;
 }
 export default UsersBar;

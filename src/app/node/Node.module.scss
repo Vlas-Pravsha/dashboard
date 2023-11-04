@@ -1,8 +1,7 @@
 .wrapper {
   display: flex;
   align-items: start;
-}
-.todolist {
-  display: flex;
   flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
 }

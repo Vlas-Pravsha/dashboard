@@ -2,7 +2,6 @@
 import "@unocss/reset/tailwind.css";
 import "./globals.css";
 import { useEffect } from "react";
-import { changeTheme } from "@/utils";
 import ReduxProvider from "@/store/Provider";
 
 export default function RootLayout({

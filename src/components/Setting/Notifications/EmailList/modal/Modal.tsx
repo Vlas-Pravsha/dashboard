@@ -3,9 +3,10 @@ import s from "./Modal.module.scss";
 import React from "react";
 import Button from "./Button/Button";
 import { BiSad } from "react-icons/bi";
+import { RegisterItem } from "../EmailList";
 
 interface ModalProps {
-  data: any;
+  data: RegisterItem | undefined;
   onClose: () => void;
 }
 
@@ -16,7 +17,7 @@ const Modal = ({ data, onClose }: ModalProps) => {
       <div className={s.wrapper}>
         <h2 className={s.title}>Your choise:</h2>
         <div className={s.line}></div>
-        {data.status.length === 0 ? (
+        {data?.status.length === 0 ? (
           <div className={s.items}>
             <p className={s.emptyTextWrapper}>
               Nothing selected <BiSad className={s.emptyIcon} />
@@ -24,10 +25,10 @@ const Modal = ({ data, onClose }: ModalProps) => {
           </div>
         ) : (
           <div className={s.items}>
-            <p className={s.itemText}> {data.status[0]}</p>
-            <p className={s.itemText}> {data.status[1]}</p>
-            <p className={s.itemText}> {data.status[2]}</p>
-            <p className={s.itemText}> {data.status[3]}</p>
+            <p className={s.itemText}> {data?.status[0]}</p>
+            <p className={s.itemText}> {data?.status[1]}</p>
+            <p className={s.itemText}> {data?.status[2]}</p>
+            <p className={s.itemText}> {data?.status[3]}</p>
           </div>
         )}
 

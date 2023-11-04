@@ -15,3 +15,8 @@
   font-size: 16px;
   color: var(--ligth-text-color);
 }
+@media (max-width: 768px) {
+  .wrapper {
+    display: none;
+  }
+}

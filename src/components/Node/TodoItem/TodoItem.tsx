@@ -2,8 +2,23 @@ import React from "react";
 import s from "./TodoItem.module.scss";
 import CheckBox from "../AddTodoList/CheckBox/CheckBox";
 import Image from "next/image";
-import { useDispatch } from "react-redux";
-import { setValue } from "@/store/slices/Node/NodeSlice";
+
+interface TodoItemProps {
+  task: Task;
+  changeStatus: (taskId: string) => void;
+  deleteTask: (id: string) => void;
+  edit: string | null;
+  value: string;
+  setValue: React.Dispatch<React.SetStateAction<string>>;
+  saveTodo: (id: string) => void;
+  editTodo: (id: string, title: string) => void;
+}
+
+type Task = {
+  id: string;
+  title: string;
+  status: boolean;
+};
 
 const TodoItem = ({
   task,
@@ -11,17 +26,21 @@ const TodoItem = ({
   deleteTask,
   edit,
   value,
+  setValue,
   saveTodo,
   editTodo,
-}: any) => {
-  const dispatch = useDispatch();
+}: TodoItemProps) => {
+  function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setValue(e.target.value);
+  }
+
   return (
     <div key={task.id} className={s.taskWrapper}>
       {edit === task.id ? (
         <div>
           <input
             value={value}
-            onChange={(e) => dispatch(setValue(e.target.value))}
+            onChange={handleInputChange}
             className={s.taskInput}
           />
         </div>
