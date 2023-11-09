@@ -11,7 +11,7 @@ interface CounterState {
   timeOptions: TimeItem[];
   emailData: EmailItem[];
   alertsData: AlertsItem[];
-  usersData: User[];
+  // usersData: User[];
 }
 
 type User = {
@@ -129,40 +129,6 @@ const initialState: CounterState = {
     { id: 5, value: "GMT+6 Bangkok Time (BTT)" },
     { id: 6, value: "GMT+7 Jakarta Time (WIB)" },
     { id: 7, value: "GMT+8 Beijing Time (CST)" },
-  ],
-  usersData: [
-    {
-      id: 1,
-      name: "Bonnie Green",
-      country: "New York, USA",
-      visited: "Last seen: 1 min ago",
-      avatar: "/Img/Settingimg/neil-sims.png",
-      status: false,
-    },
-    {
-      id: 2,
-      name: "Jese Leos",
-      country: "California, USA",
-      visited: "Last seen: 2 min ago",
-      avatar: "/Img/Settingimg/jese-leos.png",
-      status: false,
-    },
-    {
-      id: 3,
-      name: "Thomas Lean",
-      country: "Texas, USA",
-      visited: "Last seen: 30 min ago",
-      avatar: "/Img/Settingimg/lana-byrd.png",
-      status: false,
-    },
-    {
-      id: 4,
-      name: "Lana Byrd",
-      country: "Texas, USA",
-      visited: "Last seen: 1 hour ago",
-      avatar: "/Img/Settingimg/profile.png",
-      status: true,
-    },
   ],
 };
 

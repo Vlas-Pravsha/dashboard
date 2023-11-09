@@ -24,6 +24,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/DashBoard/DashBoard.tsч", "src/components/Node/TodoList/Todolist.tsx", "src/components/Crud/Products/ProductsList/ProductsList.jsx", "src/components/Setting/General/General.tsx", "src/components/DashBoard/Audience/Audience.jsx", "src/components/Setting/Time/Time.ts", "src/components/Setting/Time/Time.js", "src/components/DashBoard/LineChart/LineChart.tsx", "src/components/Pricing/Table/Table.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/DashBoard/DashBoard.tsч", "src/components/Node/TodoList/Todolist.tsx", "src/components/Crud/Products/ProductsList/ProductsList.jsx", "src/components/Setting/General/General.tsx", "src/components/DashBoard/Audience/Audience.jsx", "src/components/Setting/Time/Time.ts", "src/components/Setting/Time/Time.js", "src/components/DashBoard/LineChart/LineChart.tsx", "src/components/Pricing/Table/Table.jsx", "src/app/pages/pricing/page.jsx", "src/components/DashBoard/DashBoard.tsx"],
   "exclude": ["node_modules"]
 }
