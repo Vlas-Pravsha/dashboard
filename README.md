@@ -4,6 +4,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 First, run the development server:
 
-Open with your browser to see the result. https://dashboard-rust-five.vercel.app/)https://dashboard-rust-five.vercel.app/
+Open with your browser to see the result. https://dashboard-rust-five.vercel.app/
 
 
